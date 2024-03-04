@@ -1,7 +1,6 @@
 import React from "react";
 import { useSettings } from "../contexts/SettingsContext";
 import { SpeedTypeIcon } from "./icons/speed-type-icon";
-import ListItem from "./settings-item";
 import SpeedometerSettingsItem from "./speedometer-setting-item";
 
 // Import all speedometer components

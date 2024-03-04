@@ -21,20 +21,21 @@ const SpeedometerSettingsItem: React.FC<SpeedometerSettingsItemProps> = ({
   };
 
   return (
-    <div className="w-[231.51px] h-[231.51px] relative">
-      <div className="w-[231.51px] h-[231.51px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded border border-white border-opacity-20" />
-      {settings.speedometers.speedometerType ===
-        speedometerNumber.toString() && (
-        <div className="text-center text-gray-200 text-[10.54px] font-semibold font-['Inter']">
-          Selected Now
-        </div>
-      )}
+    <div className="w-[231.51px] relative h-[231.51px] flex flex-col justify-end bg-zinc-300 bg-opacity-5 rounded border border-white border-opacity-20 ">
+      <div className="flex items-center justify-center h-28">{children}</div>
 
-      {children}
+      <div className="flex flex-col items-center gap-y-5 mb-2 h-28">
+        <div className="flex flex-col items-center justify-start h-12">
+          <div className="text-center text-neutral-400 text-lg font-semibold font-['Inter']">
+            Speedometer #{speedometerNumber}
+          </div>
 
-      <div className="w-[141px] h-[38.74px] left-[45.84px] top-[126.76px] absolute">
-        <div className="left-0 top-0 absolute text-center text-neutral-400 text-lg font-semibold font-['Inter']">
-          Speedometer #{speedometerNumber}
+          {settings.speedometers.speedometerType ===
+            speedometerNumber.toString() && (
+            <div className="text-center text-gray-200 text-[10.54px] font-semibold font-['Inter']">
+              Selected Now
+            </div>
+          )}
         </div>
 
         {settings.speedometers.speedometerType ===
