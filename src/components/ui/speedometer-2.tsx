@@ -1,48 +1,41 @@
 const SpeedoMeter2 = () => {
   return (
-    <div className="w-[300px] bg-black h-[300px] relative">
-      <div className="w-[162.25px] h-[224.97px] left-0 top-[75.03px] absolute">
-        <div className="w-[47.17px] h-[152.84px] left-0 top-0 absolute"></div>
-        <div className="w-[132.24px] h-[65.30px] left-[30px] top-[159.67px] absolute"></div>
+    <>
+      <div className="w-[231.51px] h-[231.51px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded border border-white border-opacity-20" />
+      <div className="w-[92px] h-[88.48px] left-[69.56px] top-[24px] absolute">
+        <div className="w-[91px] h-[88.03px] left-0 top-0 absolute">
+          <div className="left-[12.63px] top-[27.22px] absolute">
+            <span className="text-black text-opacity-30 text-[26.24px] font-extrabold font-['Orbitron']">
+              0
+            </span>
+            <span className="text-black text-[26.24px] font-extrabold font-['Orbitron']">
+              99
+            </span>
+          </div>
+          <div className="left-[55.43px] top-[56.01px] absolute text-black text-[7.54px] font-extrabold font-['Orbitron']">
+            KMH
+          </div>
+          <div className="left-[4.07px] top-[75.46px] absolute text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+            1
+          </div>
+          <div className="left-[14.18px] top-[75.46px] absolute text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+            2
+          </div>
+          <div className="left-[25.86px] top-[75.46px] absolute text-center text-black text-[7.41px] font-extrabold font-['Orbitron']">
+            3
+          </div>
+          <div className="left-[38.31px] top-[75.46px] absolute text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+            4
+          </div>
+          <div className="left-[49.20px] top-[75.46px] absolute text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+            5
+          </div>
+          <div className="left-[60.87px] top-[75.46px] absolute text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+            6
+          </div>
+        </div>
       </div>
-      <div className="w-[19.29px] h-[17.61px] left-[141.43px] top-[37.93px] absolute text-white text-[10.97px] font-medium font-['Poppins']">
-        100
-      </div>
-      <div className="w-[8.57px] h-[17.61px] left-[147.86px] top-[243.73px] absolute text-white text-[10.97px] font-medium font-['Poppins']">
-        0
-      </div>
-      <div className="w-[15.10px] h-[17.49px] left-[94.29px] top-[233.83px] absolute origin-top-left rotate-[30.67deg] text-white text-[10.97px] font-medium font-['Poppins']">
-        20
-      </div>
-      <div className="w-[15.10px] h-[17.49px] left-[203.44px] top-[233.83px] absolute origin-top-left rotate-[30.67deg] text-white text-[10.97px] font-medium font-['Poppins']">
-        20
-      </div>
-      <div className="w-[16.10px] h-[17.58px] left-[47.14px] top-[199.58px] absolute origin-top-left rotate-[-15.39deg] text-white text-[10.97px] font-medium font-['Poppins']">
-        40
-      </div>
-      <div className="w-[16.10px] h-[17.58px] left-[235.04px] top-[199.58px] absolute origin-top-left rotate-[-15.39deg] text-white text-[10.97px] font-medium font-['Poppins']">
-        40
-      </div>
-      <div className="w-[16.07px] h-[17.61px] left-[35.16px] top-[144.32px] absolute text-white text-[10.97px] font-medium font-['Poppins']">
-        60
-      </div>
-      <div className="w-[16.07px] h-[17.61px] left-[250.91px] top-[144.32px] absolute text-white text-[10.97px] font-medium font-['Poppins']">
-        60
-      </div>
-      <div className="w-[16.07px] h-[17.61px] left-[52.50px] top-[85.25px] absolute text-white text-[10.97px] font-medium font-['Poppins']">
-        60
-      </div>
-      <div className="w-[16.07px] h-[17.61px] left-[233.57px] top-[85.25px] absolute text-white text-[10.97px] font-medium font-['Poppins']">
-        60
-      </div>
-      <div className="w-[271.83px] h-[295.07px] left-[28.17px] top-0 absolute"></div>
-      <div className="w-[16.18px] h-[17.49px] left-[86.79px] top-[54.98px] absolute origin-top-left rotate-[-30.67deg] text-white text-[10.97px] font-medium font-['Poppins']">
-        80
-      </div>
-      <div className="w-[19.42px] h-[17.49px] left-[185.36px] top-[58.84px] absolute origin-top-left rotate-[-30.67deg] text-white text-[10.97px] font-medium font-['Poppins']">
-        120
-      </div>
-    </div>
+    </>
   );
 };
 

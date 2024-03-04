@@ -1,15 +1,22 @@
 import React from "react";
-import OnOffSwitch from "./ui/on-off-switch";
+import Switch from "./ui/switch";
 
 // Assuming OnOffSwitch is already defined elsewhere and imported
-
 interface ListItemProps {
   title: string;
   description: string;
   icon: JSX.Element; // Allow passing a custom icon as a React element
+  isOn: boolean; // State of the switch
+  handleToggle: (isOn: boolean) => void; // Function to handle toggle
 }
 
-const ListItem: React.FC<ListItemProps> = ({ title, description, icon }) => {
+const ListItem: React.FC<ListItemProps> = ({
+  title,
+  description,
+  icon,
+  isOn,
+  handleToggle,
+}) => {
   return (
     <div className="flex items-center justify-between bg-zinc-300 bg-opacity-5 px-8 py-4 rounded-[5px]">
       <div className="flex items-center gap-x-8">
@@ -23,7 +30,7 @@ const ListItem: React.FC<ListItemProps> = ({ title, description, icon }) => {
           </div>
         </div>
       </div>
-      <OnOffSwitch />
+      <Switch isOn={isOn} onToggle={() => handleToggle(!isOn)} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ interface SwitchProps {
   onToggle: (isOn: boolean) => void;
 }
 
-const Switch: React.FC<SwitchProps> = ({ isOn, onToggle }) => {
+const SpeedUnitSwitch: React.FC<SwitchProps> = ({ isOn, onToggle }) => {
   // Define the common and conditional classes for both ON and OFF states
   const switchBaseClass = "w-16 pl-[17.02px] pr-[18.53px]";
   const activeClass =
@@ -33,7 +33,7 @@ const Switch: React.FC<SwitchProps> = ({ isOn, onToggle }) => {
               : "text-zinc-500 text-sm font-medium"
           )}
         >
-          ON
+          KMH
         </div>
       </div>
       <div
@@ -51,11 +51,11 @@ const Switch: React.FC<SwitchProps> = ({ isOn, onToggle }) => {
               : "text-zinc-500 text-sm font-medium"
           )}
         >
-          OFF
+          MPH
         </div>
       </div>
     </button>
   );
 };
 
-export default Switch;
+export default SpeedUnitSwitch;

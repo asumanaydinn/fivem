@@ -11,9 +11,21 @@ export interface GeneralSettings {
   hideServerLogo: boolean;
 }
 
+export type SpeedoMeterType =
+  | "1"
+  | "2"
+  | "3"
+  | "4"
+  | "5"
+  | "6"
+  | "7"
+  | "8"
+  | "9"
+  | "10";
+
 export interface SpeedometerSettings {
   units: "mph" | "kmh";
-  speedometerType: "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10";
+  speedometerType: SpeedoMeterType;
 }
 
 export interface StatusSettings {
