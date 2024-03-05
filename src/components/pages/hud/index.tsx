@@ -2,6 +2,7 @@ import { useState } from "react";
 import SettingsModal from "../settings/settings-modal";
 import StatusStyle1 from "../../ui/status-styles/status-style-1";
 import StatusStyle2 from "../../ui/status-styles/status-style-2";
+import StatusStyle3 from "../../ui/status-styles/status-style-3";
 
 const Hud = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,6 +49,16 @@ const Hud = () => {
           }}
         />
         <StatusStyle2
+          status={{
+            armor: 20,
+            energy: 30,
+            health: 50,
+            hungry: 20,
+            hydration: 100,
+            stress: 10,
+          }}
+        />
+        <StatusStyle3
           status={{
             armor: 20,
             energy: 30,
