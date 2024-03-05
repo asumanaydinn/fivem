@@ -1,4 +1,8 @@
-const SpeedoMeter7 = () => {
+// Adding a speed prop to the component
+const SpeedoMeter7 = ({ speed }: { speed: number }) => {
+  // Calculate the number of active bars based on the current speed
+  const activeBarsCount = Math.round((speed / 100) * 24);
+
   // Function to generate indicator bars dynamically
   const generateIndicatorBars = (activeCount: number) => {
     let bars = [];
@@ -14,6 +18,7 @@ const SpeedoMeter7 = () => {
     }
     return bars;
   };
+
   return (
     <div className="w-[151.05px] h-[87.77px]">
       <div className="flex items-center gap-x-2">
@@ -204,7 +209,7 @@ const SpeedoMeter7 = () => {
         </div>
       </div>
       <div className="flex items-center gap-x-1">
-        {generateIndicatorBars(5)}
+        {generateIndicatorBars(activeBarsCount)}
       </div>
     </div>
   );

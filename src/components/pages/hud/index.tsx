@@ -168,7 +168,9 @@ const Hud = () => {
         )}
         {settings.speedometers.speedometerType === "5" && <SpeedoMeter5 />}
         {settings.speedometers.speedometerType === "6" && <SpeedoMeter6 />}
-        {settings.speedometers.speedometerType === "7" && <SpeedoMeter7 />}
+        {settings.speedometers.speedometerType === "7" && (
+          <SpeedoMeter7 speed={speed} />
+        )}
         {settings.speedometers.speedometerType === "8" && <SpeedoMeter8 />}
         {settings.speedometers.speedometerType === "9" && <SpeedoMeter9 />}
         {settings.speedometers.speedometerType === "10" && <SpeedoMeter10 />}
