@@ -123,6 +123,30 @@ const Hud = () => {
             }}
           />
         )}
+        {settings.status.statusStyleType === "8" && (
+          <StatusStyle7
+            status={{
+              armor: 20,
+              energy: 30,
+              health: 50,
+              hungry: 20,
+              hydration: 100,
+              stress: 10,
+            }}
+          />
+        )}
+        {settings.status.statusStyleType === "9" && (
+          <StatusStyle7
+            status={{
+              armor: 20,
+              energy: 30,
+              health: 50,
+              hungry: 20,
+              hydration: 100,
+              stress: 10,
+            }}
+          />
+        )}
       </div>
 
       <button
