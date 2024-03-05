@@ -157,7 +157,15 @@ const Hud = () => {
             maxSpeed={100}
           />
         )}
-        {settings.speedometers.speedometerType === "4" && <SpeedoMeter4 />}
+        {settings.speedometers.speedometerType === "4" && (
+          <SpeedoMeter4
+            fuel={100}
+            gear={2}
+            speed={speed}
+            maxFuel={100}
+            maxSpeed={100}
+          />
+        )}
         {settings.speedometers.speedometerType === "5" && <SpeedoMeter5 />}
         {settings.speedometers.speedometerType === "6" && <SpeedoMeter6 />}
         {settings.speedometers.speedometerType === "7" && <SpeedoMeter7 />}
