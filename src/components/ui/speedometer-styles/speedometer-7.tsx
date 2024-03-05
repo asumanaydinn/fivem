@@ -1,5 +1,5 @@
 // Adding a speed prop to the component
-const SpeedoMeter7 = ({ speed }: { speed: number }) => {
+const SpeedoMeter7 = ({ speed, fuel }: { speed: number; fuel: number }) => {
   // Calculate the number of active bars based on the current speed
   const activeBarsCount = Math.round((speed / 100) * 24);
 
@@ -18,6 +18,10 @@ const SpeedoMeter7 = ({ speed }: { speed: number }) => {
     }
     return bars;
   };
+
+  const maxHeight = 42.0451; // Max height of the fillable area in your SVG
+  const filledHeight = (fuel / 100) * maxHeight; // Calculate filled height based on fuel level
+  const yPosition = 42.3071 - filledHeight + 0.262085; // Adjust y position based on filled height
 
   return (
     <div className="w-[151.05px] h-[87.77px]">
@@ -99,15 +103,16 @@ const SpeedoMeter7 = ({ speed }: { speed: number }) => {
           <g filter="url(#filter0_i_0_1)">
             <rect
               x="0.527344"
-              y="0.262085"
+              y={yPosition}
               width="23.2749"
-              height="42.0451"
+              height={filledHeight}
               rx="1.21703"
-              fill="#3F3F3F"
+              fill="#C79618"
             />
           </g>
           <g filter="url(#filter1_i_0_1)">
             <path
+              className="swaying"
               d="M0.527344 22.5385C0.527344 21.6253 1.50646 21.0327 2.3757 21.3125C10.4628 23.9161 15.533 14.9762 23.2936 20.1753C23.6143 20.3902 23.8023 20.7615 23.8023 21.1476V41.0901C23.8023 41.7623 23.2574 42.3071 22.5853 42.3071H1.74437C1.07222 42.3071 0.527344 41.7623 0.527344 41.0901V22.5385Z"
               fill="#C79618"
             />
