@@ -18,7 +18,7 @@ const ListItem: React.FC<ListItemProps> = ({
   handleToggle,
 }) => {
   return (
-    <div className="flex items-center justify-between bg-zinc-300 bg-opacity-5 px-8 py-4 rounded-[5px]">
+    <div className="flex items-center justify-between bg-zinc-300 bg-opacity-10 px-8 py-4 rounded-[5px]">
       <div className="flex items-center gap-x-8">
         {icon}
         <div className="flex flex-col gap-y-2 items-start justify-start">

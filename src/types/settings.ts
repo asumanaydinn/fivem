@@ -42,6 +42,13 @@ export interface SpeedometerSettings {
 
 export interface StatusSettings {
   statusStyleType: StatusStyleType;
+  hideAllStatus: boolean;
+  hideHealth: boolean;
+  hideHydration: boolean;
+  hideHungry: boolean;
+  hideEnergy: boolean;
+  hideArmor: boolean;
+  hideStress: boolean;
 }
 
 export interface AppSettings {

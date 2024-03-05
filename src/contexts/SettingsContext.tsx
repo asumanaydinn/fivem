@@ -53,6 +53,13 @@ const defaultSettings: AppSettings = {
   },
   status: {
     statusStyleType: "1",
+    hideAllStatus: false,
+    hideHealth: false,
+    hideHydration: false,
+    hideHungry: false,
+    hideEnergy: false,
+    hideArmor: false,
+    hideStress: false,
   },
 };
 
