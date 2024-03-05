@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Modal from "../../ui/modal";
+import Modal from "../../ui/core/modal";
 import GeneralSettings from "./general-settings";
 import SpeedometerSettings from "./speedometer-settings";
-import TabBar from "../../ui/tab";
+import TabBar from "../../ui/core/tab";
 import StatusSettings from "./status-settings";
 
 interface SettingsModalProps {

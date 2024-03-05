@@ -3,7 +3,7 @@ import { useSettings } from "../../../contexts/SettingsContext";
 import { SpeedTypeIcon } from "../../icons/speed-type-icon";
 import SpeedometerSettingsItem from "./speedometer-setting-item";
 
-import SpeedUnitSwitch from "../../ui/speed-unit-switch";
+import SpeedUnitSwitch from "../../ui/core/speed-unit-switch";
 import { Speedometer2 } from "../../icons/speedometer-2";
 import { Speedometer1 } from "../../icons/speedometer-1";
 import { Speedometer3 } from "../../icons/speedometer-3";

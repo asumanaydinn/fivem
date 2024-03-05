@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SettingsModal from "../settings/settings-modal";
-import StatusStyle1 from "../../ui/status-style-1";
+import StatusStyle1 from "../../ui/status-styles/status-style-1";
+import StatusStyle2 from "../../ui/status-styles/status-style-2";
 
 const Hud = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,8 +36,18 @@ const Hud = () => {
         >
           Open Settings
         </button> */}
-      <div className="absolute bottom-10 left-10 h-20">
+      <div className="absolute bottom-10 left-10 h-20 flex items-center justify-center gap-x-10">
         <StatusStyle1
+          status={{
+            armor: 20,
+            energy: 30,
+            health: 50,
+            hungry: 20,
+            hydration: 100,
+            stress: 10,
+          }}
+        />
+        <StatusStyle2
           status={{
             armor: 20,
             energy: 30,

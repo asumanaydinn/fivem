@@ -1,5 +1,5 @@
 import React from "react";
-import Switch from "../../ui/switch";
+import Switch from "../../ui/core/switch";
 
 // Assuming OnOffSwitch is already defined elsewhere and imported
 interface ListItemProps {

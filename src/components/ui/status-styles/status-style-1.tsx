@@ -1,4 +1,4 @@
-import { Status } from "../../types/status";
+import { Status } from "../../../types/status";
 
 interface StatusStyle1Props {
   status: Status;
