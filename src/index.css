@@ -33,3 +33,10 @@ code {
   transform-origin: bottom center;
   animation: sway 4s ease-in-out infinite;
 }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
