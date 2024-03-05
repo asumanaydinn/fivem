@@ -9,6 +9,16 @@ import StatusStyle6 from "../../ui/status-styles/status-style-6";
 import StatusStyle7 from "../../ui/status-styles/status-style-7";
 import Menu from "../menu";
 import { useSettings } from "../../../contexts/SettingsContext";
+import SpeedoMeter1 from "../../ui/speedometer-styles/speedometer-1";
+import SpeedoMeter2 from "../../ui/speedometer-styles/speedometer-2";
+import SpeedoMeter3 from "../../ui/speedometer-styles/speedometer-3";
+import SpeedoMeter4 from "../../ui/speedometer-styles/speedometer-4";
+import SpeedoMeter5 from "../../ui/speedometer-styles/speedometer-5";
+import SpeedoMeter6 from "../../ui/speedometer-styles/speedometer-6";
+import SpeedoMeter7 from "../../ui/speedometer-styles/speedometer-7";
+import SpeedoMeter8 from "../../ui/speedometer-styles/speedometer-8";
+import SpeedoMeter9 from "../../ui/speedometer-styles/speedometer-9";
+import SpeedoMeter10 from "../../ui/speedometer-styles/speedometer-10";
 
 const Hud = () => {
   const { settings } = useSettings();
@@ -120,6 +130,19 @@ const Hud = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      <div className="absolute bottom-10 right-10">
+        {settings.speedometers.speedometerType === "1" && <SpeedoMeter1 />}{" "}
+        {settings.speedometers.speedometerType === "2" && <SpeedoMeter2 />}
+        {settings.speedometers.speedometerType === "3" && <SpeedoMeter3 />}
+        {settings.speedometers.speedometerType === "4" && <SpeedoMeter4 />}
+        {settings.speedometers.speedometerType === "5" && <SpeedoMeter5 />}
+        {settings.speedometers.speedometerType === "6" && <SpeedoMeter6 />}
+        {settings.speedometers.speedometerType === "7" && <SpeedoMeter7 />}
+        {settings.speedometers.speedometerType === "8" && <SpeedoMeter8 />}
+        {settings.speedometers.speedometerType === "9" && <SpeedoMeter9 />}
+        {settings.speedometers.speedometerType === "10" && <SpeedoMeter10 />}
+      </div>
     </div>
   );
 };
