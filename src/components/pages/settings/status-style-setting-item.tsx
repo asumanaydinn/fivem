@@ -30,7 +30,7 @@ const StatusStyleSettingItem: React.FC<StatusStyleSettingItemProps> = ({
             Status Style #{statusStyleNumber}
           </div>
 
-          {settings.speedometers.speedometerType ===
+          {settings.status.statusStyleType ===
             statusStyleNumber.toString() && (
             <div className="text-center text-gray-200 text-[10.54px] font-semibold font-['Inter']">
               Selected Now
@@ -38,7 +38,7 @@ const StatusStyleSettingItem: React.FC<StatusStyleSettingItemProps> = ({
           )}
         </div>
 
-        {settings.speedometers.speedometerType ===
+        {settings.status.statusStyleType ===
           statusStyleNumber.toString() && (
           <div className="w-[184.70px] h-[32.59px] pl-[70.62px] pr-[19.92px] pt-[5.43px] pb-[4.53px] bg-neutral-200 rounded border-2 border-neutral-200 justify-start items-start inline-flex">
             <div className="text-black text-xs font-bold font-['Satoshi'] leading-snug tracking-tight">
@@ -47,7 +47,7 @@ const StatusStyleSettingItem: React.FC<StatusStyleSettingItemProps> = ({
           </div>
         )}
 
-        {settings.speedometers.speedometerType !==
+        {settings.status.statusStyleType !==
           statusStyleNumber.toString() && (
           <button
             onClick={() => handleSelect()}

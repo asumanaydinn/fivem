@@ -7,7 +7,7 @@ interface StatusStyle2Props {
 
 const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
   return (
-    <div className="flex gap-x-2 items-center">
+    <div className="flex gap-x-2 items-center h-12">
       <StatusStyle3Item
         Icon={() => (
           <svg

@@ -18,7 +18,7 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
   const stressHeight = (status.stress / maxStatusValue) * 100;
 
   return (
-    <div className="flex gap-x-2 relative">
+    <div className="flex gap-x-2 relative h-12">
       <StatusStyle5Item
         percentage={healthHeight}
         activeColor="#4D2FA1"
