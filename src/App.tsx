@@ -4,7 +4,9 @@ import Hud from "./components/pages/hud";
 function App() {
   return (
     <SettingsProvider>
-      <Hud />
+      <div className="h-screen w-screen">
+        <Hud />
+      </div>
     </SettingsProvider>
   );
 }

@@ -10,9 +10,9 @@ const Hud = () => {
   // };
 
   return (
-    <div className="relative">
+    <div className="relative w-full h-full">
       <img
-        className="absolute"
+        className="absolute object-cover"
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
       />
