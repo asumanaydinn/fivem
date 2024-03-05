@@ -1,4 +1,17 @@
-const SpeedoMeter2 = () => {
+import clsx from "clsx";
+import { useSettings } from "../../../contexts/SettingsContext";
+
+type Props = {
+  speed: number;
+  fuel: number;
+  gear: number;
+};
+
+const SpeedoMeter2 = (props: Props) => {
+  const { fuel, gear, speed } = props;
+
+  const { settings } = useSettings();
+
   return (
     <div className="w-[92px] h-[88.48px] flex flex-col items-center justify-center bg-red-50">
       <div className="flex items-center gap-x-2">
@@ -37,40 +50,73 @@ const SpeedoMeter2 = () => {
         >
           <path
             d="M2.01598 8.26841C2.03872 8.41102 2.16173 8.51596 2.30614 8.51596H9.81425C10.2109 8.51596 10.5988 8.36317 10.8677 8.0708C10.9329 8.00001 10.993 7.92172 11.0506 7.84027H1.94769L2.01598 8.26841ZM1.8524 6.86648H11.2495C11.3306 6.86648 11.406 6.8883 11.4733 6.92353C11.6813 6.15734 11.6352 5.24726 11.2276 4.44778C11.1292 4.25533 10.9808 4.09224 10.8074 3.96442L7.20204 1.30811C6.25441 0.611705 5.1099 0.234131 3.93308 0.234131H1.07906C0.898306 0.234131 0.76042 0.395761 0.788892 0.574245L1.79335 6.87244C1.81292 6.87005 1.83217 6.86648 1.8524 6.86648ZM3.99047 5.17745C3.99047 5.23138 3.94676 5.2751 3.89282 5.2751H2.46449C2.41055 5.2751 2.36684 5.23138 2.36684 5.17745V4.9487C2.36684 4.89477 2.41055 4.85105 2.46449 4.85105H3.89285C3.94676 4.85105 3.99049 4.89477 3.99049 4.9487L3.99047 5.17745ZM3.93308 0.968736C4.95858 0.968736 5.93853 1.29049 6.76716 1.90021L9.08849 3.61036H2.01725L1.5956 0.968736H3.93308ZM11.2495 7.09653H1.85244C1.71059 7.09653 1.5956 7.21152 1.5956 7.35337C1.5956 7.49522 1.71059 7.61021 1.85244 7.61021H11.2495C11.3914 7.61021 11.5064 7.49522 11.5064 7.35337C11.5064 7.21152 11.3914 7.09653 11.2495 7.09653Z"
-            fill="#898989"
+            fill={clsx(fuel < 30 ? "black" : "#898989")}
           />
         </svg>
       </div>
       <div className="flex flex-col items-end justify-start">
         <div className="">
-          <span className="text-black text-opacity-30 text-[26.24px] font-extrabold font-['Orbitron']">
-            0
-          </span>
+          {speed < 100 && speed !== 0 && (
+            <span className="text-black text-opacity-30 text-[26.24px] font-extrabold font-['Orbitron']">
+              0
+            </span>
+          )}
           <span className="text-black text-[26.24px] font-extrabold font-['Orbitron']">
-            99
+            {speed}
           </span>
         </div>
         <div className=" text-black text-[7.54px] font-extrabold font-['Orbitron']">
-          KMH
+          {settings.speedometers.units ? "KMH" : "MPH"}
         </div>
       </div>
+
       <div className="flex items-center justify-center gap-x-2">
-        <div className="text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+        <div
+          className={clsx(
+            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            gear === 1 ? "text-black" : "text-zinc-500"
+          )}
+        >
           1
         </div>
-        <div className="text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+        <div
+          className={clsx(
+            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            gear === 2 ? "text-black" : "text-zinc-500"
+          )}
+        >
           2
         </div>
-        <div className="text-center text-black text-[7.41px] font-extrabold font-['Orbitron']">
+        <div
+          className={clsx(
+            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            gear === 3 ? "text-black" : "text-zinc-500"
+          )}
+        >
           3
         </div>
-        <div className="text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+        <div
+          className={clsx(
+            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            gear === 4 ? "text-black" : "text-zinc-500"
+          )}
+        >
           4
         </div>
-        <div className="text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+        <div
+          className={clsx(
+            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            gear === 5 ? "text-black" : "text-zinc-500"
+          )}
+        >
           5
         </div>
-        <div className="text-center text-zinc-500 text-[7.41px] font-extrabold font-['Orbitron']">
+        <div
+          className={clsx(
+            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            gear === 6 ? "text-black" : "text-zinc-500"
+          )}
+        >
           6
         </div>
       </div>

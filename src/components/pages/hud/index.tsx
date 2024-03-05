@@ -24,6 +24,12 @@ const Hud = () => {
   const { settings } = useSettings();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Function to increment speed
+  const pressGasPedal = () => {
+    setSpeed((prevSpeed) => prevSpeed + 10); // Increment speed by 10 units for example
+  };
+  const [speed, setSpeed] = useState(0);
+
   return (
     <div className="relative w-full h-full">
       <img
@@ -132,9 +138,25 @@ const Hud = () => {
       />
 
       <div className="absolute bottom-10 right-10">
-        {settings.speedometers.speedometerType === "1" && <SpeedoMeter1 />}{" "}
-        {settings.speedometers.speedometerType === "2" && <SpeedoMeter2 />}
-        {settings.speedometers.speedometerType === "3" && <SpeedoMeter3 />}
+        <div className="bg-white">
+          <div>Speed: {speed} km/h</div>
+          <button onClick={pressGasPedal}>Press Gas Pedal</button>
+        </div>
+        {settings.speedometers.speedometerType === "1" && (
+          <SpeedoMeter1 speed={speed} fuel={30} />
+        )}{" "}
+        {settings.speedometers.speedometerType === "2" && (
+          <SpeedoMeter2 fuel={100} gear={2} speed={speed} />
+        )}
+        {settings.speedometers.speedometerType === "3" && (
+          <SpeedoMeter3
+            fuel={100}
+            gear={2}
+            speed={speed}
+            maxFuel={100}
+            maxSpeed={100}
+          />
+        )}
         {settings.speedometers.speedometerType === "4" && <SpeedoMeter4 />}
         {settings.speedometers.speedometerType === "5" && <SpeedoMeter5 />}
         {settings.speedometers.speedometerType === "6" && <SpeedoMeter6 />}
