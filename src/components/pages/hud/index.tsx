@@ -5,6 +5,7 @@ import StatusStyle2 from "../../ui/status-styles/status-style-2";
 import StatusStyle3 from "../../ui/status-styles/status-style-3";
 import StatusStyle4 from "../../ui/status-styles/status-style-4";
 import StatusStyle5 from "../../ui/status-styles/status-style-5";
+import StatusStyle6 from "../../ui/status-styles/status-style-6";
 
 const Hud = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,6 +66,16 @@ const Hud = () => {
           }}
         />{" "}
         <StatusStyle5
+          status={{
+            armor: 20,
+            energy: 30,
+            health: 50,
+            hungry: 20,
+            hydration: 100,
+            stress: 10,
+          }}
+        />{" "}
+        <StatusStyle6
           status={{
             armor: 20,
             energy: 30,
