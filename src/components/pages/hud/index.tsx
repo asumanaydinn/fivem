@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SettingsModal from "../settings/settings-modal";
+import StatusStyle1 from "../../ui/status-style-1";
 
 const Hud = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,8 +17,7 @@ const Hud = () => {
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
       />
-      <div className="absolute">
-        {/* <Speedometer speed={speed} maxSpeed={120} />
+      {/* <Speedometer speed={speed} maxSpeed={120} />
       <div className="mt-4">
         <input
           type="range"
@@ -29,13 +29,25 @@ const Hud = () => {
         />
       </div>
       <p className="text-center mt-2">Speed: {speed}</p> */}
-        <button
+      {/* <button
           className="absolute px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
           onClick={() => setIsModalOpen(true)}
         >
           Open Settings
-        </button>
+        </button> */}
+      <div className="absolute bottom-10 left-10 h-20">
+        <StatusStyle1
+          status={{
+            armor: 20,
+            energy: 30,
+            health: 50,
+            hungry: 20,
+            hydration: 100,
+            stress: 10,
+          }}
+        />
       </div>
+
       <SettingsModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
