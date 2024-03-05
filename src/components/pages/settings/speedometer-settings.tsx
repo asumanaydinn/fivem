@@ -1,33 +1,19 @@
 import React from "react";
-import { useSettings } from "../contexts/SettingsContext";
-import { SpeedTypeIcon } from "./icons/speed-type-icon";
+import { useSettings } from "../../../contexts/SettingsContext";
+import { SpeedTypeIcon } from "../../icons/speed-type-icon";
 import SpeedometerSettingsItem from "./speedometer-setting-item";
 
-// Import all speedometer components
-import SpeedoMeter1 from "./ui/speedometer-1";
-import SpeedoMeter2 from "./ui/speedometer-2";
-import SpeedoMeter3 from "./ui/speedometer-3";
-import SpeedoMeter4 from "./ui/speedometer-4";
-import SpeedoMeter5 from "./ui/speedometer-5";
-import SpeedoMeter6 from "./ui/speedometer-6";
-import SpeedoMeter7 from "./ui/speedometer-7";
-import SpeedoMeter8 from "./ui/speedometer-8";
-import SpeedoMeter9 from "./ui/speedometer-9";
-import SpeedoMeter10 from "./ui/speedometer-10";
-import SpeedUnitSwitch from "./ui/speed-unit-switch";
-
-const speedometerComponents = [
-  SpeedoMeter1,
-  SpeedoMeter2,
-  SpeedoMeter3,
-  SpeedoMeter4,
-  SpeedoMeter5,
-  SpeedoMeter6,
-  SpeedoMeter7,
-  SpeedoMeter8,
-  SpeedoMeter9,
-  SpeedoMeter10,
-];
+import SpeedUnitSwitch from "../../ui/speed-unit-switch";
+import { Speedometer2 } from "../../icons/speedometer-2";
+import { Speedometer1 } from "../../icons/speedometer-1";
+import { Speedometer3 } from "../../icons/speedometer-3";
+import { Speedometer4 } from "../../icons/speedometer-4";
+import { Speedometer5 } from "../../icons/speedometer-5";
+import { Speedometer7 } from "../../icons/speedometer-7";
+import { Speedometer8 } from "../../icons/speedometer-8";
+import { SpeedoMeter6 } from "../../icons/speedometer-6";
+import { Speedometer9 } from "../../icons/speedometer-9";
+import { Speedometer10 } from "../../icons/speedometer-10";
 
 const SpeedometerSettings = () => {
   const { settings, updateSettings } = useSettings();
@@ -59,7 +45,18 @@ const SpeedometerSettings = () => {
       </div>
 
       <div className="grid grid-cols-5 gap-4">
-        {speedometerComponents.map((SpeedometerComponent, index) => (
+        {[
+          Speedometer1,
+          Speedometer2,
+          Speedometer3,
+          Speedometer4,
+          Speedometer5,
+          SpeedoMeter6,
+          Speedometer7,
+          Speedometer8,
+          Speedometer9,
+          Speedometer10,
+        ].map((SpeedometerComponent, index) => (
           <SpeedometerSettingsItem key={index} speedometerNumber={index + 1}>
             <SpeedometerComponent />
           </SpeedometerSettingsItem>

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import { useSettings } from "../contexts/SettingsContext";
-import { StatusStyleType } from "../types/settings";
+import { useSettings } from "../../../contexts/SettingsContext";
+import { StatusStyleType } from "../../../types/settings";
 
 interface StatusStyleSettingItemProps {
   statusStyleNumber: number; // The number of the speedometer

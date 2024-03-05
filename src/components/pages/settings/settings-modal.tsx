@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Modal from "./ui/modal";
+import Modal from "../../ui/modal";
 import GeneralSettings from "./general-settings";
 import SpeedometerSettings from "./speedometer-settings";
+import TabBar from "../../ui/tab";
 import StatusSettings from "./status-settings";
-import TabBar from "./ui/tab";
 
 interface SettingsModalProps {
   isOpen: boolean;

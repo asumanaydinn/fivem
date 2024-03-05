@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import { useSettings } from "../contexts/SettingsContext";
-import { SpeedoMeterType } from "../types/settings";
+import { useSettings } from "../../../contexts/SettingsContext";
+import { SpeedoMeterType } from "../../../types/settings";
 
 interface SpeedometerSettingsItemProps {
   speedometerNumber: number; // The number of the speedometer
