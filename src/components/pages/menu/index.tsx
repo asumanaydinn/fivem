@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "../../ui/core/menu-tab";
 import VehicleMenu from "../settings/vehicle-menu";
+import MediaMenu from "../settings/media-menu";
 
 // Define interfaces for TypeScript (if using TS)
 interface Tab {
@@ -29,8 +30,9 @@ const Menu: React.FC = () => {
       </div>
       {/* Conditional rendering based on the active tab */}
       {activeTab === "Map" && <MapImage />}
-
       {activeTab === "Vehicle" && <VehicleMenu />}
+      {activeTab === "Media" && <MediaMenu />}
+
       {/* Tabs component */}
       <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
