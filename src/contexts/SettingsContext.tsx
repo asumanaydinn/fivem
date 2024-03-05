@@ -1,6 +1,38 @@
 // SettingsContext.tsx
 import React, { createContext, useContext, ReactNode, useState } from "react";
-import { AppSettings } from "../types/settings";
+import {
+  AppSettings,
+  StatusSetting,
+  StatusSettingsMap,
+  StatusStyleType,
+} from "../types/settings";
+
+const localStorageKey = "statusSettingsMap";
+
+function getStatusSettingsMapFromLocalStorage(): StatusSettingsMap {
+  const storedData = localStorage.getItem(localStorageKey);
+  return storedData ? JSON.parse(storedData) : {};
+}
+
+function setStatusSettingsMapInLocalStorage(settingsMap: StatusSettingsMap) {
+  localStorage.setItem(localStorageKey, JSON.stringify(settingsMap));
+}
+
+function getStatusSettingForStyleFromLocalStorage(
+  styleType: StatusStyleType
+): StatusSetting | null {
+  const settingsMap = getStatusSettingsMapFromLocalStorage();
+  return settingsMap[styleType] || null;
+}
+
+function updateStatusSettingForStyleInLocalStorage(
+  styleType: StatusStyleType,
+  setting: StatusSetting
+) {
+  const settingsMap = getStatusSettingsMapFromLocalStorage();
+  settingsMap[styleType] = setting;
+  setStatusSettingsMapInLocalStorage(settingsMap);
+}
 
 // Initial settings
 const defaultSettings: AppSettings = {
@@ -20,19 +52,31 @@ const defaultSettings: AppSettings = {
     speedometerType: "1",
   },
   status: {
-    onlineStatus: true,
+    statusStyleType: "1",
   },
 };
 
-// Creating the context with default values and an updater function
-const SettingsContext = createContext<{
+// Define the structure for the context's value
+interface SettingsContextType {
   settings: AppSettings;
+  getStatusSettingForStyle: (
+    styleType: StatusStyleType
+  ) => StatusSetting | null;
+  updateStatusSettingForStyle: (
+    styleType: StatusStyleType,
+    setting: StatusSetting
+  ) => void;
   updateSettings: <T extends keyof AppSettings>(
     category: T,
     newSettings: Partial<AppSettings[T]>
   ) => void;
-}>({
+}
+
+// Initialize the context with default values
+const SettingsContext = createContext<SettingsContextType>({
   settings: defaultSettings,
+  getStatusSettingForStyle: () => null,
+  updateStatusSettingForStyle: () => {},
   updateSettings: () => {},
 });
 
@@ -63,8 +107,29 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
     }));
   };
 
+  const getStatusSettingForStyle = (
+    styleType: StatusStyleType
+  ): StatusSetting | null => {
+    return getStatusSettingForStyleFromLocalStorage(styleType);
+  };
+
+  const updateStatusSettingForStyle = (
+    styleType: StatusStyleType,
+    setting: StatusSetting
+  ) => {
+    updateStatusSettingForStyleInLocalStorage(styleType, setting);
+    // Optionally trigger a context update or re-fetch of settings if needed
+  };
+
   return (
-    <SettingsContext.Provider value={{ settings, updateSettings }}>
+    <SettingsContext.Provider
+      value={{
+        settings,
+        getStatusSettingForStyle,
+        updateStatusSettingForStyle,
+        updateSettings,
+      }}
+    >
       {children}
     </SettingsContext.Provider>
   );

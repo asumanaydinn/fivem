@@ -23,17 +23,42 @@ export type SpeedoMeterType =
   | "9"
   | "10";
 
+export type StatusStyleType =
+  | "1"
+  | "2"
+  | "3"
+  | "4"
+  | "5"
+  | "6"
+  | "7"
+  | "8"
+  | "9"
+  | "10";
+
 export interface SpeedometerSettings {
   units: "mph" | "kmh";
   speedometerType: SpeedoMeterType;
 }
 
 export interface StatusSettings {
-  onlineStatus: boolean;
+  statusStyleType: StatusStyleType;
 }
 
 export interface AppSettings {
   general: GeneralSettings;
   speedometers: SpeedometerSettings;
   status: StatusSettings;
+}
+
+export interface StatusSetting {
+  health: { value: number; color: string };
+  dehydration: { value: number; color: string };
+  hungry: { value: number; color: string };
+  energy: { value: number; color: string };
+  stress: { value: number; color: string };
+  armor: { value: number; color: string };
+}
+
+export interface StatusSettingsMap {
+  [key: string]: StatusSetting; // key is StatusStyleType
 }
