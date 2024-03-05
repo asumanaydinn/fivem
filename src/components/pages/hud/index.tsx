@@ -4,6 +4,7 @@ import StatusStyle1 from "../../ui/status-styles/status-style-1";
 import StatusStyle2 from "../../ui/status-styles/status-style-2";
 import StatusStyle3 from "../../ui/status-styles/status-style-3";
 import StatusStyle4 from "../../ui/status-styles/status-style-4";
+import StatusStyle5 from "../../ui/status-styles/status-style-5";
 
 const Hud = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +23,7 @@ const Hud = () => {
       >
         Open Settings
       </button>
-      <div className="absolute bottom-10 left-10 h-20 flex items-center justify-center gap-x-10">
+      <div className="z-10 right-10 top-10 absolute flex flex-col gap-y-12">
         <StatusStyle1
           status={{
             armor: 20,
@@ -54,6 +55,16 @@ const Hud = () => {
           }}
         />
         <StatusStyle4
+          status={{
+            armor: 20,
+            energy: 30,
+            health: 50,
+            hungry: 20,
+            hydration: 100,
+            stress: 10,
+          }}
+        />{" "}
+        <StatusStyle5
           status={{
             armor: 20,
             energy: 30,
