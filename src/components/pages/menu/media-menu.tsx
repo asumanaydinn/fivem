@@ -2,17 +2,6 @@ import React, { useState } from "react";
 import Tab from "./menu-tab";
 import MusicList from "./music-list";
 
-interface MediaItemProps {
-  name: string;
-  artist: string;
-}
-
-const mediaItems: MediaItemProps[] = [
-  { name: "Music Name 1", artist: "Song Artist 1" },
-  { name: "Music Name 2", artist: "Song Artist 2" },
-  { name: "Music Name 3", artist: "Song Artist 3" },
-];
-
 const MediaMenu: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Track List");
 
