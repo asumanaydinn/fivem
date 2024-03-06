@@ -1,7 +1,7 @@
 export const Hood = () => (
   <svg
-    width="344"
-    height="295"
+    width="90"
+    height="80"
     viewBox="0 0 344 295"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
