@@ -39,7 +39,7 @@ const MediaMenu: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
+    <div className="flex flex-col bg-gradient-to-r gap-y-2 from-neutral-950 via-neutral-900 to-neutral-950 rounded">
       <div className="flex px-2">{renderTabButtons()}</div>
 
       {renderActiveTabContent()}

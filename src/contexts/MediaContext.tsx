@@ -8,7 +8,7 @@ export interface MusicPlayerContextType {
   musicList: Song[];
   addSongToMusicList: (song: Song) => void;
   removeSongFromMusicList: (songId: string) => void;
-  playSong: (song: Song) => void;
+  playSong: (song: Song | null) => void;
   addSongToTrackList: (song: Song, addToMusicList?: boolean) => void;
   searchSongInMusicList: (searchTerm: string) => Song[];
 }
@@ -49,7 +49,7 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
     );
   };
 
-  const playSong = (song: Song) => {
+  const playSong = (song: Song | null) => {
     setCurrentTrack(song);
   };
 

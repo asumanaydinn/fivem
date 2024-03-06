@@ -1,11 +1,17 @@
 import AddIcon from "@mui/icons-material/Add";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import { useState } from "react";
+import ReactPlayer from "react-player";
 const AddSong = () => {
   const [music, setMusic] = useState("");
 
-  const { addSongToTrackList, addSongToMusicList, trackList, currentTrack } =
-    useMusicPlayer();
+  const {
+    addSongToTrackList,
+    addSongToMusicList,
+    trackList,
+    currentTrack,
+    playSong,
+  } = useMusicPlayer();
 
   return (
     <div className="w-full h-full flex gap-y-2 px-2 flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
@@ -71,79 +77,76 @@ const AddSong = () => {
 
           {currentTrack?.url !== track.url && (
             <div>
-              <svg
-                width="49"
-                height="50"
-                viewBox="0 0 49 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                onClick={() => playSong(track)}
+                className="cursor-pointer"
               >
-                <rect
-                  x="37.8125"
-                  y="22.1502"
-                  width="1.78128"
-                  height="9.79702"
-                  rx="0.498758"
-                  transform="rotate(-45 37.8125 22.1502)"
-                  fill="#717171"
-                />
-                <rect
-                  x="39.0723"
-                  y="29.0777"
-                  width="1.78128"
-                  height="9.79702"
-                  rx="0.498758"
-                  transform="rotate(-135 39.0723 29.0777)"
-                  fill="#717171"
-                />
-                <g filter="url(#filter0_d_0_1)">
-                  <path
-                    d="M28.48 25.0112C28.4803 25.142 28.4468 25.2708 28.3826 25.3848C28.3184 25.4989 28.2258 25.5944 28.1138 25.6621L21.1718 29.9089C21.0547 29.9805 20.9207 30.0196 20.7835 30.0222C20.6463 30.0247 20.5109 29.9906 20.3912 29.9233C20.2728 29.8571 20.1741 29.7605 20.1053 29.6434C20.0365 29.5264 20.0002 29.3932 20 29.2574V20.7649C20.0002 20.6292 20.0365 20.4959 20.1053 20.3789C20.1741 20.2619 20.2728 20.1653 20.3912 20.099C20.5109 20.0317 20.6463 19.9976 20.7835 20.0001C20.9207 20.0027 21.0547 20.0418 21.1718 20.1135L28.1138 24.3602C28.2258 24.4279 28.3184 24.5234 28.3826 24.6375C28.4468 24.7516 28.4803 24.8803 28.48 25.0112Z"
-                    fill="#717171"
-                  />
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_d_0_1"
-                    x="0.083952"
-                    y="0.083952"
-                    width="48.3121"
-                    height="49.8544"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
+                <svg
+                  width="55"
+                  height="57"
+                  viewBox="0 0 55 57"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_72_5378)">
+                    <path
+                      d="M32.5213 28.8277C32.5216 28.9746 32.484 29.1191 32.4119 29.2472C32.3399 29.3753 32.2359 29.4825 32.1101 29.5585L24.3157 34.3267C24.1843 34.4072 24.0337 34.4511 23.8797 34.454C23.7256 34.4568 23.5736 34.4185 23.4393 34.343C23.3063 34.2686 23.1954 34.1601 23.1182 34.0287C23.041 33.8973 23.0002 33.7477 23 33.5953V24.06C23.0002 23.9076 23.041 23.758 23.1182 23.6266C23.1954 23.4952 23.3063 23.3867 23.4393 23.3123C23.5736 23.2368 23.7256 23.1985 23.8797 23.2013C24.0337 23.2042 24.1843 23.2481 24.3157 23.3286L32.1101 28.0968C32.2359 28.1728 32.3399 28.28 32.4119 28.4081C32.484 28.5362 32.5216 28.6807 32.5213 28.8277Z"
+                      fill="#717171"
                     />
-                    <feOffset />
-                    <feGaussianBlur stdDeviation="9.95802" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0.5625 0 0 0 0 0.555469 0 0 0 0 0.555469 0 0 0 0.62 0"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_0_1"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_0_1"
-                      result="shape"
-                    />
-                  </filter>
-                </defs>
-              </svg>
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_72_5378"
+                      x="0.63846"
+                      y="0.839632"
+                      width="54.2446"
+                      height="55.976"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="11.1808" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.5625 0 0 0 0 0.555469 0 0 0 0 0.555469 0 0 0 0.62 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_72_5378"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_72_5378"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
             </div>
           )}
         </div>
       ))}
+
+      <div className="hidden">
+        <ReactPlayer
+          url={trackList.length > 0 ? currentTrack?.url : ""}
+          playing={!!currentTrack}
+          controls={true}
+          width="96%"
+          height="180px"
+        />
+      </div>
     </div>
   );
 };

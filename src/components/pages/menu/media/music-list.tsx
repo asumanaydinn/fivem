@@ -9,7 +9,7 @@ const MusicList: React.FC = () => {
   const filteredSongs =
     searchTerm.length > 0 ? searchSongInMusicList(searchTerm) : musicList;
 
-  if (filteredSongs.length === 0)
+  if (filteredSongs.length === 0 && searchTerm === "")
     return (
       <div className="flex items-center justify-center bg-zinc-900 w-full h-full text-white">
         No song in the list
@@ -37,7 +37,7 @@ const MusicList: React.FC = () => {
             background:
               "linear-gradient(90deg, rgba(217, 217, 217, 0.00) 5.05%, rgba(217, 217, 217, 0.03) 50.58%, rgba(217, 217, 217, 0.06) 98.91%)",
           }}
-          className="flex group cursor-pointer items-center w-[38px] h-[38px] justify-center bg-gradient-to-r from-zinc-300 via-zinc-300 to-zinc-300 rounded-[3px] border border-white"
+          className="flex group items-center w-[38px] h-[38px] justify-center bg-gradient-to-r from-zinc-300 via-zinc-300 to-zinc-300 rounded-[3px] border border-white"
         >
           <svg
             width="17"
