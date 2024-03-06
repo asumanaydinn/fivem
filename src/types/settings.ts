@@ -51,10 +51,24 @@ export interface StatusSettings {
   hideStress: boolean;
 }
 
+export interface VibisilityThresholds {
+  health: number;
+  hydration: number;
+  hunger: number;
+  energy: number;
+  armor: number;
+  stress: number;
+}
+
 export interface AppSettings {
   general: GeneralSettings;
   speedometers: SpeedometerSettings;
   status: StatusSettings;
+  styleVisibility: {
+    [key: string]: {
+      visibilityThresholds?: VibisilityThresholds;
+    };
+  };
 }
 
 export interface StatusSetting {

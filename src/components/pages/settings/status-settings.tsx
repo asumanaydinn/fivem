@@ -18,9 +18,10 @@ import { StressIcon } from "../../icons/stress-icon";
 
 import ListItem from "./settings-item";
 import StatusStyleSettingItem from "./status-style-setting-item";
+import StatusStyleVisibilitySetting from "./status-style-visibility-setting";
 
 const StatusSettings = () => {
-  const { settings, updateSettings } = useSettings();
+  const { settings, updateSettings, openSettings } = useSettings();
 
   const toggleSetting = (settingKey: keyof typeof settings.status) => {
     updateSettings("status", { [settingKey]: !settings.status[settingKey] });
@@ -92,11 +93,15 @@ const StatusSettings = () => {
           StatusStyle7,
           StatusStyle8,
           StatusStyle9,
-        ].map((StatusStyle, index) => (
-          <StatusStyleSettingItem key={index} statusStyleNumber={index + 1}>
-            <StatusStyle />
-          </StatusStyleSettingItem>
-        ))}
+        ].map((StatusStyle, index) =>
+          openSettings === (index + 1).toString() ? (
+            <StatusStyleVisibilitySetting />
+          ) : (
+            <StatusStyleSettingItem key={index} statusStyleNumber={index + 1}>
+              <StatusStyle />
+            </StatusStyleSettingItem>
+          )
+        )}
       </div>
     </div>
   );

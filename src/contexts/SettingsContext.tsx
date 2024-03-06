@@ -1,4 +1,3 @@
-// SettingsContext.tsx
 import React, { createContext, useContext, ReactNode, useState } from "react";
 import {
   AppSettings,
@@ -34,7 +33,6 @@ function updateStatusSettingForStyleInLocalStorage(
   setStatusSettingsMapInLocalStorage(settingsMap);
 }
 
-// Initial settings
 const defaultSettings: AppSettings = {
   general: {
     cinematicMode: false,
@@ -61,9 +59,9 @@ const defaultSettings: AppSettings = {
     hideArmor: false,
     hideStress: false,
   },
+  styleVisibility: {}, // Initialize as empty; assume dynamic addition based on UI interactions
 };
 
-// Define the structure for the context's value
 interface SettingsContextType {
   settings: AppSettings;
   getStatusSettingForStyle: (
@@ -77,20 +75,25 @@ interface SettingsContextType {
     category: T,
     newSettings: Partial<AppSettings[T]>
   ) => void;
+  setOpenSettings: React.Dispatch<React.SetStateAction<StatusStyleType | null>>;
+  openSettings: StatusStyleType | null;
 }
 
-// Initialize the context with default values
 const SettingsContext = createContext<SettingsContextType>({
   settings: defaultSettings,
   getStatusSettingForStyle: () => null,
   updateStatusSettingForStyle: () => {},
   updateSettings: () => {},
+  setOpenSettings: (
+    value: React.SetStateAction<StatusStyleType | null>
+  ): void => {
+    throw new Error("Function not implemented.");
+  },
+  openSettings: null,
 });
 
-// Custom hook to use the settings context
 export const useSettings = () => useContext(SettingsContext);
 
-// Provider component
 interface SettingsProviderProps {
   children: ReactNode;
 }
@@ -99,19 +102,33 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
   children,
 }) => {
   const [settings, setSettings] = useState<AppSettings>(defaultSettings);
+  const [openSettings, setOpenSettings] = useState<StatusStyleType | null>(
+    null
+  );
 
-  // Method to update settings for any category
   const updateSettings = <T extends keyof AppSettings>(
     category: T,
     newSettings: Partial<AppSettings[T]>
   ) => {
-    setSettings((prevSettings) => ({
-      ...prevSettings,
-      [category]: {
-        ...prevSettings[category],
+    // Handle styleVisibility updates separately to merge properly
+    if (category === "styleVisibility") {
+      const updatedVisibility = {
+        ...settings.styleVisibility,
         ...newSettings,
-      },
-    }));
+      };
+      setSettings((prevSettings) => ({
+        ...prevSettings,
+        styleVisibility: updatedVisibility,
+      }));
+    } else {
+      setSettings((prevSettings) => ({
+        ...prevSettings,
+        [category]: {
+          ...prevSettings[category],
+          ...newSettings,
+        },
+      }));
+    }
   };
 
   const getStatusSettingForStyle = (
@@ -125,7 +142,6 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
     setting: StatusSetting
   ) => {
     updateStatusSettingForStyleInLocalStorage(styleType, setting);
-    // Optionally trigger a context update or re-fetch of settings if needed
   };
 
   return (
@@ -135,6 +151,8 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
         getStatusSettingForStyle,
         updateStatusSettingForStyle,
         updateSettings,
+        openSettings,
+        setOpenSettings,
       }}
     >
       {children}
