@@ -45,7 +45,7 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
 
   const removeSongFromMusicList = (songId: string) => {
     setMusicList((prevMusicList) =>
-      prevMusicList.filter((song) => song.id !== songId)
+      prevMusicList.filter((song) => song.title !== songId)
     );
   };
 

@@ -60,6 +60,7 @@ const SpeedoMeter9 = () => {
           <div className="w-[0.71px] h-[1.41px] left-[4.83px] top-[1.93px] absolute origin-top-left rotate-[3.38deg] bg-amber-300 rounded-[0.12px] border border-amber-300" />
           <div className="w-[4.70px] h-[0.47px] left-[-0.35px] top-[5.86px] absolute origin-top-left rotate-[3.38deg] bg-amber-300 rounded-[3.06px]" />
           <img
+            alt=""
             className="w-[3.76px] h-[6.11px] left-[0.47px] top-[0.03px] absolute origin-top-left rotate-[3.38deg] border border-amber-300"
             src="https://via.placeholder.com/4x6"
           />

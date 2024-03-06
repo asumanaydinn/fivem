@@ -25,10 +25,10 @@ const MusicList: React.FC = () => {
       />
       <ul>
         {filteredSongs.map((song: Song) => (
-          <li key={song.id}>
+          <li key={song.title}>
             {song.title}
             <button onClick={() => playSong(song)}>Play</button>
-            <button onClick={() => removeSongFromMusicList(song.id)}>
+            <button onClick={() => removeSongFromMusicList(song.title)}>
               Remove
             </button>
           </li>
