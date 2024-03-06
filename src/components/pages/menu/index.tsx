@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "../../ui/core/menu-tab";
-import VehicleMenu from "../settings/vehicle-menu";
-import MediaMenu from "../settings/media-menu";
+import VehicleMenu from "./vehicle-menu";
+import MediaMenu from "./media-menu";
 import LogoAndLocation from "./menu-header";
 
 // Define interfaces for TypeScript (if using TS)

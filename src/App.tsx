@@ -1,12 +1,15 @@
 import { SettingsProvider } from "./contexts/SettingsContext";
 import Hud from "./components/pages/hud";
+import { MusicPlayerProvider } from "./contexts/MediaContext";
 
 function App() {
   return (
     <SettingsProvider>
-      <div className="h-screen w-screen">
-        <Hud />
-      </div>
+      <MusicPlayerProvider>
+        <div className="h-screen w-screen">
+          <Hud />
+        </div>
+      </MusicPlayerProvider>
     </SettingsProvider>
   );
 }

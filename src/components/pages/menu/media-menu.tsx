@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Tab from "../menu/menu-tab";
+import Tab from "./menu-tab";
+import MusicList from "./music-list";
 
 interface MediaItemProps {
   name: string;
@@ -40,22 +41,7 @@ const MediaMenu: React.FC = () => {
         />
       </div>
       <div className="w-[369px] h-[206px] relative bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded overflow-auto">
-        {mediaItems.map((item, index) => (
-          <div
-            key={index}
-            className="w-[338px] h-[47.58px] m-[14px] bg-zinc-300 bg-opacity-5 rounded-[0.99px] flex"
-          >
-            <div className="w-[31.72px] h-[31.72px] bg-stone-500 rounded-[0.99px] m-[8.92px]"></div>
-            <div className="flex flex-col justify-center">
-              <div className="text-neutral-200 text-[9.15px] font-semibold font-['Inter']">
-                {item.name}
-              </div>
-              <div className="text-neutral-400 text-[6.51px] font-semibold font-['Inter']">
-                {item.artist}
-              </div>
-            </div>
-          </div>
-        ))}
+        <MusicList />
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ const Tab: React.FC<TabProps> = ({ label, isActive }) => (
   <div
     className={clsx(
       "grow w-full cursor-pointer shrink basis-0 p-[5.17px] flex-col justify-start items-start gap-[5.17px] inline-flex",
-      isActive && "bg-gradient-to-l from-gray-200 to-violet-300 rounded shadow"
+      isActive &&
+        "bg-gradient-to-l from-gray-200 to-violet-300 rounded shadow-violet-300 shadow"
     )}
   >
     <div

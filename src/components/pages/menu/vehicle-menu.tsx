@@ -1,4 +1,5 @@
 import { Car } from "../../icons/car";
+import CarBackground from "./car-background";
 
 const VehicleMenu = () => {
   return (
@@ -43,7 +44,7 @@ const VehicleMenu = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center gap-x-2">
+      <div className="flex items-center justify-center relative gap-x-2">
         <div className=" flex flex-col gap-y-2">
           <div className="w-20 h-[23.23px] relative">
             <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -81,6 +82,9 @@ const VehicleMenu = () => {
               Trunk
             </div>
           </div>
+        </div>
+        <div className="absolute">
+          <CarBackground />
         </div>
         <Car />
       </div>
