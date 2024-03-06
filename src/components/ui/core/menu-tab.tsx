@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 // Define interfaces for the props
 interface TabProps {
@@ -8,16 +9,19 @@ interface TabProps {
 
 const Tab: React.FC<TabProps> = ({ label, isActive }) => (
   <div
-    className={`grow w-full cursor-pointer shrink basis-0 p-[5.17px] flex-col justify-start items-start gap-[5.17px] inline-flex ${
-      isActive
-        ? "bg-gradient-to-l from-gray-200 to-violet-300 rounded shadow"
-        : ""
-    }`}
+    className={clsx(
+      "grow w-full cursor-pointer shrink basis-0 p-[5.17px] flex-col justify-start items-start gap-[5.17px] inline-flex",
+      isActive && "bg-gradient-to-l from-gray-200 to-violet-300 rounded shadow"
+    )}
   >
     <div
-      className={`self-stretch text-center text-[10.34px] font-medium font-['Inter'] ${
-        isActive ? "text-gray-950 font-bold" : "text-neutral-400"
-      }`}
+      className={clsx(
+        "self-stretch text-center text-[10.34px] font-medium font-['Inter']",
+        {
+          "text-gray-950 font-bold": isActive,
+          "text-neutral-400": !isActive,
+        }
+      )}
     >
       {label}
     </div>
@@ -45,4 +49,5 @@ const Tabs: React.FC<TabsProps> = ({ tabs, activeTab, setActiveTab }) => {
     </div>
   );
 };
+
 export default Tabs;

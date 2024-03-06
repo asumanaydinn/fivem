@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Tabs from "../../ui/core/menu-tab";
 import VehicleMenu from "../settings/vehicle-menu";
 import MediaMenu from "../settings/media-menu";
+import LogoAndLocation from "./menu-header";
 
 // Define interfaces for TypeScript (if using TS)
 interface Tab {
@@ -24,9 +25,6 @@ const Menu: React.FC = () => {
       <div className="w-[369px] px-2 flex items-center justify-between h-[58px] bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
         {/* Logo and location name section */}
         <LogoAndLocation />
-
-        {/* Action button */}
-        <ActionButton />
       </div>
       {/* Conditional rendering based on the active tab */}
       {activeTab === "Map" && <MapImage />}
@@ -38,29 +36,6 @@ const Menu: React.FC = () => {
     </div>
   );
 };
-
-// Consider splitting these into separate components or functional chunks if they grow in complexity
-const LogoAndLocation: React.FC = () => (
-  <div className="flex gap-x-2 items-center">
-    {/* Logo */}
-    <div className="w-[32.56px] h-[32.56px] flex items-center justify-center bg-gradient-to-b from-violet-300 to-gray-200 rounded-[0.57px]">
-      <div className="text-center text-black text-xs font-extrabold">NE</div>
-    </div>
-    {/* Location Name */}
-    <div className="flex flex-col gap-y-2 items-start justify-start">
-      <div className="text-center text-white text-xs font-semibold">
-        LOCATION NAME
-      </div>
-      <div className="text-center text-white text-opacity-50 text-[7.95px] font-bold">
-        Location Name
-      </div>
-    </div>
-  </div>
-);
-
-const ActionButton: React.FC = () => (
-  <button>{/* SVG or Image goes here */}</button>
-);
 
 const MapImage: React.FC = () => (
   <img
