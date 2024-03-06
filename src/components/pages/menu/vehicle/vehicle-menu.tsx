@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Car } from "../../icons/car";
-import { DoorsIcon } from "../../icons/doors-icon";
-import { NeonIcon } from "../../icons/neon-icon";
+import { Car } from "../../../icons/car";
+import { DoorsIcon } from "../../../icons/doors-icon";
+import { NeonIcon } from "../../../icons/neon-icon";
 import CarBackground from "./car-background";
 import VehicleMenuTab from "./vehicle-menu-tab";
-import { Trunk } from "../../icons/trunk";
-import { RightFrontDoor } from "../../icons/right-front-door";
-import { LeftFrontDoor } from "../../icons/left-front-door";
-import { Hood } from "../../icons/hood";
-import { RearLeftDoor } from "../../icons/rear-left-door";
-import { RearRightDoor } from "../../icons/rear-right-door";
+import { Trunk } from "../../../icons/trunk";
+import { RightFrontDoor } from "../../../icons/right-front-door";
+import { LeftFrontDoor } from "../../../icons/left-front-door";
+import { Hood } from "../../../icons/hood";
+import { RearLeftDoor } from "../../../icons/rear-left-door";
+import { RearRightDoor } from "../../../icons/rear-right-door";
 
 const VehicleMenu = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Doors");

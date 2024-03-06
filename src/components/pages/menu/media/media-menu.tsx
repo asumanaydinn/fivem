@@ -4,7 +4,7 @@ import MusicList from "./music-list";
 import TrackList from "./track-list";
 import MusicPlayer from "./music-player";
 import AddSong from "./add-song";
-import { useMusicPlayer } from "../../../contexts/MediaContext";
+import { useMusicPlayer } from "../../../../contexts/MediaContext";
 
 const MediaMenu: React.FC = () => {
   const { musicList } = useMusicPlayer();
@@ -41,6 +41,7 @@ const MediaMenu: React.FC = () => {
   return (
     <div className="flex flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
       <div className="flex px-2">{renderTabButtons()}</div>
+
       {renderActiveTabContent()}
     </div>
   );
