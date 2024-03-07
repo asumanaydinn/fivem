@@ -37,8 +37,6 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      {/* Settings header and instructions remain unchanged */}
-
       <div className="flex flex-col gap-y-8">
         <TabBar
           tabs={tabs.map(({ id, label }) => ({ id, label }))}
