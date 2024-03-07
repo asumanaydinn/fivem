@@ -47,7 +47,7 @@ const defaultSettings: AppSettings = {
   },
   speedometers: {
     units: "kmh",
-    speedometerType: "9",
+    speedometerType: "8",
   },
   status: {
     statusStyleType: "9",
