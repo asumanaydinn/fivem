@@ -1,5 +1,3 @@
-import { useRef, useEffect } from "react";
-
 interface SpeedFuelGaugeProps {
   speed: number; // Current speed passed from outside
   maxSpeed: number; // Maximum speed of the gauge
@@ -88,6 +86,7 @@ const SpeedoMeter8: React.FC<SpeedFuelGaugeProps> = ({
             stroke="url(#paint2_linear_86_819)"
             stroke-width="4.15475"
             shape-rendering="crispEdges"
+            strokeDasharray={`${(fuel * 240) / maxFuel} 200`}
           />
         </g>
         <path
@@ -420,7 +419,7 @@ const SpeedoMeter8: React.FC<SpeedFuelGaugeProps> = ({
         </div>
         <div className="w-[12.99px] h-[12.99px] text-center flex items-center justify-center bg-zinc-300 bg-opacity-10 rounded-full shadow-inner border border-white border-opacity-10">
           <div className="text-center text-zinc-500 text-[6.14px] font-medium font-['Tomorrow']">
-            2
+            {gear}
           </div>
         </div>
       </div>
