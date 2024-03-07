@@ -4,6 +4,7 @@ import GeneralSettings from "./general-settings";
 import SpeedometerSettings from "./speedometer-settings";
 import StatusSettings from "./status-settings";
 import TabBar from "../../ui/core/tab";
+import SettingsHeader from "./settings-header";
 
 interface SettingsModalProps {
   isOpen: boolean;
@@ -37,6 +38,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
+      <SettingsHeader />
       <div className="flex flex-col gap-y-8">
         <TabBar
           tabs={tabs.map(({ id, label }) => ({ id, label }))}
