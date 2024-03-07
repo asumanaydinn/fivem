@@ -21,6 +21,7 @@ import SpeedoMeter7 from "../../ui/speedometer-styles/speedometer-7";
 import SpeedoMeter8 from "../../ui/speedometer-styles/speedometer-8";
 import SpeedoMeter9 from "../../ui/speedometer-styles/speedometer-9";
 import SpeedoMeter10 from "../../ui/speedometer-styles/speedometer-10";
+import StatusStyle8 from "../../ui/status-styles/status-style-8";
 
 const statusComponents = [
   StatusStyle1,
@@ -30,6 +31,7 @@ const statusComponents = [
   StatusStyle5,
   StatusStyle6,
   StatusStyle7,
+  StatusStyle8,
 ];
 
 const speedometerComponents = [
