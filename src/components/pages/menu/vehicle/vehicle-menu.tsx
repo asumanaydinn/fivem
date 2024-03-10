@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Car } from "../../../icons/car";
 import { DoorsIcon } from "../../../icons/doors-icon";
 import { NeonIcon } from "../../../icons/neon-icon";
@@ -16,6 +16,33 @@ const VehicleMenu = () => {
   const [selectedPiece, setSelectedPiece] = useState("Bonnet");
 
   const [selectedNeon, setSelectedNeon] = useState("All");
+
+  useEffect(() => {
+    const cycleDuration = 5000; // Total duration of one cycle in milliseconds
+    let svgCount = 5; // Total number of SVGs
+    let interval = cycleDuration / svgCount;
+
+    let currentSVG = 1;
+    const loopAnimation = () => {
+      for (let i = 1; i <= svgCount; i++) {
+        const element = document.querySelector(`.svg${i}`);
+        if (element instanceof HTMLElement) {
+          // Type assertion
+          element.style.opacity = "0";
+        }
+      }
+      const currentElement = document.querySelector(`.svg${currentSVG}`);
+      if (currentElement instanceof HTMLElement) {
+        // Type assertion
+        currentElement.style.opacity = "1";
+      }
+      currentSVG = (currentSVG % svgCount) + 1;
+    };
+
+    const intervalId = setInterval(loopAnimation, interval);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const tabs = [
     {
@@ -416,6 +443,212 @@ const VehicleMenu = () => {
                   </svg>
                 </>
               )}
+              <div className="neon-animation-container">
+                {selectedNeon === "Party" && (
+                  <>
+                    <div className="svg-animation svg1">
+                      <svg
+                        className="absolute top-0 -left-[40px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="122"
+                        height="122"
+                        viewBox="0 0 122 122"
+                        fill="none"
+                      >
+                        <g filter="url(#filter0_f_72_4716)">
+                          <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_72_4716"
+                            x="0.617287"
+                            y="0.400002"
+                            width="121.2"
+                            height="121.2"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                          >
+                            <feFlood
+                              flood-opacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="18.8"
+                              result="effect1_foregroundBlur_72_4716"
+                            />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div className="svg-animation svg2">
+                      <svg
+                        className="absolute top-0 -left-[40px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="122"
+                        height="122"
+                        viewBox="0 0 122 122"
+                        fill="none"
+                      >
+                        <g filter="url(#filter0_f_72_4716)">
+                          <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_72_4716"
+                            x="0.617287"
+                            y="0.400002"
+                            width="121.2"
+                            height="121.2"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                          >
+                            <feFlood
+                              flood-opacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="18.8"
+                              result="effect1_foregroundBlur_72_4716"
+                            />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div className="svg-animation svg3">
+                      <svg
+                        className="absolute -bottom-[50px] left-[50px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="122"
+                        height="122"
+                        viewBox="0 0 122 122"
+                        fill="none"
+                      >
+                        <g filter="url(#filter0_f_72_4716)">
+                          <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_72_4716"
+                            x="0.617287"
+                            y="0.400002"
+                            width="121.2"
+                            height="121.2"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                          >
+                            <feFlood
+                              flood-opacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="18.8"
+                              result="effect1_foregroundBlur_72_4716"
+                            />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div className="svg-animation svg4">
+                      <svg
+                        className="absolute -top-[50px] left-[50px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="122"
+                        height="122"
+                        viewBox="0 0 122 122"
+                        fill="none"
+                      >
+                        <g filter="url(#filter0_f_72_4716)">
+                          <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_72_4716"
+                            x="0.617287"
+                            y="0.400002"
+                            width="121.2"
+                            height="121.2"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                          >
+                            <feFlood
+                              flood-opacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="18.8"
+                              result="effect1_foregroundBlur_72_4716"
+                            />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div className="svg-animation svg5">
+                      <svg
+                        className="absolute -bottom-[12px] -right-[45px]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="122"
+                        height="122"
+                        viewBox="0 0 122 122"
+                        fill="none"
+                      >
+                        <g filter="url(#filter0_f_72_4716)">
+                          <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_72_4716"
+                            x="0.617287"
+                            y="0.400002"
+                            width="121.2"
+                            height="121.2"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                          >
+                            <feFlood
+                              flood-opacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="18.8"
+                              result="effect1_foregroundBlur_72_4716"
+                            />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </>
+                )}
+              </div>
               {selectedNeon === "Front" && (
                 <svg
                   className="absolute top-0 -left-[40px]"
