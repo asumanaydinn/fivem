@@ -44,10 +44,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="inline-block  w-full p-6 overflow-hidden text-left align-middle transition-all transform bg-black shadow-xl rounded-2xl">
-              <div className="overflow-y-auto">
-                {children}
-              </div>
+            <div className="inline-block  w-full overflow-hidden text-left align-middle transition-all transform bg-black shadow-xl rounded-2xl">
+              <div className="overflow-y-auto">{children}</div>
             </div>
           </Transition.Child>
         </div>
