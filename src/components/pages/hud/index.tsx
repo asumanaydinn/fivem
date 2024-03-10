@@ -99,10 +99,10 @@ const Hud = () => {
       />
 
       <div className="absolute bottom-10 right-10">
-        <div className="bg-white">
-          <div>Speed: {speed} km/h</div>
-          <button onClick={pressGasPedal}>Press Gas Pedal</button>
-        </div>
+        <button onClick={pressGasPedal} className="bg-white w-20 h-20">
+          Press
+        </button>
+
         {SpeedoMeterComponent && (
           <SpeedoMeterComponent
             speed={speed}

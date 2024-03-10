@@ -56,7 +56,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[24.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[24.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Bonnet
               </div>
             </div>
@@ -65,7 +65,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[8.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[8.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Left Front Door
               </div>
             </div>
@@ -74,7 +74,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[5.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[5.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Right Front Door
               </div>
             </div>
@@ -83,7 +83,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[8.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[8.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Left Back Door
               </div>
             </div>
@@ -92,7 +92,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[6.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[6.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Right Back Door
               </div>
             </div>
@@ -101,7 +101,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[27.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[27.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Trunk
               </div>
             </div>
@@ -115,7 +115,7 @@ const VehicleMenu = () => {
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[31.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[31.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 ALL
               </div>
             </div>
@@ -125,7 +125,7 @@ const VehicleMenu = () => {
             >
               {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[24.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[24.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 FRONT
               </div>
             </div>
@@ -135,7 +135,7 @@ const VehicleMenu = () => {
             >
               {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[28.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[28.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 LEFT
               </div>
             </div>
@@ -145,7 +145,7 @@ const VehicleMenu = () => {
             >
               {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[26.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[26.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 RIGHT
               </div>
             </div>
@@ -155,7 +155,7 @@ const VehicleMenu = () => {
             >
               {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[28.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[28.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 REAR
               </div>
             </div>
@@ -165,7 +165,7 @@ const VehicleMenu = () => {
             >
               {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[25.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Inter']">
+              <div className="left-[25.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 PARTY
               </div>
             </div>

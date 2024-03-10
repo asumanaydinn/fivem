@@ -48,7 +48,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
             setActiveTab={setActiveTab}
           />
         </div>
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-8 max-h-[68vh] min-h-[68vh] overflow-y-auto">
           <ActiveTabComponent />{" "}
         </div>{" "}
       </div>

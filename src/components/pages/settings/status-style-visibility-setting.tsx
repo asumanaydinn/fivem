@@ -72,10 +72,10 @@ const StatusStyleVisibilitySetting = () => {
     <div className="w-full flex flex-col justify-between items-center h-[230px] p-4 bg-gradient-to-r from-zinc-800 to-neutral-800 rounded border border-white border-opacity-20">
       <div className="flex items-start w-full justify-between">
         <div className="flex flex-col gap-y-1 items-start justify-start">
-          <div className="text-center text-neutral-400 text-base font-semibold font-['Inter']">
+          <div className="text-center text-neutral-400 text-base font-semibold font-['Qanelas Soft']">
             Status Style Settings #1
           </div>
-          <div className="text-center text-gray-200 text-[9.65px] font-semibold font-['Inter']">
+          <div className="text-center text-gray-200 text-[9.65px] font-semibold font-['Qanelas Soft']">
             Selected Now
           </div>
         </div>
@@ -92,7 +92,7 @@ const StatusStyleVisibilitySetting = () => {
               fill="#969696"
             />
           </svg>
-          <div className="text-center flex gap-x-2 items-center text-neutral-400 text-[11.10px] font-semibold font-['Inter']">
+          <div className="text-center flex gap-x-2 items-center text-neutral-400 text-[11.10px] font-semibold font-['Qanelas Soft']">
             {" "}
             100 = Never Hide
           </div>

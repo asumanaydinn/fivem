@@ -17,7 +17,7 @@ const Tab: React.FC<TabProps> = ({ label, isActive }) => (
   >
     <div
       className={clsx(
-        "self-stretch text-center text-[10.34px] font-medium font-['Inter']",
+        "self-stretch text-center text-[10.34px] font-medium font-['Qanelas Soft']",
         {
           "text-gray-950 font-bold": isActive,
           "text-neutral-400": !isActive,

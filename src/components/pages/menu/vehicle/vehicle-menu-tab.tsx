@@ -30,7 +30,7 @@ const VehicleMenuTab: React.FC<VehicleMenuTabProps> = ({
         >
           <div className="grow shrink basis-0 self-stretch relative">
             <div
-              className={`flex items-center gap-x-2 justify-center w-full text-center text-[10.34px] font-['Inter'] ${
+              className={`flex items-center gap-x-2 justify-center w-full text-center text-[10.34px] font-['Qanelas Soft'] ${
                 selected === tab.title
                   ? "text-gray-950 font-bold left-[15.24px]"
                   : "text-neutral-400 font-medium left-[10.67px]"

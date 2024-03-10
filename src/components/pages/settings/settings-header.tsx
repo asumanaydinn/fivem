@@ -52,18 +52,18 @@ const SettingsHeader = () => {
       </div>
       <div className="flex flex-col gap-y-2">
         <div className="flex items-center gap-x-2">
-          <div className="text-center w-11 bg-white py-1 text-black text-[10.72px] font-bold font-['Inter']">
+          <div className="text-center w-11 bg-white py-1 text-black text-[10.72px] font-bold font-['Qanelas Soft']">
             ESC
           </div>
-          <div className="text-center text-neutral-400 text-xs font-medium font-['Inter']">
+          <div className="text-center text-neutral-400 text-xs font-medium font-['Qanelas Soft']">
             Exit Settings
           </div>
         </div>
         <div className="flex items-center gap-x-2">
-          <div className="text-center w-11  bg-white py-1 text-black text-[10.72px] font-bold font-['Inter']">
+          <div className="text-center w-11  bg-white py-1 text-black text-[10.72px] font-bold font-['Qanelas Soft']">
             CLICK
           </div>
-          <div className="text-center text-neutral-400 text-xs font-medium font-['Inter']">
+          <div className="text-center text-neutral-400 text-xs font-medium font-['Qanelas Soft']">
             to Save Settings
           </div>
         </div>

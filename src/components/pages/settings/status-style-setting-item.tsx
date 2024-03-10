@@ -32,12 +32,12 @@ const StatusStyleSettingItem: React.FC<StatusStyleSettingItemProps> = ({
 
       <div className="flex flex-col items-center gap-y-5 mb-2 h-28">
         <div className="flex flex-col items-center justify-start h-12">
-          <div className="text-center text-neutral-400 text-lg font-semibold font-['Inter']">
+          <div className="text-center text-neutral-400 text-lg font-semibold font-['Qanelas Soft']">
             Status Style #{statusStyleNumber}
           </div>
 
           {settings.status.statusStyleType === statusStyleNumber.toString() && (
-            <div className="text-center text-gray-200 text-[10.54px] font-semibold font-['Inter']">
+            <div className="text-center text-gray-200 text-[10.54px] font-semibold font-['Qanelas Soft']">
               Selected Now
             </div>
           )}

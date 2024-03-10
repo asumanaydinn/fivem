@@ -13,7 +13,7 @@ interface TabBarProps {
 
 const TabBar: React.FC<TabBarProps> = ({ tabs, activeTab, setActiveTab }) => {
   return (
-    <div className="w-full  bg-black p-[2.79px]  bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded-md justify-start items-start inline-flex">
+    <div className="w-full  bg-black p-[2.79px]  bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded-md justify-start items-start inline-flex font-['Qanelas Soft']">
       {tabs.map((tab) => (
         <div
           key={tab.id}
@@ -27,7 +27,7 @@ const TabBar: React.FC<TabBarProps> = ({ tabs, activeTab, setActiveTab }) => {
           <div
             className={`self-stretch text-center ${
               activeTab === tab.id ? "text-gray-950" : "text-neutral-400"
-            } text-sm font-bold font-['Inter']`}
+            } text-sm font-bold`}
           >
             {tab.label}
           </div>

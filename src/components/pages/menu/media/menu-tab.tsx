@@ -16,7 +16,7 @@ const Tab: React.FC<TabProps> = ({ label, isActive, setActiveTab }) => (
     <div
       className={`w-[80.88px] text-center ${
         isActive ? "text-gray-950 font-bold" : "text-neutral-400 font-medium"
-      } text-[10.34px] font-['Inter']`}
+      } text-[10.34px] font-['Qanelas Soft']`}
     >
       {label}
     </div>

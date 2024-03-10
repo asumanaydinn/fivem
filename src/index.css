@@ -16,6 +16,38 @@ code {
     monospace;
 }
 
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 4px; /* Set scrollbar width to 4px */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(
+    217,
+    217,
+    217,
+    0.06
+  ); /* D9D9D9 with 6% opacity for tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    217,
+    217,
+    217,
+    0.67
+  ); /* D9D9D9 with 67% opacity for the scroll thumb */
+  border-radius: 0px !important; /* No rounding on the scroll */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: 4px; /* Set scrollbar width to 4px */
+  scroll-margin-block-start: 10px;
+  scrollbar-width: thin; /* Use "thin" to approximate the 4px width */
+  scrollbar-color: rgba(217, 217, 217, 0.67) rgba(217, 217, 217, 0.06); /* thumb and track color with specified opacity */
+}
+
 @keyframes sway {
   0%,
   100% {

@@ -33,12 +33,12 @@ const TrackList = () => {
               </svg>
             </div>
 
-            <div className="px-2 text-neutral-200 text-[9.26px] font-semibold font-['Inter']">
+            <div className="px-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
               {track.url}
             </div>
           </div>
           {currentTrack?.url === track.url && (
-            <div className="text-zinc-500 text-[8.89px] font-semibold font-['Inter']">
+            <div className="text-zinc-500 text-[8.89px] font-semibold font-['Qanelas Soft']">
               Playing Now
             </div>
           )}

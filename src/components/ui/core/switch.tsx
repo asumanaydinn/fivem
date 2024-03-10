@@ -11,7 +11,7 @@ const Switch: React.FC<SwitchProps> = ({ isOn, onToggle }) => {
   const switchBaseClass = "w-16 pl-[17.02px] pr-[18.53px]";
   const activeClass =
     "py-[7.01px] bg-neutral-200 bg-opacity-10 rounded-lg shadow shadow-white border-2 border-neutral-200 justify-start items-start inline-flex";
-  const textBaseClass = "font-['Satoshi'] leading-normal tracking-tight";
+  const textBaseClass = "font-['Qanelas Soft'] leading-normal tracking-tight";
 
   return (
     <button
