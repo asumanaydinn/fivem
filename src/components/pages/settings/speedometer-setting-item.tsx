@@ -21,7 +21,13 @@ const SpeedometerSettingsItem: React.FC<SpeedometerSettingsItemProps> = ({
   };
 
   return (
-    <div className="w-[231.51px] relative h-[231.51px] flex flex-col justify-end bg-zinc-300 bg-opacity-10 rounded border border-white border-opacity-20 ">
+    <div
+      style={{
+        background:
+          "linear-gradient(79deg, #090909 5.22%, #161616 50.4%, #0B0B0B 96.49%)",
+      }}
+      className="w-[231.51px] relative h-[231.51px] flex flex-col justify-end ounded border border-white border-opacity-20 "
+    >
       <div className="flex items-center justify-center h-28">{children}</div>
 
       <div className="flex flex-col items-center gap-y-5 mb-2 h-28">

@@ -3,9 +3,9 @@ const SettingsHeader = () => {
     <div
       style={{
         background:
-          "linear-gradient(90deg, rgba(255, 255, 255, 0.05) 4.04%, rgba(252, 251, 255, 0.03) 54.09%, rgba(234, 232, 244, 0.00) 101.23%)",
+          "linear-gradient(79deg, #090909 5.22%, #161616 50.4%, #0B0B0B 96.49%)",
       }}
-      className="flex px-2 w-full h-[126.67px] items-center justify-between"
+      className="flex px-2 w-full mb-2 h-[126.67px] items-center bg-opacity-100 justify-between "
     >
       <div className="flex items-center gap-x-2">
         <svg

@@ -25,7 +25,7 @@ const MusicList: React.FC = () => {
             borderRadius: "3px",
             border: "0.5px solid rgba(255, 255, 255, 0.25)",
             background:
-              "linear-gradient(90deg, rgba(217, 217, 217, 0.00) 5.05%, rgba(217, 217, 217, 0.03) 50.58%, rgba(217, 217, 217, 0.06) 98.91%)",
+              "linear-gradient(79deg, #090909 5.22%, #161616 50.4%, #0B0B0B 96.49%)",
           }}
           value={searchTerm}
           className="w-[296px] p-2 h-[38px] text-[8.891px] text-[#959595] bg-gradient-to-r from-zinc-300 via-zinc-300 to-zinc-300 rounded-[3px] border border-white"
@@ -35,7 +35,7 @@ const MusicList: React.FC = () => {
             borderRadius: "3px",
             border: "0.5px solid rgba(255, 255, 255, 0.25)",
             background:
-              "linear-gradient(90deg, rgba(217, 217, 217, 0.00) 5.05%, rgba(217, 217, 217, 0.03) 50.58%, rgba(217, 217, 217, 0.06) 98.91%)",
+              "linear-gradient(79deg, #090909 5.22%, #161616 50.4%, #0B0B0B 96.49%)",
           }}
           className="flex group items-center w-[38px] h-[38px] justify-center bg-gradient-to-r from-zinc-300 via-zinc-300 to-zinc-300 rounded-[3px] border border-white"
         >

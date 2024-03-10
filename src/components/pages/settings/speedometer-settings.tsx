@@ -26,7 +26,13 @@ const SpeedometerSettings = () => {
 
   return (
     <div className="flex flex-col gap-y-2">
-      <div className="flex items-center justify-between bg-zinc-300 bg-opacity-5 px-8 py-4 rounded-[5px]">
+      <div
+        style={{
+          background:
+            "linear-gradient(79deg, #090909 5.22%, #161616 50.4%, #0B0B0B 96.49%)",
+        }}
+        className="flex items-center justify-between px-8 py-4 rounded-[5px]"
+      >
         <div className="flex items-center gap-x-8">
           <SpeedTypeIcon />
           <div className="flex flex-col gap-y-2 items-start justify-start">

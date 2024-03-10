@@ -38,15 +38,19 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <SettingsHeader />
-      <div className="flex flex-col gap-y-8">
-        <TabBar
-          tabs={tabs.map(({ id, label }) => ({ id, label }))}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
+      <div className="flex flex-col h-full">
+        <div className="sticky top-0 z-10 mb-2 bg-black">
+          <SettingsHeader />
 
-        <ActiveTabComponent />
+          <TabBar
+            tabs={tabs.map(({ id, label }) => ({ id, label }))}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        </div>
+        <div className="flex flex-col gap-y-8">
+          <ActiveTabComponent />{" "}
+        </div>{" "}
       </div>
     </Modal>
   );
