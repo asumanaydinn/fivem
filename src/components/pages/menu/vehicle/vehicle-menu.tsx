@@ -171,44 +171,211 @@ const VehicleMenu = () => {
             </div>
           </div>
         )}
-        <div className="relative flex items-center justify-center">
-          <div className="absolute">
-            <CarBackground />
+
+        {selectedTab === "Doors" && (
+          <div className="relative flex items-center justify-center">
+            <div className="absolute">
+              <CarBackground />
+            </div>
+            <div className="">
+              <Car />
+              {selectedPiece === "RightFront" && (
+                <div className="absolute -top-[28px] left-[49px]">
+                  <RightFrontDoor />
+                </div>
+              )}
+              {selectedPiece === "LeftFront" && (
+                <div className="absolute -bottom-[40px] left-[53px]">
+                  <LeftFrontDoor />
+                </div>
+              )}
+              {selectedPiece === "LeftBack" && (
+                <div className="absolute -bottom-[19px] right-[48px]">
+                  <RearLeftDoor />
+                </div>
+              )}
+              {selectedPiece === "RightBack" && (
+                <div className="absolute -top-[19px] right-[48px]">
+                  <RearRightDoor />
+                </div>
+              )}
+              {selectedPiece === "Trunk" && (
+                <div className="absolute -right-[16px] top-[13px] -rotate-90">
+                  <Trunk />
+                </div>
+              )}
+              {selectedPiece === "Bonnet" && (
+                <div className="absolute rotate-90 top-[12px] -left-[7px]">
+                  <Hood />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="">
-            <Car />
-            {selectedPiece === "RightFront" && (
-              <div className="absolute -top-[28px] left-[49px]">
-                <RightFrontDoor />
+        )}
+
+        {selectedTab === "Neons" && (
+          <div className="relative flex items-center justify-center">
+            <div className="absolute">
+              <CarBackground />
+            </div>
+            <div className="relative">
+              <div className="z-10 relative">
+                <Car />
               </div>
-            )}
-            {selectedPiece === "LeftFront" && (
-              <div className="absolute -bottom-[40px] left-[53px]">
-                <LeftFrontDoor />
-              </div>
-            )}
-            {selectedPiece === "LeftBack" && (
-              <div className="absolute -bottom-[19px] right-[48px]">
-                <RearLeftDoor />
-              </div>
-            )}
-            {selectedPiece === "RightBack" && (
-              <div className="absolute -top-[19px] right-[48px]">
-                <RearRightDoor />
-              </div>
-            )}
-            {selectedPiece === "Trunk" && (
-              <div className="absolute -right-[16px] top-[13px] -rotate-90">
-                <Trunk />
-              </div>
-            )}
-            {selectedPiece === "Bonnet" && (
-              <div className="absolute rotate-90 top-[12px] -left-[7px]">
-                <Hood />
-              </div>
-            )}
+              {selectedNeon === "Front" && (
+                <svg
+                  className="absolute top-0 -left-[40px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="122"
+                  height="122"
+                  viewBox="0 0 122 122"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_f_72_4716)">
+                    <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_72_4716"
+                      x="0.617287"
+                      y="0.400002"
+                      width="121.2"
+                      height="121.2"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="18.8"
+                        result="effect1_foregroundBlur_72_4716"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              )}
+
+              {selectedNeon === "Left" && (
+                <svg
+                  className="absolute -bottom-[50px] left-[50px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="122"
+                  height="122"
+                  viewBox="0 0 122 122"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_f_72_4716)">
+                    <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_72_4716"
+                      x="0.617287"
+                      y="0.400002"
+                      width="121.2"
+                      height="121.2"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="18.8"
+                        result="effect1_foregroundBlur_72_4716"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              )}
+
+              {selectedNeon === "Right" && (
+                <svg
+                  className="absolute -top-[50px] left-[50px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="122"
+                  height="122"
+                  viewBox="0 0 122 122"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_f_72_4716)">
+                    <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_72_4716"
+                      x="0.617287"
+                      y="0.400002"
+                      width="121.2"
+                      height="121.2"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="18.8"
+                        result="effect1_foregroundBlur_72_4716"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              )}
+
+              {selectedNeon === "Rear" && (
+                <svg
+                  className="absolute -bottom-[12px] -right-[45px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="122"
+                  height="122"
+                  viewBox="0 0 122 122"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_f_72_4716)">
+                    <circle cx="61.2173" cy="61" r="23" fill="#9868FF" />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_72_4716"
+                      x="0.617287"
+                      y="0.400002"
+                      width="121.2"
+                      height="121.2"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="18.8"
+                        result="effect1_foregroundBlur_72_4716"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
