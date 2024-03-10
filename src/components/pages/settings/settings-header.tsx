@@ -5,7 +5,7 @@ const SettingsHeader = () => {
         background:
           "linear-gradient(79deg, #090909 5.22%, #161616 50.4%, #0B0B0B 96.49%)",
       }}
-      className="flex px-2 w-full mb-2 h-[126.67px] items-center bg-opacity-100 justify-between "
+      className="flex px-4 w-full mb-2 h-[126.67px] items-center bg-opacity-100 justify-between "
     >
       <div className="flex items-center gap-x-2">
         <svg
