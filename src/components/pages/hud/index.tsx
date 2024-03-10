@@ -23,6 +23,7 @@ import SpeedoMeter9 from "../../ui/speedometer-styles/speedometer-9";
 import SpeedoMeter10 from "../../ui/speedometer-styles/speedometer-10";
 import StatusStyle8 from "../../ui/status-styles/status-style-8";
 import StatusStyle9 from "../../ui/status-styles/status-style-9";
+import QuickInfo from "./quick-info";
 
 const statusComponents = [
   StatusStyle1,
@@ -112,6 +113,10 @@ const Hud = () => {
             maxSpeed={100}
           />
         )}
+      </div>
+
+      <div className="absolute right-10 top-10">
+        <QuickInfo />
       </div>
     </div>
   );
