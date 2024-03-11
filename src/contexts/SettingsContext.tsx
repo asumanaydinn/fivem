@@ -42,7 +42,7 @@ const defaultSettings: AppSettings = {
     hideAllHud: false,
     hideUserMoney: false,
     hideServerLogo: false,
-    hideQuickInfo: false
+    hideQuickInfo: false,
   },
   speedometers: {
     units: "kmh",

@@ -66,7 +66,7 @@ const SpeedoMeter2 = (props: Props) => {
           </span>
         </div>
         <div className=" text-black text-[7.54px] font-extrabold font-['Orbitron']">
-          {settings.speedometers.units ? "KMH" : "MPH"}
+          {settings.speedometers.units.toLocaleUpperCase()}
         </div>
       </div>
 

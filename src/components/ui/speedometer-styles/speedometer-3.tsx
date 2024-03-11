@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React, { useEffect, useRef, useState } from "react";
+import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SpeedFuelGaugeProps {
   speed: number; // Current speed passed from outside
@@ -16,6 +17,7 @@ const SpeedoMeter3: React.FC<SpeedFuelGaugeProps> = ({
   maxFuel,
   gear,
 }) => {
+  const { settings } = useSettings();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   // State to manage animated speed value
   const [animatedSpeed, setAnimatedSpeed] = useState(speed);
@@ -157,7 +159,7 @@ const SpeedoMeter3: React.FC<SpeedFuelGaugeProps> = ({
             </span>
           </div>
           <div className="text-white text-opacity-50 text-[8.74px] font-medium font-['Orbitron']">
-            KMH
+            {settings.speedometers.units.toLocaleUpperCase()}
           </div>
           <div className="flex items-center">
             <div className="flex items-center gap-x-2">

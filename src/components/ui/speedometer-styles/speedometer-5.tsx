@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SpeedFuelGaugeProps {
   speed: number; // Current speed passed from outside
@@ -15,6 +16,7 @@ const SpeedoMeter5: React.FC<SpeedFuelGaugeProps> = ({
   maxFuel,
   gear,
 }) => {
+  const { settings } = useSettings();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   // State to manage animated speed value
   const [animatedSpeed, setAnimatedSpeed] = useState(speed);
@@ -121,7 +123,7 @@ const SpeedoMeter5: React.FC<SpeedFuelGaugeProps> = ({
             125
           </div>
           <div className=" text-neutral-400 text-[3.58px] font-medium font-['Orbitron']">
-            KMH
+            {settings.speedometers.units.toLocaleUpperCase()}
           </div>
         </div>
         <svg

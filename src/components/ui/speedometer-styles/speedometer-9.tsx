@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SpeedFuelGaugeProps {
   speed: number; // Current speed passed from outside
@@ -15,6 +16,8 @@ const SpeedoMeter9: React.FC<SpeedFuelGaugeProps> = ({
   maxFuel,
   gear,
 }) => {
+  const { settings } = useSettings();
+
   const numbers = [0, 180, 155, 120, 100, 80, 50, 30];
 
   const radius = 42;
@@ -76,7 +79,7 @@ const SpeedoMeter9: React.FC<SpeedFuelGaugeProps> = ({
             125
           </div>
           <div className=" text-neutral-400 text-[3.58px] font-medium font-['Orbitron']">
-            KMH
+            {settings.speedometers.units.toLocaleUpperCase()}
           </div>
         </div>
         <svg

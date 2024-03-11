@@ -1,3 +1,5 @@
+import { useSettings } from "../../../contexts/SettingsContext";
+
 interface SpeedFuelGaugeProps {
   speed: number; // Current speed passed from outside
   maxSpeed: number; // Maximum speed of the gauge
@@ -13,6 +15,8 @@ const SpeedoMeter8: React.FC<SpeedFuelGaugeProps> = ({
   maxFuel,
   gear,
 }) => {
+
+  const {settings} = useSettings()
   return (
     <div className="flex items-center justify-center relative">
       <svg
@@ -415,7 +419,7 @@ const SpeedoMeter8: React.FC<SpeedFuelGaugeProps> = ({
           038
         </div>
         <div className="text-center text-zinc-600 text-[6.87px] font-medium font-['Orbitron'] tracking-wide">
-          KMH
+          {settings.speedometers.units.toLocaleUpperCase()}
         </div>
         <div className="w-[12.99px] h-[12.99px] text-center flex items-center justify-center bg-zinc-300 bg-opacity-10 rounded-full shadow-inner border border-white border-opacity-10">
           <div className="text-center text-zinc-500 text-[6.14px] font-medium font-['Tomorrow']">

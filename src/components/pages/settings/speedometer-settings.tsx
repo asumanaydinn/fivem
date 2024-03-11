@@ -44,6 +44,7 @@ const SpeedometerSettings = () => {
             </div>
           </div>
         </div>
+        
         <SpeedUnitSwitch
           isOn={settings.speedometers.units === "kmh"}
           onToggle={() => toggleUnits()}
