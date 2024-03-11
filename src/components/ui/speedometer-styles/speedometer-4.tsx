@@ -94,7 +94,7 @@ const SpeedoMeter4: React.FC<SpeedFuelGaugeProps> = ({
           ref={canvasRef}
           width="132"
           height="132"
-        ></canvas>{" "}
+        ></canvas>
         <svg
           className="absolute bottom-2 left-9"
           width="5"
@@ -162,7 +162,6 @@ const SpeedoMeter4: React.FC<SpeedFuelGaugeProps> = ({
           </div>
           <div className="flex items-center">
             <div className="flex items-center gap-x-2">
-              {" "}
               <div className="text-neutral-400 text-[4.85px] font-medium font-['Orbitron']">
                 1
               </div>

@@ -117,7 +117,7 @@ const SpeedoMeter5: React.FC<SpeedFuelGaugeProps> = ({
           ref={canvasRef}
           width="132"
           height="132"
-        ></canvas>{" "}
+        ></canvas>
         <div className="w-[28.55px] h-[28.55px] flex flex-col bg-opacity-30 items-center justify-center absolute bg-gradient-to-b from-zinc-800 to-neutral-800 rounded-full shadow border border-white border-opacity-10">
           <div className=" text-white text-[7.04px] font-medium font-['Orbitron']">
             125

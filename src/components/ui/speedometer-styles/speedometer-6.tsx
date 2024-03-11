@@ -16,8 +16,7 @@ const SpeedoMeter6: React.FC<SpeedFuelGaugeProps> = ({
   maxFuel,
   gear,
 }) => {
-
-  const {settings} = useSettings()
+  const { settings } = useSettings();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -78,13 +77,12 @@ const SpeedoMeter6: React.FC<SpeedFuelGaugeProps> = ({
         180
       </div>
       <div className="w-[98.56px] flex items-center justify-center h-[98.56px]  bg-gradient-to-b from-black via-stone-950 to-neutral-800 rounded-full border border-white border-opacity-10">
-        {" "}
         <canvas
           className="-rotate-90"
           ref={canvasRef}
           width="132"
           height="132"
-        ></canvas>{" "}
+        ></canvas>
         <div className="w-[28.55px] h-[28.55px] flex flex-col bg-opacity-30 items-center justify-center absolute bg-gradient-to-b from-zinc-800 to-neutral-800 rounded-full shadow border border-white border-opacity-10">
           <div className="w-[42.12px] h-[42.12px] centered  bg-zinc-300 bg-opacity-0 rounded-full border border-white border-opacity-5" />
           <div className="w-[42.12px] h-[42.12px] centered  bg-zinc-300 bg-opacity-0 rounded-full border border-white border-opacity-5" />
@@ -94,7 +92,7 @@ const SpeedoMeter6: React.FC<SpeedFuelGaugeProps> = ({
             125
           </div>
           <div className=" text-neutral-400 text-[3.58px] font-medium font-['Orbitron']">
-          {settings.speedometers.units.toLocaleUpperCase()}
+            {settings.speedometers.units.toLocaleUpperCase()}
           </div>
         </div>
         <div className="w-[24.12px] h-[7.69px] absolute top-[70px]">

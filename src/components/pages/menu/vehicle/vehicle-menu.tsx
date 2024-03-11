@@ -150,7 +150,6 @@ const VehicleMenu = () => {
               onClick={() => setSelectedNeon("Front")}
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
-              {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
               <div className="left-[24.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 FRONT
@@ -160,7 +159,6 @@ const VehicleMenu = () => {
               onClick={() => setSelectedNeon("Left")}
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
-              {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
               <div className="left-[28.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 LEFT
@@ -170,7 +168,6 @@ const VehicleMenu = () => {
               onClick={() => setSelectedNeon("Right")}
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
-              {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
               <div className="left-[26.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 RIGHT
@@ -180,7 +177,6 @@ const VehicleMenu = () => {
               onClick={() => setSelectedNeon("Rear")}
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
-              {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
               <div className="left-[28.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 REAR
@@ -190,7 +186,6 @@ const VehicleMenu = () => {
               onClick={() => setSelectedNeon("Party")}
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
-              {" "}
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
               <div className="left-[25.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 PARTY

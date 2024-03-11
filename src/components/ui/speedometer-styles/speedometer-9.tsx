@@ -55,13 +55,12 @@ const SpeedoMeter9: React.FC<SpeedFuelGaugeProps> = ({
   return (
     <div className="relative">
       <div className="w-[110px] h-[110px] flex items-center justify-center   bg-gradient-to-b from-black via-stone-950 to-neutral-800 rounded-full border border-white border-opacity-10">
-        {" "}
         <canvas
           className="absolute"
           ref={canvasRef}
           width="132"
           height="132"
-        ></canvas>{" "}
+        ></canvas>
         <div className="w-[27.42px] h-[8.74px] absolute z-50 top-6  flex items-center justify-between px-0.5 bg-stone-950 rounded-tl-sm rounded-tr-sm rounded-bl rounded-br shadow border border-white border-opacity-10">
           <div className=" text-neutral-600 text-[4.95px] font-medium font-['Orbitron']">
             1

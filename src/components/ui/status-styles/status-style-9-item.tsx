@@ -50,7 +50,6 @@ const StatusStyle9Item = (props: Props) => {
         />
       </svg>
       <div className="absolute">
-        {" "}
         <Icon />
       </div>
     </div>

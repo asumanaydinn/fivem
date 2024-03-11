@@ -93,7 +93,6 @@ const StatusStyleVisibilitySetting = () => {
             />
           </svg>
           <div className="text-center flex gap-x-2 items-center text-neutral-400 text-[11.10px] font-semibold font-['Qanelas Soft']">
-            {" "}
             100 = Never Hide
           </div>
         </div>

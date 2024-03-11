@@ -61,7 +61,7 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}{" "}
+      )}
       {!settings.status.hideHungry && (
         <StatusStyle4Item
           percentage={hungryHeight}

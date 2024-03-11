@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SettingsModal from "../settings/settings-modal";
 import { useSettings } from "../../../contexts/SettingsContext";
 
-// Import all status and speedometer components
 import StatusStyle1 from "../../ui/status-styles/status-style-1";
 import StatusStyle2 from "../../ui/status-styles/status-style-2";
 import StatusStyle3 from "../../ui/status-styles/status-style-3";
@@ -61,7 +60,7 @@ const Hud = () => {
   const { playNextTrack, currentTrackIndex } = useMusicPlayer();
 
   const pressGasPedal = () => {
-    setSpeed((prevSpeed) => prevSpeed + 10); // Increment speed by 10 units
+    setSpeed((prevSpeed) => prevSpeed + 10);
   };
 
   const StatusComponent =

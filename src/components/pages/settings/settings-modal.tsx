@@ -52,8 +52,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
           />
         </div>
         <div className="flex flex-col px-4 gap-y-8 max-h-[64vh] min-h-[64vh] overflow-y-auto">
-          <ActiveTabComponent />{" "}
-        </div>{" "}
+          <ActiveTabComponent />
+        </div>
         <div className="sticky bottom-0 bg-black py-4 px-4">
           <div className="flex items-center w-full justify-end h-full">
             <button
@@ -63,7 +63,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
               <div className="text-center text-neutral-200 text-sm font-bold leading-none tracking-tight">
                 Restore Defaults
               </div>
-            </button>{" "}
+            </button>
           </div>
         </div>
       </div>

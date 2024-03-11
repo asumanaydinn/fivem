@@ -15,8 +15,7 @@ const SpeedoMeter8: React.FC<SpeedFuelGaugeProps> = ({
   maxFuel,
   gear,
 }) => {
-
-  const {settings} = useSettings()
+  const { settings } = useSettings();
   return (
     <div className="flex items-center justify-center relative">
       <svg
@@ -413,7 +412,7 @@ const SpeedoMeter8: React.FC<SpeedFuelGaugeProps> = ({
             <stop offset="1" stop-color="#59BC98" stop-opacity="0" />
           </linearGradient>
         </defs>
-      </svg>{" "}
+      </svg>
       <div className="absolute centered flex items-center justify-center flex-col">
         <div className="text-center text-emerald-400 text-base font-medium font-['Orbitron']">
           038

@@ -15,7 +15,6 @@ const MediaMenu: React.FC = () => {
     "Music List": <MusicList />,
   };
 
-  // Helper function to render tab buttons
   const renderTabButtons = () => {
     return Object.keys(tabComponents).map((label) => (
       <Tab
@@ -27,7 +26,6 @@ const MediaMenu: React.FC = () => {
     ));
   };
 
-  // Renders the content of the active tab
   const renderActiveTabContent = () => {
     return (
       <div className="w-[369px] h-[206px] flex items-start py-2 justify-center relative bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded overflow-auto">

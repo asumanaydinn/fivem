@@ -53,7 +53,6 @@ const QuickInfo = () => {
       <div className="grid grid-cols-2 gap-2">
         {!settings.general.hideUserMoney && (
           <>
-            {" "}
             <div className="w-[163.10px] h-[29.85px] flex items-center justify-start opacity-90 bg-black rounded ">
               <div className="w-0.5 h-4 bg-cyan-500 rounded-tr-[1px] rounded-br-[1px]" />
               <div className="flex items-center justify-start px-2 gap-x-1">
@@ -71,10 +70,9 @@ const QuickInfo = () => {
                 </svg>
 
                 <span className="text-neutral-400 text-[11.11px] font-semibold font-['Orbitron']">
-                  BANK :{" "}
+                  BANK :
                 </span>
                 <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-                  {" "}
                   9923$
                 </span>
               </div>
@@ -99,7 +97,6 @@ const QuickInfo = () => {
                   CASH :
                 </span>
                 <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-                  {" "}
                   9923$
                 </span>
               </div>
@@ -127,7 +124,6 @@ const QuickInfo = () => {
               JOB :
             </span>
             <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-              {" "}
               İSSİZ
             </span>
           </div>
@@ -153,7 +149,6 @@ const QuickInfo = () => {
               ID :
             </span>
             <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-              {" "}
               32323
             </span>
           </div>

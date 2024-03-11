@@ -37,14 +37,14 @@ const SpeedometerSettings = () => {
           <SpeedTypeIcon />
           <div className="flex flex-col gap-y-2 items-start justify-start">
             <div className="text-center text-neutral-400 text-[21.25px] font-semibold font-['Qanelas Soft']">
-              Speed Type (KMH/MPH){" "}
+              Speed Type (KMH/MPH)
             </div>
             <div className="text-center text-zinc-500 text-xs font-semibold font-['Qanelas Soft']">
-              Off-On Settings{" "}
+              Off-On Settings
             </div>
           </div>
         </div>
-        
+
         <SpeedUnitSwitch
           isOn={settings.speedometers.units === "kmh"}
           onToggle={() => toggleUnits()}

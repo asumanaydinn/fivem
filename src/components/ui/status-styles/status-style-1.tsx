@@ -177,7 +177,7 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
             <div
               className="h-4 absolute left-0 bg-[#2E60E1] flex items-center justify-center"
               style={{ width: armorHeight }}
-            ></div>{" "}
+            ></div>
             <ArmorIcon />
           </div>
         )}
