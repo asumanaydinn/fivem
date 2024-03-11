@@ -13,7 +13,7 @@ const SpeedoMeter2 = (props: Props) => {
   const { settings } = useSettings();
 
   return (
-    <div className="w-[92px] h-[88.48px] flex flex-col items-center justify-center bg-red-50">
+    <div className="w-32 h-32 flex flex-col items-center justify-center bg-red-50">
       <div className="flex items-center gap-x-2">
         <svg
           width="12"
@@ -57,15 +57,15 @@ const SpeedoMeter2 = (props: Props) => {
       <div className="flex flex-col items-end justify-start">
         <div className="">
           {speed < 100 && speed !== 0 && (
-            <span className="text-black text-opacity-30 text-[26.24px] font-extrabold font-['Orbitron']">
+            <span className="text-black text-opacity-30 text-[32px] font-extrabold font-['Orbitron']">
               0
             </span>
           )}
-          <span className="text-black text-[26.24px] font-extrabold font-['Orbitron']">
+          <span className="text-black text-[32px] font-extrabold font-['Orbitron']">
             {speed}
           </span>
         </div>
-        <div className=" text-black text-[7.54px] font-extrabold font-['Orbitron']">
+        <div className=" text-black text-[12px] font-extrabold font-['Orbitron']">
           {settings.speedometers.units.toLocaleUpperCase()}
         </div>
       </div>
@@ -73,7 +73,7 @@ const SpeedoMeter2 = (props: Props) => {
       <div className="flex items-center justify-center gap-x-2">
         <div
           className={clsx(
-            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            "text-center text-[12px] font-extrabold font-['Orbitron']",
             gear === 1 ? "text-black" : "text-zinc-500"
           )}
         >
@@ -81,7 +81,7 @@ const SpeedoMeter2 = (props: Props) => {
         </div>
         <div
           className={clsx(
-            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            "text-center text-[12px] font-extrabold font-['Orbitron']",
             gear === 2 ? "text-black" : "text-zinc-500"
           )}
         >
@@ -89,7 +89,7 @@ const SpeedoMeter2 = (props: Props) => {
         </div>
         <div
           className={clsx(
-            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            "text-center text-[12px] font-extrabold font-['Orbitron']",
             gear === 3 ? "text-black" : "text-zinc-500"
           )}
         >
@@ -97,7 +97,7 @@ const SpeedoMeter2 = (props: Props) => {
         </div>
         <div
           className={clsx(
-            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            "text-center text-[12px] font-extrabold font-['Orbitron']",
             gear === 4 ? "text-black" : "text-zinc-500"
           )}
         >
@@ -105,7 +105,7 @@ const SpeedoMeter2 = (props: Props) => {
         </div>
         <div
           className={clsx(
-            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            "text-center text-[12px] font-extrabold font-['Orbitron']",
             gear === 5 ? "text-black" : "text-zinc-500"
           )}
         >
@@ -113,7 +113,7 @@ const SpeedoMeter2 = (props: Props) => {
         </div>
         <div
           className={clsx(
-            "text-center text-[7.41px] font-extrabold font-['Orbitron']",
+            "text-center text-[12px] font-extrabold font-['Orbitron']",
             gear === 6 ? "text-black" : "text-zinc-500"
           )}
         >

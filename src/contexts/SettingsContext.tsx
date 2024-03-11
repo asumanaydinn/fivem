@@ -50,7 +50,7 @@ const defaultSettings: AppSettings = {
   },
   speedometers: {
     units: "kmh",
-    speedometerType: "1",
+    speedometerType: "4",
   },
   status: {
     statusStyleType: "1",
@@ -62,7 +62,7 @@ const defaultSettings: AppSettings = {
     hideArmor: false,
     hideStress: false,
   },
-  styleVisibility: {}, 
+  styleVisibility: {},
 };
 
 interface SettingsContextType {
@@ -151,7 +151,7 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
   };
 
   const restoreDefaults = () => {
-    setSettings(defaultSettings); 
+    setSettings(defaultSettings);
     clearSettingsInLocalStorage();
   };
 

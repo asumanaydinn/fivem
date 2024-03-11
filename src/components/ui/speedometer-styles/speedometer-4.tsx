@@ -82,12 +82,12 @@ const SpeedoMeter4: React.FC<SpeedFuelGaugeProps> = ({
 
   return (
     <>
-      <div className="w-[102.62px] shadow shadow-white relative flex items-center justify-center  h-[102.62px] bg-gradient-to-b from-neutral-900 via-neutral-800 to-zinc-950 rounded-full border border-white border-opacity-10">
+      <div className="w-36 shadow shadow-white relative flex items-center justify-center h-36 bg-gradient-to-b from-neutral-900 via-neutral-800 to-zinc-950 rounded-full border border-white border-opacity-10">
         <canvas
           className="-rotate-90"
           ref={canvasRef}
-          width="132"
-          height="132"
+          width="176"
+          height="176"
         ></canvas>
         <svg
           className="absolute bottom-2 left-9"
@@ -144,25 +144,25 @@ const SpeedoMeter4: React.FC<SpeedFuelGaugeProps> = ({
             </svg>
           </div>
           <div>
-            <span className="text-white text-opacity-30 text-2xl font-semibold font-['Orbitron']">
+            <span className="text-white text-opacity-30 text-[36.82px] font-semibold font-['Orbitron']">
               0
             </span>
-            <span className="text-neutral-200 text-2xl font-semibold font-['Orbitron']">
+            <span className="text-neutral-200 text-[36.82px] font-semibold font-['Orbitron']">
               92
             </span>
           </div>
-          <div className="text-white text-opacity-50 text-[8.74px] font-medium font-['Orbitron']">
+          <div className="text-white text-opacity-50 text-[12px] font-medium font-['Orbitron']">
             {settings.speedometers.units.toLocaleUpperCase()}
           </div>
           <div className="flex items-center">
             <div className="flex items-center gap-x-2">
-              <div className="text-neutral-400 text-[4.85px] font-medium font-['Orbitron']">
+              <div className="text-neutral-400 text-[12px] font-medium font-['Orbitron']">
                 1
               </div>
-              <div className="text-white text-[8.25px] font-medium font-['Orbitron']">
+              <div className="text-white text-[12px] font-medium font-['Orbitron']">
                 2
               </div>
-              <div className="text-neutral-400 text-[4.85px] font-medium font-['Orbitron']">
+              <div className="text-neutral-400 text-[12px] font-medium font-['Orbitron']">
                 3
               </div>
             </div>

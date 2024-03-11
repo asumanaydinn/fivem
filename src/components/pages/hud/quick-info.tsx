@@ -47,10 +47,10 @@ const QuickInfo = () => {
   if (settings.general.hideQuickInfo) return null;
 
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-1">
       {!settings.general.hideServerLogo && serverInfo()}
 
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-x-2 gap-y-1">
         {!settings.general.hideUserMoney && (
           <>
             <div className="w-[163.10px] h-[29.85px] flex items-center justify-start opacity-90 bg-black rounded ">
