@@ -2,10 +2,12 @@ import AddIcon from "@mui/icons-material/Add";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import { useState } from "react";
 
+import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
+
 const AddSong = () => {
   const [music, setMusic] = useState("");
 
-  const { addSongToMusicList, musicList } = useMusicPlayer();
+  const { addSongToMusicList, musicList, onPlay } = useMusicPlayer();
 
   return (
     <div className="w-full h-full flex gap-y-2 px-2 flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
@@ -61,6 +63,9 @@ const AddSong = () => {
             <div className="px-2 w-44 line-clamp-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
               {track.url}
             </div>
+            <button onClick={() => onPlay(index)}>
+              <PlayArrowRounded />
+            </button>
           </div>
         </div>
       ))}

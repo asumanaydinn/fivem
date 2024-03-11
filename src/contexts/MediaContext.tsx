@@ -11,6 +11,7 @@ export interface MusicPlayerContextType {
   playNextTrack: () => void;
   playPreviousTrack: () => void;
   currentTrackIndex: number;
+  onPlay: (index: number) => void;
 }
 
 const defaultValue: MusicPlayerContextType = {
@@ -29,6 +30,9 @@ const defaultValue: MusicPlayerContextType = {
     throw new Error("Function not implemented.");
   },
   currentTrackIndex: 0,
+  onPlay: function (index: number): void {
+    throw new Error("Function not implemented.");
+  },
 };
 
 const MusicPlayerContext = createContext<MusicPlayerContextType>(defaultValue);
@@ -43,9 +47,7 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
   children,
 }) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
-
   const [musicList, setMusicList] = useState<Song[]>([]);
-
   const [playing, setPlaying] = useState(false);
 
   const addSongToMusicList = (song: Song) => {
@@ -72,6 +74,11 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
     setCurrentTrackIndex((prevIndex) => (prevIndex - 1) % musicList.length);
   };
 
+  const onPlay = (index: number) => {
+    setCurrentTrackIndex(index);
+    setPlaying(true);
+  };
+
   return (
     <MusicPlayerContext.Provider
       value={{
@@ -84,6 +91,7 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
         searchSongInMusicList,
         playing,
         setPlaying,
+        onPlay,
       }}
     >
       {children}

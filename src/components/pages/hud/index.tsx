@@ -81,7 +81,7 @@ const Hud = () => {
       <ReactPlayer
         loop={true}
         url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
-        playing={playing && !!currentTrackIndex}
+        playing={playing}
         controls={true}
         onPause={() => setPlaying(false)}
         onEnded={playNextTrack}

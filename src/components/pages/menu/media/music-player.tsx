@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import PauseRoundedIcon from "@mui/icons-material/PauseRounded";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
@@ -24,7 +24,54 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
     playPreviousTrack,
   } = useMusicPlayer();
 
-  if (!currentTrackIndex)
+  const [currentSongDetails, setCurrentSongDetails] = useState({
+    title: "",
+    duration: "",
+    artist: "", // Assuming artist's name could be derived or is a placeholder
+  });
+
+  useEffect(() => {
+    if (!musicList || musicList.length === 0 || currentTrackIndex == null)
+      return;
+
+    const currentTrack = musicList[currentTrackIndex];
+    const videoID = extractVideoID(currentTrack.url);
+
+    if (videoID) {
+      fetchSongDetails(videoID).then((details) => {
+        setCurrentSongDetails(details);
+      });
+    }
+  }, [musicList, currentTrackIndex]);
+
+  function extractVideoID(url: string): string | null {
+    const regExp =
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return match && match[7].length === 11 ? match[7] : null;
+  }
+
+  async function fetchSongDetails(videoID: string) {
+    const API_KEY = "AIzaSyBVwkciEOdTzJyAQuwRSbm0k_IO_RjfpYA"; // Replace with your YouTube Data API Key
+    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoID}&key=${API_KEY}&part=snippet,contentDetails`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      const videoData = data.items[0];
+
+      return {
+        title: videoData.snippet.title,
+        duration: videoData.contentDetails.duration, // Consider formatting this value
+        artist: videoData.snippet.channelTitle, // YouTube doesn't directly provide artist names for music videos
+      };
+    } catch (error) {
+      console.error("Error fetching YouTube video data:", error);
+      return { title: "", duration: "", artist: "" };
+    }
+  }
+
+  if (!playing)
     return (
       <div className="flex items-center justify-center bg-zinc-900 w-full h-full text-white">
         No music on play.
@@ -33,16 +80,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
 
   return (
     <>
-      <div className="w-full h-full p-3 relative bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded justify-between flex flex-col">
-        <div className="absolute left-3 top-7">
-          <div className="text-center text-neutral-400 text-xs font-semibold font-['Inter']">
-            {musicList[currentTrackIndex].title}
-          </div>
-          <div className="text-center text-zinc-400 text-[8.05px] font-semibold font-['Inter']">
-            artist
-          </div>
-        </div>
-        <div className="flex h-2/3 w-full items-center justify-center">
+      <div className="w-full h-full px-3  bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded justify-between flex flex-col">
+        <div className="flex flex-col h-20 w-full items-center justify-start">
           <svg
             width="116"
             height="122"
@@ -126,13 +165,21 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
             </defs>
           </svg>
         </div>
-        <div className="w-full h-1/3 flex items-center justify-center flex-col gap-y-1">
+        <div className="w-full h-2/3 flex items-center justify-end flex-col gap-y-1">
+          <div className="flex flex-col gap-y-2">
+            <div className="text-center text-neutral-400 text-xs font-semibold font-['Inter']">
+              {currentSongDetails.title}
+            </div>
+            <div className="text-center text-zinc-400 text-[8.05px] font-semibold font-['Inter']">
+              {currentSongDetails.artist}
+            </div>
+          </div>
           <div className="w-full flex items-center justify-between">
             <div className="text-center text-neutral-400 text-[7.12px] font-semibold font-['Inter']">
               00.00
             </div>
             <div className="text-center text-neutral-400 text-[7.12px] font-semibold font-['Inter']">
-              02.18
+              {currentSongDetails.duration}
             </div>
           </div>
           <div className="w-[335px] h-0.5 bg-zinc-300 bg-opacity-10 rounded-sm" />
