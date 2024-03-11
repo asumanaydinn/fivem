@@ -20,7 +20,9 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
 
   return (
     <div className="flex gap-x-2 relative h-12">
-      {!settings.status.hideHealth && (
+      {(!settings.status.hideHealth ||
+        status.health >
+          settings.styleVisibility["5"].visibilityThresholds?.health) && (
         <StatusStyle5Item
           percentage={healthHeight}
           activeColor="#4D2FA1"
@@ -42,7 +44,9 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideHydration && (
+      {(!settings.status.hideHydration ||
+        status.hydration >
+          settings.styleVisibility["5"].visibilityThresholds?.hydration) && (
         <StatusStyle5Item
           percentage={hydrationHeight}
           activeColor="#FF56C5"
@@ -63,7 +67,9 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideHungry && (
+      {(!settings.status.hideHungry ||
+        status.hungry >
+          settings.styleVisibility["5"].visibilityThresholds?.hunger) && (
         <StatusStyle5Item
           percentage={hungryHeight}
           activeColor="#FFA756"
@@ -84,7 +90,9 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideEnergy && (
+      {(!settings.status.hideEnergy ||
+        status.energy >
+          settings.styleVisibility["5"].visibilityThresholds?.energy) && (
         <StatusStyle5Item
           percentage={energyHeight}
           activeColor="#FF4758"
@@ -106,7 +114,9 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideArmor && (
+      {(!settings.status.hideArmor ||
+        status.armor >
+          settings.styleVisibility["5"].visibilityThresholds?.armor) && (
         <StatusStyle5Item
           percentage={armorHeight}
           activeColor="#D84DA8"
@@ -128,7 +138,9 @@ const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideStress && (
+      {(!settings.status.hideStress ||
+        status.stress >
+          settings.styleVisibility["5"].visibilityThresholds?.stress) && (
         <StatusStyle5Item
           percentage={stressHeight}
           activeColor="#FFA756"

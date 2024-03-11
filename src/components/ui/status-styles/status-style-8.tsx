@@ -11,7 +11,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
 
   return (
     <div className="flex items-center justify-center gap-x-2">
-      {!settings.status.hideHealth && (
+      {(!settings.status.hideHealth ||
+        status.health >
+          settings.styleVisibility["8"].visibilityThresholds?.health) && (
         <StatusStyle8Item
           Icon={() => (
             <svg
@@ -33,7 +35,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideHydration && (
+      {(!settings.status.hideHydration ||
+        status.hydration >
+          settings.styleVisibility["8"].visibilityThresholds?.hydration) && (
         <StatusStyle8Item
           Icon={() => (
             <svg
@@ -54,7 +58,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           value={status.hydration}
         />
       )}
-      {!settings.status.hideHungry && (
+      {(!settings.status.hideHungry ||
+        status.hungry >
+          settings.styleVisibility["8"].visibilityThresholds?.hunger) && (
         <StatusStyle8Item
           Icon={() => (
             <svg
@@ -75,7 +81,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           value={status.hungry}
         />
       )}
-      {!settings.status.hideEnergy && (
+      {(!settings.status.hideEnergy ||
+        status.energy >
+          settings.styleVisibility["8"].visibilityThresholds?.energy) && (
         <StatusStyle8Item
           Icon={() => (
             <svg
@@ -96,7 +104,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           value={status.energy}
         />
       )}
-      {!settings.status.hideArmor && (
+      {(!settings.status.hideArmor ||
+        status.armor >
+          settings.styleVisibility["8"].visibilityThresholds?.armor) && (
         <StatusStyle8Item
           Icon={() => (
             <svg
@@ -118,7 +128,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideStress && (
+      {(!settings.status.hideStress ||
+        status.stress >
+          settings.styleVisibility["8"].visibilityThresholds?.stress) && (
         <StatusStyle8Item
           Icon={() => (
             <svg

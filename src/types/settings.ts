@@ -64,7 +64,7 @@ export interface AppSettings {
   status: StatusSettings;
   styleVisibility: {
     [key: string]: {
-      visibilityThresholds?: VibisilityThresholds;
+      visibilityThresholds: VibisilityThresholds;
     };
   };
 }
@@ -79,5 +79,5 @@ export interface StatusSetting {
 }
 
 export interface StatusSettingsMap {
-  [key: string]: StatusSetting; 
+  [key: string]: StatusSetting;
 }

@@ -50,10 +50,10 @@ const defaultSettings: AppSettings = {
   },
   speedometers: {
     units: "kmh",
-    speedometerType: "10",
+    speedometerType: "3",
   },
   status: {
-    statusStyleType: "1",
+    statusStyleType: "10",
     hideAllStatus: false,
     hideHealth: false,
     hideHydration: false,

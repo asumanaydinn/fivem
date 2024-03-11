@@ -11,7 +11,9 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
 
   return (
     <div className="flex gap-x-2 items-center h-12">
-      {!settings.status.hideHealth && (
+      {(!settings.status.hideHealth ||
+        status.health >
+          settings.styleVisibility["3"].visibilityThresholds?.health) && (
         <StatusStyle3Item
           Icon={() => (
             <svg
@@ -30,7 +32,9 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.health}
         />
       )}
-      {!settings.status.hideHydration && (
+      {(!settings.status.hideHydration ||
+        status.hydration >
+          settings.styleVisibility["3"].visibilityThresholds?.hydration) && (
         <StatusStyle3Item
           Icon={() => (
             <svg
@@ -49,7 +53,9 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.hydration}
         />
       )}
-      {!settings.status.hideHungry && (
+      {(!settings.status.hideHungry ||
+        status.hungry >
+          settings.styleVisibility["3"].visibilityThresholds?.hunger) && (
         <StatusStyle3Item
           Icon={() => (
             <svg
@@ -68,7 +74,9 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.hungry}
         />
       )}
-      {!settings.status.hideEnergy && (
+      {(!settings.status.hideEnergy ||
+        status.energy >
+          settings.styleVisibility["3"].visibilityThresholds?.energy) && (
         <StatusStyle3Item
           Icon={() => (
             <svg
@@ -87,7 +95,9 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.energy}
         />
       )}
-      {!settings.status.hideArmor && (
+      {(!settings.status.hideArmor ||
+        status.armor >
+          settings.styleVisibility["3"].visibilityThresholds?.armor) && (
         <StatusStyle3Item
           Icon={() => (
             <svg
@@ -106,7 +116,9 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.armor}
         />
       )}
-      {!settings.status.hideStress && (
+      {(!settings.status.hideStress ||
+        status.stress >
+          settings.styleVisibility["3"].visibilityThresholds?.stress) && (
         <StatusStyle3Item
           Icon={() => (
             <svg

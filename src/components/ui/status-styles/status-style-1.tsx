@@ -114,7 +114,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
   return (
     <div className="flex flex-col gap-y-2">
       <div className="flex gap-x-2 items-center">
-        {!settings.status.hideHealth && (
+        {(!settings.status.hideHealth ||
+          status.health >
+            settings.styleVisibility["1"].visibilityThresholds?.health) && (
           <div className="w-7 relative h-7 bg-[#010100] flex items-center justify-center">
             <div
               className="bg-[#E12E59] w-full absolute bottom-0"
@@ -123,7 +125,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
             <HealthIcon />
           </div>
         )}
-        {!settings.status.hideHydration && (
+        {(!settings.status.hideHydration ||
+          status.hydration >
+            settings.styleVisibility["1"].visibilityThresholds.hydration) && (
           <div className="w-7 relative h-7 bg-[#010100] flex items-center justify-center">
             <div
               className="bg-purple-600 w-full absolute bottom-0"
@@ -132,7 +136,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
             <HydrationIcon />
           </div>
         )}
-        {!settings.status.hideHungry && (
+        {(!settings.status.hideHungry ||
+          status.hungry >
+            settings.styleVisibility["1"].visibilityThresholds?.hunger) && (
           <div className="w-7 relative h-7 bg-[#010100] flex items-center justify-center">
             <div
               className="bg-[#DE2EE1] w-full absolute bottom-0"
@@ -141,7 +147,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
             <HungryIcon />
           </div>
         )}
-        {!settings.status.hideEnergy && (
+        {(!settings.status.hideEnergy ||
+          status.energy >
+            settings.styleVisibility["1"].visibilityThresholds?.energy) && (
           <div className="w-7 relative h-7 bg-[#010100] flex items-center justify-center">
             <div
               className="bg-[#E12E39] w-full absolute bottom-0"
@@ -150,7 +158,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
             <EnergyIcon />
           </div>
         )}
-        {!settings.status.hideStress && (
+        {(!settings.status.hideStress ||
+          status.stress >
+            settings.styleVisibility["1"].visibilityThresholds?.stress) && (
           <div className="w-7 relative h-7 bg-[#010100] flex items-center justify-center">
             <div
               className="bg-[#E12E39] w-full absolute bottom-0"
@@ -162,7 +172,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
       </div>
 
       <div className="flex gap-x-2">
-        {!settings.status.hideHealth && (
+        {(!settings.status.hideHealth ||
+          status.health >
+            settings.styleVisibility["1"].visibilityThresholds?.health) && (
           <div className="w-24 h-4 bg-[#010100] relative flex items-center justify-center">
             <div
               className="h-4 absolute left-0 bg-[#1CB459] flex items-center justify-center"
@@ -171,7 +183,9 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
             <HealthIcon />
           </div>
         )}
-        {!settings.status.hideArmor && (
+        {(!settings.status.hideArmor ||
+          status.armor >
+            settings.styleVisibility["1"].visibilityThresholds?.armor) && (
           <div className="w-24 h-4 bg-[#010100] relative flex items-center justify-center">
             <div
               className="h-4 absolute left-0 bg-[#2E60E1] flex items-center justify-center"

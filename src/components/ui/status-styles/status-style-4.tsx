@@ -20,7 +20,9 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
 
   return (
     <div className="flex gap-x-2 relative">
-      {!settings.status.hideHealth && (
+      {(!settings.status.hideHealth ||
+        status.health >
+          settings.styleVisibility["4"].visibilityThresholds?.health) && (
         <StatusStyle4Item
           percentage={healthHeight}
           activeColor="#4D2FA1"
@@ -41,7 +43,9 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideHydration && (
+      {(!settings.status.hideHydration ||
+        status.hydration >
+          settings.styleVisibility["4"].visibilityThresholds?.hydration) && (
         <StatusStyle4Item
           percentage={hydrationHeight}
           activeColor="#FF56C5"
@@ -62,7 +66,9 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideHungry && (
+      {(!settings.status.hideHungry ||
+        status.hungry >
+          settings.styleVisibility["4"].visibilityThresholds?.hunger) && (
         <StatusStyle4Item
           percentage={hungryHeight}
           activeColor="#FFA756"
@@ -83,7 +89,9 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideEnergy && (
+      {(!settings.status.hideEnergy ||
+        status.energy >
+          settings.styleVisibility["4"].visibilityThresholds?.energy) && (
         <StatusStyle4Item
           percentage={energyHeight}
           activeColor="#FF4758"
@@ -104,7 +112,9 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideArmor && (
+      {(!settings.status.hideArmor ||
+        status.armor >
+          settings.styleVisibility["4"].visibilityThresholds?.armor) && (
         <StatusStyle4Item
           percentage={armorHeight}
           activeColor="#D84DA8"
@@ -125,7 +135,9 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
           )}
         />
       )}
-      {!settings.status.hideStress && (
+      {(!settings.status.hideStress ||
+        status.stress >
+          settings.styleVisibility["4"].visibilityThresholds?.stress) && (
         <StatusStyle4Item
           percentage={stressHeight}
           activeColor="#FFA756"

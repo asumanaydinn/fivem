@@ -27,6 +27,7 @@ import { useMusicPlayer } from "../../../contexts/MediaContext";
 import ReactPlayer from "react-player";
 
 import Draggable from "react-draggable";
+import StatusStyle10 from "../../ui/status-styles/status-style-10";
 
 const statusComponents = [
   StatusStyle1,
@@ -38,6 +39,7 @@ const statusComponents = [
   StatusStyle7,
   StatusStyle8,
   StatusStyle9,
+  StatusStyle10,
 ];
 
 const speedometerComponents = [
@@ -100,7 +102,7 @@ const Hud = () => {
       />
 
       <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute bottom-28 left-10 flex flex-col gap-y-2">
+        <div className="absolute bottom-52 left-10 flex flex-col gap-y-2">
           <Menu />
         </div>
       </Draggable>

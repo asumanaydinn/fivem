@@ -11,7 +11,9 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
 
   return (
     <div className="flex gap-x-2 items-center h-12">
-      {!settings.status.hideHealth && (
+      {(!settings.status.hideHealth ||
+        status.health >
+          settings.styleVisibility["6"].visibilityThresholds?.health) && (
         <StatusStyle6Item
           activeColor="#8256FF"
           Icon={() => (
@@ -31,7 +33,9 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.health}
         />
       )}
-      {!settings.status.hideHydration && (
+      {(!settings.status.hideHydration ||
+        status.hydration >
+          settings.styleVisibility["6"].visibilityThresholds?.hydration) && (
         <StatusStyle6Item
           activeColor="#FF56C5"
           Icon={() => (
@@ -52,7 +56,9 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideHungry && (
+      {(!settings.status.hideHungry ||
+        status.hungry >
+          settings.styleVisibility["6"].visibilityThresholds?.hunger) && (
         <StatusStyle6Item
           activeColor="#FFA756"
           Icon={() => (
@@ -72,7 +78,9 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
           fillPercentage={status.hungry}
         />
       )}
-      {!settings.status.hideEnergy && (
+      {(!settings.status.hideEnergy ||
+        status.energy >
+          settings.styleVisibility["6"].visibilityThresholds?.energy) && (
         <StatusStyle6Item
           activeColor="#56FFAE"
           Icon={() => (
@@ -93,7 +101,9 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideArmor && (
+      {(!settings.status.hideArmor ||
+        status.armor >
+          settings.styleVisibility["6"].visibilityThresholds?.armor) && (
         <StatusStyle6Item
           activeColor="#FF56C5"
           Icon={() => (
@@ -114,7 +124,9 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
         />
       )}
 
-      {!settings.status.hideStress && (
+      {(!settings.status.hideStress ||
+        status.stress >
+          settings.styleVisibility["6"].visibilityThresholds?.stress) && (
         <StatusStyle6Item
           activeColor="#FFA756"
           Icon={() => (
