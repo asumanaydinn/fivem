@@ -2,6 +2,9 @@ import React from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import PauseRoundedIcon from "@mui/icons-material/PauseRounded";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
+import SkipNextRoundedIcon from "@mui/icons-material/SkipNextRounded";
+import SkipPreviousRoundedIcon from "@mui/icons-material/SkipPreviousRounded";
+
 interface Track {
   url: string;
   title: string;
@@ -12,9 +15,16 @@ interface MusicPlayerProps {
 }
 
 const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
-  const { currentTrack, playing, setPlaying } = useMusicPlayer();
+  const {
+    currentTrackIndex,
+    playing,
+    setPlaying,
+    musicList,
+    playNextTrack,
+    playPreviousTrack,
+  } = useMusicPlayer();
 
-  if (!currentTrack)
+  if (!currentTrackIndex)
     return (
       <div className="flex items-center justify-center bg-zinc-900 w-full h-full text-white">
         No music on play.
@@ -26,7 +36,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
       <div className="w-full h-full p-3 relative bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded justify-between flex flex-col">
         <div className="absolute left-3 top-7">
           <div className="text-center text-neutral-400 text-xs font-semibold font-['Inter']">
-            {currentTrack.title}
+            {musicList[currentTrackIndex].title}
           </div>
           <div className="text-center text-zinc-400 text-[8.05px] font-semibold font-['Inter']">
             artist
@@ -126,16 +136,34 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
             </div>
           </div>
           <div className="w-[335px] h-0.5 bg-zinc-300 bg-opacity-10 rounded-sm" />
-          <button
-            onClick={() => setPlaying(!playing)}
-            className="cursor-pointer"
-          >
-            {!playing ? (
-              <PlayArrowRoundedIcon className="text-neutral-500" />
-            ) : (
-              <PauseRoundedIcon className="text-neutral-500" />
+          <div className="flex items-center justify-center w-full">
+            {currentTrackIndex - 1 >= 0 && (
+              <button
+                onClick={() => playPreviousTrack()}
+                className="cursor-pointer"
+              >
+                <SkipPreviousRoundedIcon className="text-neutral-500" />
+              </button>
             )}
-          </button>
+            <button
+              onClick={() => setPlaying(!playing)}
+              className="cursor-pointer"
+            >
+              {!playing ? (
+                <PlayArrowRoundedIcon className="text-neutral-500" />
+              ) : (
+                <PauseRoundedIcon className="text-neutral-500" />
+              )}
+            </button>
+            {currentTrackIndex + 1 <= musicList.length && (
+              <button
+                onClick={() => playNextTrack()}
+                className="cursor-pointer"
+              >
+                <SkipNextRoundedIcon className="text-neutral-500" />
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </>

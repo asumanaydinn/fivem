@@ -1,18 +1,11 @@
 import AddIcon from "@mui/icons-material/Add";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import { useState } from "react";
-import ReactPlayer from "react-player";
+
 const AddSong = () => {
   const [music, setMusic] = useState("");
 
-  const {
-    // addSongToTrackList,
-    addSongToMusicList,
-    trackList,
-    currentTrack,
-    playSong,
-    playing,
-  } = useMusicPlayer();
+  const { addSongToMusicList, trackList } = useMusicPlayer();
 
   return (
     <div className="w-full h-full flex gap-y-2 px-2 flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
@@ -31,7 +24,6 @@ const AddSong = () => {
         <button
           onClick={() => {
             addSongToMusicList({ title: "", url: music });
-            // addSongToTrackList({ title: "", url: music });
           }}
           style={{
             borderRadius: "3px",
@@ -70,84 +62,8 @@ const AddSong = () => {
               {track.url}
             </div>
           </div>
-          {playing && currentTrack?.url === track.url && (
-            <div className="text-zinc-500 text-[8.89px] font-semibold font-['Qanelas Soft']">
-              Playing Now
-            </div>
-          )}
-
-          {currentTrack?.url !== track.url && (
-            <div>
-              <button
-                onClick={() => playSong(track)}
-                className="cursor-pointer"
-              >
-                <svg
-                  width="55"
-                  height="57"
-                  viewBox="0 0 55 57"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g filter="url(#filter0_d_72_5378)">
-                    <path
-                      d="M32.5213 28.8277C32.5216 28.9746 32.484 29.1191 32.4119 29.2472C32.3399 29.3753 32.2359 29.4825 32.1101 29.5585L24.3157 34.3267C24.1843 34.4072 24.0337 34.4511 23.8797 34.454C23.7256 34.4568 23.5736 34.4185 23.4393 34.343C23.3063 34.2686 23.1954 34.1601 23.1182 34.0287C23.041 33.8973 23.0002 33.7477 23 33.5953V24.06C23.0002 23.9076 23.041 23.758 23.1182 23.6266C23.1954 23.4952 23.3063 23.3867 23.4393 23.3123C23.5736 23.2368 23.7256 23.1985 23.8797 23.2013C24.0337 23.2042 24.1843 23.2481 24.3157 23.3286L32.1101 28.0968C32.2359 28.1728 32.3399 28.28 32.4119 28.4081C32.484 28.5362 32.5216 28.6807 32.5213 28.8277Z"
-                      fill="#717171"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_d_72_5378"
-                      x="0.63846"
-                      y="0.839632"
-                      width="54.2446"
-                      height="55.976"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="11.1808" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.5625 0 0 0 0 0.555469 0 0 0 0 0.555469 0 0 0 0.62 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_72_5378"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_72_5378"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </button>
-            </div>
-          )}
         </div>
       ))}
-
-      <div className="hidden">
-        <ReactPlayer
-          url={trackList.length > 0 ? currentTrack?.url : ""}
-          playing={!!currentTrack}
-          controls={true}
-          width="96%"
-          height="180px"
-        />
-      </div>
     </div>
   );
 };

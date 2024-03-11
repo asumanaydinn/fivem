@@ -4,7 +4,7 @@ import { useMusicPlayer } from "../../../../contexts/MediaContext";
 
 const MusicList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const { musicList, searchSongInMusicList, currentTrack } = useMusicPlayer();
+  const { musicList, searchSongInMusicList } = useMusicPlayer();
 
   const filteredSongs =
     searchTerm.length > 0 ? searchSongInMusicList(searchTerm) : musicList;
@@ -79,85 +79,6 @@ const MusicList: React.FC = () => {
               {track.url}
             </div>
           </div>
-          {currentTrack?.url === track.url && (
-            <div className="text-zinc-500 text-[8.89px] font-semibold font-['Qanelas Soft']">
-              Playing Now
-            </div>
-          )}
-
-          {currentTrack?.url !== track.url && (
-            <div>
-              <svg
-                width="49"
-                height="50"
-                viewBox="0 0 49 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="37.8125"
-                  y="22.1502"
-                  width="1.78128"
-                  height="9.79702"
-                  rx="0.498758"
-                  transform="rotate(-45 37.8125 22.1502)"
-                  fill="#717171"
-                />
-                <rect
-                  x="39.0723"
-                  y="29.0777"
-                  width="1.78128"
-                  height="9.79702"
-                  rx="0.498758"
-                  transform="rotate(-135 39.0723 29.0777)"
-                  fill="#717171"
-                />
-                <g filter="url(#filter0_d_0_1)">
-                  <path
-                    d="M28.48 25.0112C28.4803 25.142 28.4468 25.2708 28.3826 25.3848C28.3184 25.4989 28.2258 25.5944 28.1138 25.6621L21.1718 29.9089C21.0547 29.9805 20.9207 30.0196 20.7835 30.0222C20.6463 30.0247 20.5109 29.9906 20.3912 29.9233C20.2728 29.8571 20.1741 29.7605 20.1053 29.6434C20.0365 29.5264 20.0002 29.3932 20 29.2574V20.7649C20.0002 20.6292 20.0365 20.4959 20.1053 20.3789C20.1741 20.2619 20.2728 20.1653 20.3912 20.099C20.5109 20.0317 20.6463 19.9976 20.7835 20.0001C20.9207 20.0027 21.0547 20.0418 21.1718 20.1135L28.1138 24.3602C28.2258 24.4279 28.3184 24.5234 28.3826 24.6375C28.4468 24.7516 28.4803 24.8803 28.48 25.0112Z"
-                    fill="#717171"
-                  />
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_d_0_1"
-                    x="0.083952"
-                    y="0.083952"
-                    width="48.3121"
-                    height="49.8544"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    />
-                    <feOffset />
-                    <feGaussianBlur stdDeviation="9.95802" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0.5625 0 0 0 0 0.555469 0 0 0 0 0.555469 0 0 0 0.62 0"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_0_1"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_0_1"
-                      result="shape"
-                    />
-                  </filter>
-                </defs>
-              </svg>
-            </div>
-          )}
         </div>
       ))}
     </div>

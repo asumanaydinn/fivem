@@ -54,14 +54,11 @@ const speedometerComponents = [
 
 const Hud = () => {
   const { settings } = useSettings();
-  const { currentTrack, trackList, playing, setPlaying } = useMusicPlayer();
+  const { musicList, playing, setPlaying } = useMusicPlayer();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [speed, setSpeed] = useState(0);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
 
-  const playNextTrack = () => {
-    setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % trackList.length);
-  };
+  const { playNextTrack, currentTrackIndex } = useMusicPlayer();
 
   const pressGasPedal = () => {
     setSpeed((prevSpeed) => prevSpeed + 10); // Increment speed by 10 units
@@ -83,8 +80,9 @@ const Hud = () => {
       />
 
       <ReactPlayer
-        url={trackList.length > 0 ? trackList[currentTrackIndex].url : ""}
-        playing={playing && !!currentTrack}
+        loop={true}
+        url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
+        playing={playing && !!currentTrackIndex}
         controls={true}
         onPause={() => setPlaying(false)}
         onEnded={playNextTrack}
