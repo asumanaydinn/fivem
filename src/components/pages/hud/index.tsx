@@ -128,10 +128,10 @@ const Hud = () => {
       />
 
       <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute bottom-20 right-20">
-          {/* <button onClick={pressGasPedal} className="bg-white w-20 h-20">
+        <div className="absolute flex flex-col gap-y-2 bottom-0 right-2">
+          <button onClick={pressGasPedal} className="bg-white w-20 h-20">
             Press
-          </button> */}
+          </button>
 
           {SpeedoMeterComponent && (
             <SpeedoMeterComponent
