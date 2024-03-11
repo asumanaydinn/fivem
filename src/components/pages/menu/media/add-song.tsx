@@ -5,7 +5,7 @@ import { useState } from "react";
 const AddSong = () => {
   const [music, setMusic] = useState("");
 
-  const { addSongToMusicList, trackList } = useMusicPlayer();
+  const { addSongToMusicList, musicList } = useMusicPlayer();
 
   return (
     <div className="w-full h-full flex gap-y-2 px-2 flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
@@ -37,7 +37,7 @@ const AddSong = () => {
         </button>
       </div>
 
-      {trackList.map((track, index) => (
+      {musicList.map((track, index) => (
         <div
           key={index}
           className="w-[342px] h-[48.14px] px-2 flex items-center justify-between bg-zinc-300 bg-opacity-5 rounded-[1px]"
