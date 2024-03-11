@@ -1,4 +1,3 @@
-// Types.ts
 export interface GeneralSettings {
   cinematicMode: boolean;
   showLocation: boolean;
@@ -80,5 +79,5 @@ export interface StatusSetting {
 }
 
 export interface StatusSettingsMap {
-  [key: string]: StatusSetting; // key is StatusStyleType
+  [key: string]: StatusSetting; 
 }

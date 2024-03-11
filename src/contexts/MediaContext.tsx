@@ -1,4 +1,3 @@
-// MusicPlayerContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { Song } from "../types/media";
 

@@ -1,23 +1,23 @@
 import React from "react";
 
 interface StatusStyle3ItemProps {
-  fillPercentage: number; // The percentage of the circle to be filled
-  Icon: () => JSX.Element; // React component for the icon
+  fillPercentage: number;
+  Icon: () => JSX.Element;
 }
 
 const StatusStyle3Item: React.FC<StatusStyle3ItemProps> = ({
   fillPercentage,
   Icon,
 }) => {
-  const radius = 18; // Radius of the circle
-  const circumference = 2 * Math.PI * radius; // Calculate the circumference of the circle
-  const filledLength = (circumference * fillPercentage) / 100; // Calculate the length of the dash to represent the filled percentage
+  const radius = 18;
+  const circumference = 2 * Math.PI * radius;
+  const filledLength = (circumference * fillPercentage) / 100;
 
   return (
     <>
       <div
         className="relative flex items-center justify-center"
-        style={{ width: "100%", height: "100%", backgroundColor: "white" }} // Set the background color to white
+        style={{ width: "100%", height: "100%", backgroundColor: "white" }}
       >
         <div
           className="w-9 h-9 z-10 absolute rounded-full border-2 border-black top-1/2 left-1/2"
@@ -47,7 +47,7 @@ const StatusStyle3Item: React.FC<StatusStyle3ItemProps> = ({
               cy="18"
               r="17"
               fill="transparent"
-              stroke="white" // Change stroke to black
+              stroke="white"
               strokeWidth="2"
             />
             <circle
@@ -55,7 +55,7 @@ const StatusStyle3Item: React.FC<StatusStyle3ItemProps> = ({
               cy="18"
               r="17"
               fill="transparent"
-              stroke="black" // Change stroke to black for the percentage circle
+              stroke="black"
               strokeWidth="2"
               strokeDasharray={`${filledLength} ${circumference}`}
               transform="rotate(-90) translate(-36)"

@@ -7,12 +7,10 @@ interface StatusStyle5Props {
 }
 
 const StatusStyle5: React.FC<StatusStyle5Props> = ({ status }) => {
-  // Assuming each status value ranges from 0 to 100
   const maxStatusValue = 100;
 
   const { settings } = useSettings();
 
-  // Calculate height percentage for the background of each status
   const healthHeight = (status.health / maxStatusValue) * 100;
   const hydrationHeight = (status.hydration / maxStatusValue) * 100;
   const hungryHeight = (status.hungry / maxStatusValue) * 100;

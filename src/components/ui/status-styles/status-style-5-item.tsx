@@ -8,15 +8,13 @@ type StatusStyle4ItemProps = {
 const StatusStyle5Item = (props: StatusStyle4ItemProps) => {
   const { Icon, activeColor, color } = props;
 
-  // Constant value for the percentage of the square to be colored purple
-  const purplePercentage = props.percentage; // Example: 50%
-  const pinkPercentage = 100 - purplePercentage; // Calculate the rest for pink
+  const purplePercentage = props.percentage; 
+  const pinkPercentage = 100 - purplePercentage; 
 
-  // Inline styles for the square
   const squareStyle = {
-    width: "2rem", // Adjust the size as needed
-    height: "2rem", // Adjust the size as needed
-    transform: "rotate(45deg)", // Rotate the square
+    width: "2rem", 
+    height: "2rem", 
+    transform: "rotate(45deg)",
     backgroundImage: `linear-gradient(to bottom right, ${activeColor} ${purplePercentage}%,  ${color} ${pinkPercentage}%)`,
     outlineColor: color + "40",
   };

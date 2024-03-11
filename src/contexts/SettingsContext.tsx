@@ -34,7 +34,6 @@ function updateStatusSettingForStyleInLocalStorage(
 }
 
 function clearSettingsInLocalStorage() {
-  // To clear all settings
   localStorage.removeItem(localStorageKey);
 }
 
@@ -63,7 +62,7 @@ const defaultSettings: AppSettings = {
     hideArmor: false,
     hideStress: false,
   },
-  styleVisibility: {}, // Initialize as empty; assume dynamic addition based on UI interactions
+  styleVisibility: {}, 
 };
 
 interface SettingsContextType {
@@ -118,7 +117,6 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
     category: T,
     newSettings: Partial<AppSettings[T]>
   ) => {
-    // Handle styleVisibility updates separately to merge properly
     if (category === "styleVisibility") {
       const updatedVisibility = {
         ...settings.styleVisibility,
@@ -153,8 +151,8 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
   };
 
   const restoreDefaults = () => {
-    setSettings(defaultSettings); // Reset state settings to default
-    clearSettingsInLocalStorage(); // Clear local storage settings or reset them to default
+    setSettings(defaultSettings); 
+    clearSettingsInLocalStorage();
   };
 
   return (
