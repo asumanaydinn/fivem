@@ -104,7 +104,6 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
   const { settings } = useSettings();
   const maxStatusValue = 100;
 
-  // Calculate height percentage for the background of each status
   const healthHeight = `${(status.health / maxStatusValue) * 100}%`;
   const hydrationHeight = `${(status.hydration / maxStatusValue) * 100}%`;
   const hungryHeight = `${(status.hungry / maxStatusValue) * 100}%`;

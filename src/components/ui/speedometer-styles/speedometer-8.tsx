@@ -1,10 +1,10 @@
 import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SpeedFuelGaugeProps {
-  speed: number; // Current speed passed from outside
-  maxSpeed: number; // Maximum speed of the gauge
-  fuel: number; // Current fuel level passed from outside
-  maxFuel: number; // Maximum fuel level (for simplicity, you might set this to 100)
+  speed: number; 
+  maxSpeed: number; 
+  fuel: number; 
+  maxFuel: number; 
   gear: number;
 }
 

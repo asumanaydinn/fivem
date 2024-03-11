@@ -1,14 +1,12 @@
-// Define the structure for a single tab
 interface TabItem {
-  id: string; // Unique identifier for each tab
-  label: string; // Display label for the tab
+  id: string; 
+  label: string;
 }
 
-// Define the props for the TabBar component
 interface TabBarProps {
-  tabs: TabItem[]; // Array of tabs to display
-  activeTab: string; // Currently active tab id
-  setActiveTab: (tabId: string) => void; // Function to set the active tab
+  tabs: TabItem[]; 
+  activeTab: string; 
+  setActiveTab: (tabId: string) => void; 
 }
 
 const TabBar: React.FC<TabBarProps> = ({ tabs, activeTab, setActiveTab }) => {

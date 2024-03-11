@@ -2,10 +2,10 @@ import { useRef, useEffect } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SpeedFuelGaugeProps {
-  speed: number; // Current speed passed from outside
-  maxSpeed: number; // Maximum speed of the gauge
-  fuel: number; // Current fuel level passed from outside
-  maxFuel: number; // Maximum fuel level (for simplicity, you might set this to 100)
+  speed: number; 
+  maxSpeed: number;
+  fuel: number; 
+  maxFuel: number; 
   gear: number;
 }
 
@@ -22,7 +22,7 @@ const SpeedoMeter9: React.FC<SpeedFuelGaugeProps> = ({
 
   const radius = 42;
   const diameter = radius * 2;
-  const center = radius; // Center of the circle
+  const center = radius; 
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -35,21 +35,20 @@ const SpeedoMeter9: React.FC<SpeedFuelGaugeProps> = ({
 
     const drawGauge = () => {
       if (context) {
-        context.clearRect(0, 0, canvas!.width, canvas!.height); // Clear the canvas
+        context.clearRect(0, 0, canvas!.width, canvas!.height);
 
-        // Speed arc
-        let speedAngleStart = Math.PI; // Start from the left (middle of the circle)
-        let speedAngleEnd = Math.PI + (speed / maxSpeed) * Math.PI; // End angle based on animated speed
+        let speedAngleStart = Math.PI; 
+        let speedAngleEnd = Math.PI + (speed / maxSpeed) * Math.PI;
         context.beginPath();
         context.arc(centerX, centerY, radius, speedAngleStart, speedAngleEnd);
-        context.lineWidth = 2; // Make the arc a bit thicker
-        context.strokeStyle = "#BC61F3"; // Different color for speed
+        context.lineWidth = 2; 
+        context.strokeStyle = "#BC61F3"; 
         context.stroke();
       }
     };
 
     drawGauge();
-  }, [speed, maxSpeed, fuel, maxFuel]); // Update dependencies to include animatedSpeed
+  }, [speed, maxSpeed, fuel, maxFuel]); 
   const visualFuel = (fuel * 30) / 100;
 
   return (
@@ -211,11 +210,9 @@ const SpeedoMeter9: React.FC<SpeedFuelGaugeProps> = ({
           style={{ width: diameter, height: diameter }}
         >
           {numbers.map((number, index) => {
-            // Calculate the angle for this number
             const angle = (index / numbers.length) * 2 * Math.PI;
-            // Calculate the position based on the angle
-            const x = center + radius * Math.cos(angle) - 10; // Adjusting with -10 for centering the number
-            const y = center + radius * Math.sin(angle) - 10; // Adjusting with -10 for centering the number
+            const x = center + radius * Math.cos(angle) - 10; 
+            const y = center + radius * Math.sin(angle) - 10; 
 
             return (
               <div

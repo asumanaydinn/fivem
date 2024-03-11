@@ -3,8 +3,8 @@ import { useSettings } from "../../../contexts/SettingsContext";
 import { SpeedoMeterType } from "../../../types/settings";
 
 interface SpeedometerSettingsItemProps {
-  speedometerNumber: number; // The number of the speedometer
-  children: ReactNode; // Children components to be rendered inside
+  speedometerNumber: number;
+  children: ReactNode; 
 }
 
 const SpeedometerSettingsItem: React.FC<SpeedometerSettingsItemProps> = ({
@@ -14,7 +14,6 @@ const SpeedometerSettingsItem: React.FC<SpeedometerSettingsItemProps> = ({
   const { settings, updateSettings } = useSettings();
 
   const handleSelect = () => {
-    // Update the speedometerType to the selected speedometerNumber, converting number to string if necessary
     updateSettings("speedometers", {
       speedometerType: speedometerNumber.toString() as SpeedoMeterType,
     });

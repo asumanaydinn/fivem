@@ -1,9 +1,6 @@
-// Adding a speed prop to the component
 const SpeedoMeter7 = ({ speed, fuel }: { speed: number; fuel: number }) => {
-  // Calculate the number of active bars based on the current speed
   const activeBarsCount = Math.round((speed / 100) * 24);
 
-  // Function to generate indicator bars dynamically
   const generateIndicatorBars = (activeCount: number) => {
     let bars = [];
     for (let i = 0; i < 24; i++) {
@@ -19,9 +16,9 @@ const SpeedoMeter7 = ({ speed, fuel }: { speed: number; fuel: number }) => {
     return bars;
   };
 
-  const maxHeight = 42.0451; // Max height of the fillable area in your SVG
-  const filledHeight = (fuel / 100) * maxHeight; // Calculate filled height based on fuel level
-  const yPosition = 42.3071 - filledHeight + 0.262085; // Adjust y position based on filled height
+  const maxHeight = 42.0451; 
+  const filledHeight = (fuel / 100) * maxHeight; 
+  const yPosition = 42.3071 - filledHeight + 0.262085; 
 
   return (
     <div className="w-[151.05px] h-[87.77px]">

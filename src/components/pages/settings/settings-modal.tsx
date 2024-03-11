@@ -12,11 +12,10 @@ interface SettingsModalProps {
   onClose: () => void;
 }
 
-// Define a type for tabs to ensure type checking
 type TabType = {
   id: string;
   label: string;
-  component: React.FC; // Associate each tab with its component
+  component: React.FC; 
 };
 
 const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
@@ -24,7 +23,6 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
 
   const { restoreDefaults } = useSettings();
 
-  // Associate each tab with its component to render dynamically
   const tabs: TabType[] = [
     { id: "General", label: "General Settings", component: GeneralSettings },
     {
@@ -35,7 +33,6 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
     { id: "Status", label: "Status Settings", component: StatusSettings },
   ];
 
-  // Dynamically get the active tab's component
   const ActiveTabComponent =
     tabs.find((tab) => tab.id === activeTab)?.component || GeneralSettings;
 

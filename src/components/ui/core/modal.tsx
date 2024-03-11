@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  children: React.ReactNode; // To allow any React element(s) as children
+  children: React.ReactNode;
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
@@ -28,7 +28,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
           </Transition.Child>
 
-          {/* This element is to trick the browser into centering the modal contents. */}
           <span
             className="inline-block h-screen align-middle"
             aria-hidden="true"

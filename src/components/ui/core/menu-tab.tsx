@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 
-// Define interfaces for the props
 interface TabProps {
   label: string;
   isActive: boolean;

@@ -1,7 +1,7 @@
 import React from "react";
 
 interface StatusStyle2ItemProps {
-  fillPercentage: number; // The percentage of the circle to be filled
+  fillPercentage: number; 
   Icon: () => JSX.Element;
 }
 
@@ -9,9 +9,9 @@ const StatusStyle2Item: React.FC<StatusStyle2ItemProps> = ({
   fillPercentage,
   Icon,
 }) => {
-  const radius = 18; // Radius of the circle
-  const circumference = 2 * Math.PI * radius; // Calculate the circumference of the circle
-  const filledLength = (circumference * fillPercentage) / 100; // Calculate the length of the dash to represent the filled percentage
+  const radius = 18;
+  const circumference = 2 * Math.PI * radius; 
+  const filledLength = (circumference * fillPercentage) / 100; 
 
   return (
     <>

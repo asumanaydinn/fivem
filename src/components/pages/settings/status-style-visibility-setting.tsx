@@ -11,7 +11,6 @@ import { StatusStyle8 } from "../../icons/status-style-8";
 import { StatusStyle9 } from "../../icons/status-style-9";
 import { VibisilityThresholds } from "../../../types/settings";
 
-// Define a default visibility threshold for resetting purposes
 const defaultVisibilityThresholds = {
   health: 100,
   hydration: 100,
@@ -28,7 +27,6 @@ const StatusStyleVisibilitySetting = () => {
     useState<VibisilityThresholds>(defaultVisibilityThresholds);
 
   useEffect(() => {
-    // Fetch current visibility settings for the openSettings style
     if (openSettings) {
       const currentThresholds =
         settings.styleVisibility[openSettings]?.visibilityThresholds ||
@@ -42,7 +40,6 @@ const StatusStyleVisibilitySetting = () => {
   };
 
   const handleSave = () => {
-    // Update the visibility settings for the selected style
     const updatedVisibilitySettings = {
       ...settings.styleVisibility,
       [openSettings as string]: {
@@ -53,12 +50,10 @@ const StatusStyleVisibilitySetting = () => {
   };
 
   const handleRestore = () => {
-    // Restore to default thresholds
     setVisibilityThresholds(defaultVisibilityThresholds);
   };
 
   const handleCancel = () => {
-    // Revert changes by resetting to the last saved state or default
     const currentThresholds =
       settings.styleVisibility[openSettings as string]?.visibilityThresholds ||
       defaultVisibilityThresholds;

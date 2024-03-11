@@ -3,10 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SpeedFuelGaugeProps {
-  speed: number; // Current speed passed from outside
-  maxSpeed: number; // Maximum speed of the gauge
-  fuel: number; // Current fuel level passed from outside
-  maxFuel: number; // Maximum fuel level (for simplicity, you might set this to 100)
+  speed: number; 
+  maxSpeed: number; 
+  fuel: number; 
+  maxFuel: number; 
   gear: number;
 }
 
@@ -19,25 +19,21 @@ const SpeedoMeter3: React.FC<SpeedFuelGaugeProps> = ({
 }) => {
   const { settings } = useSettings();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // State to manage animated speed value
   const [animatedSpeed, setAnimatedSpeed] = useState(speed);
 
   useEffect(() => {
     const animate = () => {
-      // Calculate the difference between current speed and target speed
       const speedDiff = speed - animatedSpeed;
-      // If the difference is negligible, directly set to target speed
       if (Math.abs(speedDiff) < 0.01) {
         setAnimatedSpeed(speed);
         return;
       }
-      // Otherwise, incrementally update the animated speed towards the target speed
-      setAnimatedSpeed((prevSpeed) => prevSpeed + speedDiff * 0.02); // Adjust the 0.02 factor to control the animation speed
+      setAnimatedSpeed((prevSpeed) => prevSpeed + speedDiff * 0.02); 
       requestAnimationFrame(animate);
     };
 
     animate();
-  }, [animatedSpeed, speed]); // Dependency array includes speed to react to its changes
+  }, [animatedSpeed, speed]); 
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -48,12 +44,11 @@ const SpeedoMeter3: React.FC<SpeedFuelGaugeProps> = ({
 
     const drawGauge = () => {
       if (context) {
-        context.clearRect(0, 0, canvas!.width, canvas!.height); // Clear the canvas
+        context.clearRect(0, 0, canvas!.width, canvas!.height); 
 
-        // Speed arc
-        let speedAngleStart = Math.PI + 0.3; // Start from the left (middle of the circle)
+        let speedAngleStart = Math.PI + 0.3; 
         let speedAngleEnd =
-          Math.PI + (animatedSpeed / maxSpeed) * Math.PI - 0.3; // End angle based on animated speed
+          Math.PI + (animatedSpeed / maxSpeed) * Math.PI - 0.3; 
         context.beginPath();
         context.arc(
           centerX,
@@ -62,13 +57,12 @@ const SpeedoMeter3: React.FC<SpeedFuelGaugeProps> = ({
           speedAngleStart,
           speedAngleEnd
         );
-        context.lineWidth = 2; // Make the arc a bit thicker
-        context.strokeStyle = "#FC56FF"; // Different color for speed
+        context.lineWidth = 2; 
+        context.strokeStyle = "#FC56FF"; 
         context.stroke();
 
-        // Fuel arc
-        let fuelAngleStart = 0 + 0.3; // Start from the right (middle of the circle)
-        let fuelAngleEnd = (fuel / maxFuel) * Math.PI - 0.3; // End angle based on fuel
+        let fuelAngleStart = 0 + 0.3; 
+        let fuelAngleEnd = (fuel / maxFuel) * Math.PI - 0.3; 
         context.beginPath();
         context.arc(
           centerX,
@@ -77,14 +71,14 @@ const SpeedoMeter3: React.FC<SpeedFuelGaugeProps> = ({
           fuelAngleStart,
           fuelAngleEnd
         );
-        context.lineWidth = 2; // Same thickness for a consistent look
-        context.strokeStyle = "#FF6A56"; // Different color for fuel
+        context.lineWidth = 2; 
+        context.strokeStyle = "#FF6A56"; 
         context.stroke();
       }
     };
 
     drawGauge();
-  }, [animatedSpeed, maxSpeed, fuel, maxFuel]); // Update dependencies to include animatedSpeed
+  }, [animatedSpeed, maxSpeed, fuel, maxFuel]); 
 
   return (
     <>

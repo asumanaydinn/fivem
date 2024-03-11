@@ -1,10 +1,10 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 import { StatusStyleType } from "../../../types/settings";
 
 interface StatusStyleSettingItemProps {
-  statusStyleNumber: number; // The number of the speedometer
-  children: ReactNode; // Children components to be rendered inside
+  statusStyleNumber: number;
+  children: ReactNode;
 }
 
 const StatusStyleSettingItem: React.FC<StatusStyleSettingItemProps> = ({
@@ -14,7 +14,6 @@ const StatusStyleSettingItem: React.FC<StatusStyleSettingItemProps> = ({
   const { settings, updateSettings, setOpenSettings } = useSettings();
 
   const handleSelect = () => {
-    // Update the speedometerType to the selected speedometerNumber, converting number to string if necessary
     updateSettings("status", {
       statusStyleType: statusStyleNumber.toString() as StatusStyleType,
     });

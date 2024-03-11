@@ -11,7 +11,6 @@ const SpeedUnitSwitch: React.FC<SwitchProps> = ({ isOn, onToggle }) => {
     "w-16 pl-[17.02px] pr-[18.53px] justify-start items-start inline-flex";
   const textBaseClass = "font-['Satoshi'] leading-normal tracking-tight";
 
-  // Active and inactive class definitions
   const activeClass =
     "py-[7.01px] bg-neutral-200 bg-opacity-10 rounded-lg shadow shadow-white border-2 border-neutral-200";
   const inactiveClass = "bg-white bg-opacity-0";

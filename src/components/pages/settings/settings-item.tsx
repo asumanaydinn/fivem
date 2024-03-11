@@ -1,13 +1,12 @@
 import React from "react";
 import Switch from "../../ui/core/switch";
 
-// Assuming OnOffSwitch is already defined elsewhere and imported
 interface ListItemProps {
   title: string;
   description: string;
-  icon: JSX.Element; // Allow passing a custom icon as a React element
-  isOn: boolean; // State of the switch
-  handleToggle: (isOn: boolean) => void; // Function to handle toggle
+  icon: JSX.Element; 
+  isOn: boolean; 
+  handleToggle: (isOn: boolean) => void; 
 }
 
 const ListItem: React.FC<ListItemProps> = ({

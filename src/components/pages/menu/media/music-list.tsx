@@ -1,4 +1,3 @@
-// MusicList.tsx
 import React, { useState } from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 

@@ -19,7 +19,6 @@ const SpeedometerSettings = () => {
   const { settings, updateSettings } = useSettings();
 
   const toggleUnits = () => {
-    // Assuming you want to toggle between "kmh" and "mph"
     const newUnit = settings.speedometers.units === "kmh" ? "mph" : "kmh";
     updateSettings("speedometers", { units: newUnit });
   };

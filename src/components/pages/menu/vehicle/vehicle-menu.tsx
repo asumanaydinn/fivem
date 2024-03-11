@@ -18,8 +18,8 @@ const VehicleMenu = () => {
   const [selectedNeon, setSelectedNeon] = useState("All");
 
   useEffect(() => {
-    const cycleDuration = 5000; // Total duration of one cycle in milliseconds
-    let svgCount = 5; // Total number of SVGs
+    const cycleDuration = 5000; 
+    let svgCount = 5; 
     let interval = cycleDuration / svgCount;
 
     let currentSVG = 1;
@@ -27,13 +27,11 @@ const VehicleMenu = () => {
       for (let i = 1; i <= svgCount; i++) {
         const element = document.querySelector(`.svg${i}`);
         if (element instanceof HTMLElement) {
-          // Type assertion
           element.style.opacity = "0";
         }
       }
       const currentElement = document.querySelector(`.svg${currentSVG}`);
       if (currentElement instanceof HTMLElement) {
-        // Type assertion
         currentElement.style.opacity = "1";
       }
       currentSVG = (currentSVG % svgCount) + 1;
