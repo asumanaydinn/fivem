@@ -27,7 +27,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
   const [currentSongDetails, setCurrentSongDetails] = useState({
     title: "",
     duration: "",
-    artist: "", // Assuming artist's name could be derived or is a placeholder
+    artist: "",
   });
 
   useEffect(() => {

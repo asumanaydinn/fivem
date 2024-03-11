@@ -26,6 +26,8 @@ import QuickInfo from "./quick-info";
 import { useMusicPlayer } from "../../../contexts/MediaContext";
 import ReactPlayer from "react-player";
 
+import Draggable from "react-draggable";
+
 const statusComponents = [
   StatusStyle1,
   StatusStyle2,
@@ -70,6 +72,13 @@ const Hud = () => {
       parseInt(settings.speedometers.speedometerType, 10) - 1
     ];
 
+  const [isDraggable, setIsDraggable] = useState(true); // General state for controlling draggability
+
+  // Function to toggle draggability
+  const toggleDraggable = () => {
+    setIsDraggable(!isDraggable);
+  };
+
   return (
     <div className="relative w-full h-full">
       <img
@@ -90,22 +99,34 @@ const Hud = () => {
         height="180px"
       />
 
-      <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
-        <Menu />
+      <Draggable disabled={!isDraggable}>
+        <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
+          <Menu />
+        </div>
+      </Draggable>
+      <button
+        onClick={toggleDraggable}
+        className="fixed bottom-0 left-0 m-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 z-50"
+      >
+        {isDraggable ? "Disable Dragging" : "Enable Dragging"}
+      </button>
 
-        {!settings.status.hideAllStatus && (
-          <StatusComponent
-            status={{
-              armor: 20,
-              energy: 30,
-              health: 50,
-              hungry: 20,
-              hydration: 100,
-              stress: 10,
-            }}
-          />
-        )}
-      </div>
+      <Draggable disabled={!isDraggable}>
+        <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
+          {!settings.status.hideAllStatus && (
+            <StatusComponent
+              status={{
+                armor: 20,
+                energy: 30,
+                health: 50,
+                hungry: 20,
+                hydration: 100,
+                stress: 10,
+              }}
+            />
+          )}
+        </div>
+      </Draggable>
 
       <button
         className="absolute top-10 left-10 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
@@ -119,25 +140,29 @@ const Hud = () => {
         onClose={() => setIsModalOpen(false)}
       />
 
-      <div className="absolute bottom-10 right-10">
-        <button onClick={pressGasPedal} className="bg-white w-20 h-20">
-          Press
-        </button>
+      <Draggable disabled={!isDraggable}>
+        <div className="absolute bottom-10 right-10">
+          <button onClick={pressGasPedal} className="bg-white w-20 h-20">
+            Press
+          </button>
 
-        {SpeedoMeterComponent && (
-          <SpeedoMeterComponent
-            speed={speed}
-            fuel={30}
-            gear={2}
-            maxFuel={100}
-            maxSpeed={100}
-          />
-        )}
-      </div>
+          {SpeedoMeterComponent && (
+            <SpeedoMeterComponent
+              speed={speed}
+              fuel={30}
+              gear={2}
+              maxFuel={100}
+              maxSpeed={100}
+            />
+          )}
+        </div>
+      </Draggable>
 
-      <div className="absolute right-10 top-10">
-        <QuickInfo />
-      </div>
+      <Draggable disabled={!isDraggable}>
+        <div className="absolute right-10 top-10">
+          <QuickInfo />
+        </div>
+      </Draggable>
     </div>
   );
 };
