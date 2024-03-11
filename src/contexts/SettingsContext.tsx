@@ -40,10 +40,9 @@ const defaultSettings: AppSettings = {
     minimap: true,
     freeformEditMode: false,
     hideAllHud: false,
-    restoreDefaults: false,
     hideUserMoney: false,
-    hideOnlineUsers: false,
     hideServerLogo: false,
+    hideQuickInfo: false
   },
   speedometers: {
     units: "kmh",

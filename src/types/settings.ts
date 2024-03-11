@@ -5,10 +5,9 @@ export interface GeneralSettings {
   minimap: boolean;
   freeformEditMode: boolean;
   hideAllHud: boolean;
-  restoreDefaults: boolean;
   hideUserMoney: boolean;
-  hideOnlineUsers: boolean;
   hideServerLogo: boolean;
+  hideQuickInfo: boolean;
 }
 
 export type SpeedoMeterType =

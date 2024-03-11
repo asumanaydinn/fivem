@@ -4,7 +4,6 @@ import { useSettings } from "../../../contexts/SettingsContext";
 import { FreeFormEditModeIcon } from "../../icons/free-form-edit-mode-icon";
 import { HideIcon } from "../../icons/hide-icon";
 import { MinimapIcon } from "../../icons/minimap-icon";
-import { RestoreDefaultsIcon } from "../../icons/restore-defaults-icon";
 import { ShowLocationIcon } from "../../icons/show-location-icon";
 import { SinematicModeIcon } from "../../icons/sinematic-mode-icon";
 import ListItem from "./settings-item";
@@ -53,15 +52,15 @@ const GeneralSettings = () => {
         isOn={settings.general.hideAllHud}
         handleToggle={() => toggleSetting("hideAllHud")}
       />
+
       <ListItem
-        description="Click to restore all settings to defaults"
-        title="Restore Defaults"
-        icon={<RestoreDefaultsIcon />}
-        isOn={settings.general.restoreDefaults}
-        handleToggle={() => {
-          toggleSetting("restoreDefaults");
-        }}
+        description="Off-On Settings"
+        title="Hide Quick Info"
+        icon={<HideIcon />}
+        isOn={settings.general.hideQuickInfo}
+        handleToggle={() => toggleSetting("hideQuickInfo")}
       />
+
       <ListItem
         description="Off-On Settings"
         title="Hide User Money"
@@ -69,13 +68,7 @@ const GeneralSettings = () => {
         isOn={settings.general.hideUserMoney}
         handleToggle={() => toggleSetting("hideUserMoney")}
       />
-      <ListItem
-        description="Off-On Settings"
-        title="Hide Online Users"
-        icon={<HideIcon />}
-        isOn={settings.general.hideOnlineUsers}
-        handleToggle={() => toggleSetting("hideOnlineUsers")}
-      />
+
       <ListItem
         description="Off-On Settings"
         title="Hide Server Logo"
