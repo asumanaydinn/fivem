@@ -1,3 +1,13 @@
+
+interface Props {
+  speed: number;
+  maxSpeed: number;
+  fuel: number;
+  maxFuel: number;
+  gear: number;
+}
+
+
 const SpeedoMeter7 = ({ speed, fuel }: { speed: number; fuel: number }) => {
   const activeBarsCount = Math.round((speed / 100) * 24);
 

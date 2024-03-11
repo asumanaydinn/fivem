@@ -2,7 +2,8 @@ import clsx from "clsx";
 import React, { useEffect, useRef, useState } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 
-interface SpeedFuelGaugeProps {
+
+interface Props {
   speed: number;
   maxSpeed: number;
   fuel: number;
@@ -10,7 +11,8 @@ interface SpeedFuelGaugeProps {
   gear: number;
 }
 
-const SpeedoMeter4: React.FC<SpeedFuelGaugeProps> = ({
+
+const SpeedoMeter4: React.FC<Props> = ({
   speed,
   maxSpeed,
   fuel,

@@ -1,11 +1,13 @@
 import clsx from "clsx";
 import { useSettings } from "../../../contexts/SettingsContext";
 
-type Props = {
+interface Props {
   speed: number;
+  maxSpeed: number;
   fuel: number;
+  maxFuel: number;
   gear: number;
-};
+}
 
 const SpeedoMeter2 = (props: Props) => {
   const { fuel, gear, speed } = props;

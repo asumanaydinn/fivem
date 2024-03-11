@@ -1,3 +1,12 @@
+
+interface Props {
+  speed: number;
+  maxSpeed: number;
+  fuel: number;
+  maxFuel: number;
+  gear: number;
+}
+
 const SpeedoMeter10 = () => {
   return (
     <svg

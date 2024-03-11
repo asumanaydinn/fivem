@@ -1,9 +1,13 @@
 import React from "react";
 
-type Props = {
+interface Props {
   speed: number;
+  maxSpeed: number;
   fuel: number;
-};
+  maxFuel: number;
+  gear: number;
+}
+
 
 const SpeedoMeter1 = (props: Props) => {
   const { speed, fuel } = props;

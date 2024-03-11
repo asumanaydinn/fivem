@@ -58,12 +58,19 @@ const Hud = () => {
   const { musicList, playing, setPlaying } = useMusicPlayer();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [speed, setSpeed] = useState(0);
+  const [gear, setGear] = useState(1);
 
-  const { playNextTrack, currentTrackIndex } = useMusicPlayer();
-
+  // Function to increase speed - simulate pressing the gas pedal
   const pressGasPedal = () => {
     setSpeed((prevSpeed) => prevSpeed + 10);
   };
+
+  // Function to change gear
+  const changeGear = (newGear: number) => {
+    setGear(newGear);
+  };
+
+  const { playNextTrack, currentTrackIndex } = useMusicPlayer();
 
   const StatusComponent =
     statusComponents[parseInt(settings.status.statusStyleType, 10) - 1];
@@ -129,17 +136,17 @@ const Hud = () => {
 
       <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute flex flex-col gap-y-2 bottom-0 right-2">
-          <button onClick={pressGasPedal} className="bg-white w-20 h-20">
-            Press
-          </button>
+          <button onClick={pressGasPedal}>Press Gas Pedal</button>
+          <button onClick={() => changeGear(gear + 1)}>Gear Up</button>
+          <button onClick={() => changeGear(gear - 1)}>Gear Down</button>
 
           {SpeedoMeterComponent && (
             <SpeedoMeterComponent
               speed={speed}
               fuel={30}
-              gear={2}
+              gear={gear}
               maxFuel={100}
-              maxSpeed={100}
+              maxSpeed={300}
             />
           )}
         </div>

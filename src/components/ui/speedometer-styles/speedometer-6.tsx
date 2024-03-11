@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 
-interface SpeedFuelGaugeProps {
+
+interface Props {
   speed: number;
   maxSpeed: number;
   fuel: number;
@@ -9,7 +10,7 @@ interface SpeedFuelGaugeProps {
   gear: number;
 }
 
-const SpeedoMeter6: React.FC<SpeedFuelGaugeProps> = ({
+const SpeedoMeter6: React.FC<Props> = ({
   speed,
   maxSpeed,
   fuel,
