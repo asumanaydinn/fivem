@@ -72,13 +72,6 @@ const Hud = () => {
       parseInt(settings.speedometers.speedometerType, 10) - 1
     ];
 
-  const [isDraggable, setIsDraggable] = useState(true); // General state for controlling draggability
-
-  // Function to toggle draggability
-  const toggleDraggable = () => {
-    setIsDraggable(!isDraggable);
-  };
-
   return (
     <div className="relative w-full h-full">
       <img
@@ -99,19 +92,13 @@ const Hud = () => {
         height="180px"
       />
 
-      <Draggable disabled={!isDraggable}>
+      <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
           <Menu />
         </div>
       </Draggable>
-      <button
-        onClick={toggleDraggable}
-        className="fixed bottom-0 left-0 m-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 z-50"
-      >
-        {isDraggable ? "Disable Dragging" : "Enable Dragging"}
-      </button>
 
-      <Draggable disabled={!isDraggable}>
+      <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
           {!settings.status.hideAllStatus && (
             <StatusComponent
@@ -140,7 +127,7 @@ const Hud = () => {
         onClose={() => setIsModalOpen(false)}
       />
 
-      <Draggable disabled={!isDraggable}>
+      <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-10 right-10">
           <button onClick={pressGasPedal} className="bg-white w-20 h-20">
             Press
@@ -158,7 +145,7 @@ const Hud = () => {
         </div>
       </Draggable>
 
-      <Draggable disabled={!isDraggable}>
+      <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute right-10 top-10">
           <QuickInfo />
         </div>
