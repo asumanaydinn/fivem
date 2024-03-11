@@ -33,6 +33,11 @@ function updateStatusSettingForStyleInLocalStorage(
   setStatusSettingsMapInLocalStorage(settingsMap);
 }
 
+function clearSettingsInLocalStorage() {
+  // To clear all settings
+  localStorage.removeItem(localStorageKey);
+}
+
 const defaultSettings: AppSettings = {
   general: {
     cinematicMode: false,
@@ -76,6 +81,7 @@ interface SettingsContextType {
   ) => void;
   setOpenSettings: React.Dispatch<React.SetStateAction<StatusStyleType | null>>;
   openSettings: StatusStyleType | null;
+  restoreDefaults: () => void;
 }
 
 const SettingsContext = createContext<SettingsContextType>({
@@ -89,6 +95,9 @@ const SettingsContext = createContext<SettingsContextType>({
     throw new Error("Function not implemented.");
   },
   openSettings: null,
+  restoreDefaults: function (): void {
+    throw new Error("Function not implemented.");
+  },
 });
 
 export const useSettings = () => useContext(SettingsContext);
@@ -143,6 +152,11 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
     updateStatusSettingForStyleInLocalStorage(styleType, setting);
   };
 
+  const restoreDefaults = () => {
+    setSettings(defaultSettings); // Reset state settings to default
+    clearSettingsInLocalStorage(); // Clear local storage settings or reset them to default
+  };
+
   return (
     <SettingsContext.Provider
       value={{
@@ -152,6 +166,7 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
         updateSettings,
         openSettings,
         setOpenSettings,
+        restoreDefaults,
       }}
     >
       {children}

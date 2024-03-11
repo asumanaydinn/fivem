@@ -5,6 +5,7 @@ import SpeedometerSettings from "./speedometer-settings";
 import StatusSettings from "./status-settings";
 import TabBar from "../../ui/core/tab";
 import SettingsHeader from "./settings-header";
+import { useSettings } from "../../../contexts/SettingsContext";
 
 interface SettingsModalProps {
   isOpen: boolean;
@@ -20,6 +21,8 @@ type TabType = {
 
 const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = useState<string>("General");
+
+  const { restoreDefaults } = useSettings();
 
   // Associate each tab with its component to render dynamically
   const tabs: TabType[] = [
@@ -53,7 +56,10 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
         </div>{" "}
         <div className="sticky bottom-0 bg-black py-4 px-4">
           <div className="flex items-center w-full justify-end h-full">
-            <button className="py-2 px-6 bg-neutral-200 bg-opacity-10 rounded-sm border border-neutral-200 flex items-center justify-center">
+            <button
+              onClick={() => restoreDefaults()}
+              className="py-2 px-6 bg-neutral-200 bg-opacity-10 rounded-sm border border-neutral-200 flex items-center justify-center"
+            >
               <div className="text-center text-neutral-200 text-sm font-bold leading-none tracking-tight">
                 Restore Defaults
               </div>
