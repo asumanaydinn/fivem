@@ -7,7 +7,7 @@ import { useMusicPlayer } from "../../../../contexts/MediaContext";
 
 const MediaMenu: React.FC = () => {
   const { musicList } = useMusicPlayer();
-  const [activeTab, setActiveTab] = useState("Track List");
+  const [activeTab, setActiveTab] = useState("Add Song");
 
   const tabComponents: Record<string, ReactNode> = {
     "Add Song": <AddSong />,

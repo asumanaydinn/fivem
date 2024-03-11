@@ -100,7 +100,7 @@ const Hud = () => {
       />
 
       <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
+        <div className="absolute bottom-28 left-10 flex flex-col gap-y-2">
           <Menu />
         </div>
       </Draggable>
@@ -135,10 +135,16 @@ const Hud = () => {
       />
 
       <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute flex flex-col gap-y-2 bottom-0 right-2">
-          <button onClick={pressGasPedal}>Press Gas Pedal</button>
-          <button onClick={() => changeGear(gear + 1)}>Gear Up</button>
-          <button onClick={() => changeGear(gear - 1)}>Gear Down</button>
+        <div className="absolute flex flex-col gap-y-2 bottom-10 right-10">
+          <button className="bg-white" onClick={pressGasPedal}>
+            Press Gas Pedal
+          </button>
+          <button className="bg-white" onClick={() => changeGear(gear + 1)}>
+            Gear Up
+          </button>
+          <button className="bg-white" onClick={() => changeGear(gear - 1)}>
+            Gear Down
+          </button>
 
           {SpeedoMeterComponent && (
             <SpeedoMeterComponent
