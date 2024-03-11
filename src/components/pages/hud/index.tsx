@@ -73,18 +73,22 @@ const Hud = () => {
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
       />
+
       <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
         <Menu />
-        <StatusComponent
-          status={{
-            armor: 20,
-            energy: 30,
-            health: 50,
-            hungry: 20,
-            hydration: 100,
-            stress: 10,
-          }}
-        />
+
+        {!settings.status.hideAllStatus && (
+          <StatusComponent
+            status={{
+              armor: 20,
+              energy: 30,
+              health: 50,
+              hungry: 20,
+              hydration: 100,
+              stress: 10,
+            }}
+          />
+        )}
       </div>
 
       <button
