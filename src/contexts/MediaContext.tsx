@@ -11,6 +11,8 @@ export interface MusicPlayerContextType {
   playSong: (song: Song | null) => void;
   addSongToTrackList: (song: Song, addToMusicList?: boolean) => void;
   searchSongInMusicList: (searchTerm: string) => Song[];
+  playing: boolean;
+  setPlaying: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const defaultValue: MusicPlayerContextType = {
@@ -22,6 +24,10 @@ const defaultValue: MusicPlayerContextType = {
   playSong: () => {},
   addSongToTrackList: () => {},
   searchSongInMusicList: () => [],
+  playing: false,
+  setPlaying: function (value: React.SetStateAction<boolean>): void {
+    throw new Error("Function not implemented.");
+  },
 };
 
 const MusicPlayerContext = createContext<MusicPlayerContextType>(defaultValue);
@@ -38,6 +44,8 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
   const [currentTrack, setCurrentTrack] = useState<Song | null>(null);
   const [trackList, setTrackList] = useState<Song[]>([]);
   const [musicList, setMusicList] = useState<Song[]>([]);
+
+  const [playing, setPlaying] = useState(false);
 
   const addSongToMusicList = (song: Song) => {
     setMusicList((prevMusicList) => [...prevMusicList, song]);
@@ -77,6 +85,8 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
         playSong,
         addSongToTrackList,
         searchSongInMusicList,
+        playing,
+        setPlaying,
       }}
     >
       {children}

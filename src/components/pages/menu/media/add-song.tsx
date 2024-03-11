@@ -6,11 +6,12 @@ const AddSong = () => {
   const [music, setMusic] = useState("");
 
   const {
-    addSongToTrackList,
+    // addSongToTrackList,
     addSongToMusicList,
     trackList,
     currentTrack,
     playSong,
+    playing,
   } = useMusicPlayer();
 
   return (
@@ -30,7 +31,7 @@ const AddSong = () => {
         <button
           onClick={() => {
             addSongToMusicList({ title: "", url: music });
-            addSongToTrackList({ title: "", url: music });
+            // addSongToTrackList({ title: "", url: music });
           }}
           style={{
             borderRadius: "3px",
@@ -65,11 +66,11 @@ const AddSong = () => {
               </svg>
             </div>
 
-            <div className="px-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
+            <div className="px-2 w-44 line-clamp-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
               {track.url}
             </div>
           </div>
-          {currentTrack?.url === track.url && (
+          {playing && currentTrack?.url === track.url && (
             <div className="text-zinc-500 text-[8.89px] font-semibold font-['Qanelas Soft']">
               Playing Now
             </div>

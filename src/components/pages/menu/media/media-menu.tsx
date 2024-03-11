@@ -1,7 +1,7 @@
 import React, { useState, ReactNode } from "react";
 import Tab from "./menu-tab";
 import MusicList from "./music-list";
-import TrackList from "./track-list";
+// import TrackList from "./track-list";
 import MusicPlayer from "./music-player";
 import AddSong from "./add-song";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
@@ -14,7 +14,7 @@ const MediaMenu: React.FC = () => {
     "Add Song": <AddSong />,
     "Music Player": <MusicPlayer tracks={musicList} />,
     "Music List": <MusicList />,
-    "Track List": <TrackList />,
+    // "Track List": <TrackList />,
   };
 
   // Helper function to render tab buttons

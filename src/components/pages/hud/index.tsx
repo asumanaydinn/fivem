@@ -24,6 +24,8 @@ import SpeedoMeter10 from "../../ui/speedometer-styles/speedometer-10";
 import StatusStyle8 from "../../ui/status-styles/status-style-8";
 import StatusStyle9 from "../../ui/status-styles/status-style-9";
 import QuickInfo from "./quick-info";
+import { useMusicPlayer } from "../../../contexts/MediaContext";
+import ReactPlayer from "react-player";
 
 const statusComponents = [
   StatusStyle1,
@@ -52,8 +54,14 @@ const speedometerComponents = [
 
 const Hud = () => {
   const { settings } = useSettings();
+  const { currentTrack, trackList, playing, setPlaying } = useMusicPlayer();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [speed, setSpeed] = useState(0);
+  const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
+
+  const playNextTrack = () => {
+    setCurrentTrackIndex((prevIndex) => (prevIndex + 1) % trackList.length);
+  };
 
   const pressGasPedal = () => {
     setSpeed((prevSpeed) => prevSpeed + 10); // Increment speed by 10 units
@@ -72,6 +80,17 @@ const Hud = () => {
         className="absolute object-cover"
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
+      />
+
+      <ReactPlayer
+        url={trackList.length > 0 ? trackList[currentTrackIndex].url : ""}
+        playing={playing && !!currentTrack}
+        controls={true}
+        onPause={() => setPlaying(false)}
+        onEnded={playNextTrack}
+        style={{ visibility: "hidden" }}
+        width="96%"
+        height="180px"
       />
 
       <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">

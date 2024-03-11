@@ -75,7 +75,7 @@ const MusicList: React.FC = () => {
               </svg>
             </div>
 
-            <div className="px-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
+            <div className="px-2 line-clamp-2 w-44 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
               {track.url}
             </div>
           </div>
