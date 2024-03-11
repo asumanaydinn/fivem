@@ -71,7 +71,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
     }
   }
 
-  if (!playing)
+  if (!currentSongDetails)
     return (
       <div className="flex items-center justify-center bg-zinc-900 w-full h-full text-white">
         No music on play.
