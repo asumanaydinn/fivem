@@ -108,9 +108,7 @@ const SpeedoMeter3: React.FC<Props> = ({
             fill="none"
             stroke="#FF6A56"
             strokeWidth={3}
-            strokeDasharray={
-              (Math.min(fuel, maxFuel) * 240) / maxSpeed + " 500"
-            }
+            strokeDasharray={(Math.min(fuel, maxFuel) * 240) / maxFuel + " 500"}
           />
         </g>
         <g filter="url(#filter2_d_43_1542)">
