@@ -15,6 +15,8 @@ import { StatusStyle7 } from "../../icons/status-style-7";
 import { StatusStyle8 } from "../../icons/status-style-8";
 import { StatusStyle9 } from "../../icons/status-style-9";
 import { StressIcon } from "../../icons/stress-icon";
+import StatusStyle10 from "../../ui/status-styles/status-style-10";
+import Status10Edit, { Status10 } from "./settings-10-edit";
 
 import ListItem from "./settings-item";
 import StatusStyleSettingItem from "./status-style-setting-item";
@@ -101,6 +103,13 @@ const StatusSettings = () => {
               <StatusStyle />
             </StatusStyleSettingItem>
           )
+        )}
+        {openSettings === "10" ? (
+          <Status10Edit />
+        ) : (
+          <StatusStyleSettingItem statusStyleNumber={10}>
+            <Status10 />
+          </StatusStyleSettingItem>
         )}
       </div>
     </div>
