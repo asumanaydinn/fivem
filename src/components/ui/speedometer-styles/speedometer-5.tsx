@@ -1,4 +1,3 @@
-import { useRef, useState, useEffect } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 
 interface Props {
