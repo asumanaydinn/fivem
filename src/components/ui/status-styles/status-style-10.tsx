@@ -16,7 +16,10 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
           {" "}
           <div
             className="absolute left-0 h-[3.79px] bg-[#FF5F98]"
-            style={{ width: status.health + "%" }}
+            style={{
+              width: status.health + "%",
+              boxShadow: "0px 0px 17.644px 2.846px rgba(255, 95, 152, 0.47)",
+            }}
           ></div>
         </div>
         <svg
@@ -360,7 +363,10 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
           {" "}
           <div
             className="absolute right-0 h-[3.79px] bg-[#5FBCFF]"
-            style={{ width: status.health + "%" }}
+            style={{
+              width: status.health + "%",
+              boxShadow: "0px 0px 17.644px 2.846px rgba(95, 188, 255, 0.47)",
+            }}
           ></div>
         </div>
       </div>
