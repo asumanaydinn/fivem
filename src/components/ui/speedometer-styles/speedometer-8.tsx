@@ -29,6 +29,76 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
         </div>
       </div>
       <svg
+        className="absolute left-[3px] top-[5px]"
+        width="290"
+        height="258"
+        viewBox="0 0 290 258"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_i_796_3658)">
+          <path
+            d="M48.4825 254.117C27.8946 233.929 13.7558 208.115 7.85414 179.939C1.95246 151.763 4.55292 122.492 15.3267 95.8257C26.1004 69.1597 44.5636 46.297 68.3814 30.1288C92.1992 13.9606 120.302 5.21294 149.136 4.99213C177.969 4.77132 206.239 13.0872 230.37 28.8883C254.501 44.6893 273.41 67.2658 284.704 93.7628"
+            strokeDasharray={(speed * 170) / 100 + " 5000"}
+            stroke="url(#paint0_linear_796_3658)"
+            stroke-width="9.53"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_i_796_3658"
+            x="0.00292969"
+            y="0.2229"
+            width="289.085"
+            height="257.473"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dy="0.176616" />
+            <feGaussianBlur stdDeviation="0.176616" />
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="shape"
+              result="effect1_innerShadow_796_3658"
+            />
+          </filter>
+          <linearGradient
+            id="paint0_linear_796_3658"
+            x1="80.4298"
+            y1="267.025"
+            x2="185.23"
+            y2="7.63663"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0.076701" stop-color="#AE713C" stop-opacity="0.54" />
+            <stop
+              offset="0.716738"
+              stop-color="#DEB546"
+              stop-opacity="0.814929"
+            />
+            <stop offset="0.858898" stop-color="#FFE24D" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <svg
         width="312"
         height="312"
         viewBox="0 0 312 312"
@@ -79,10 +149,7 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             stroke-width="3.53233"
           />
         </g>
-        <path
-          d="M44.8352 258.991C29.0429 243.199 16.9424 224.106 9.4022 203.084C1.86201 182.061 -0.93087 159.63 1.22401 137.401C3.37889 115.171 10.4281 93.6945 21.8657 74.5117C33.3033 55.329 48.8456 38.9161 67.3771 26.451C85.9087 13.986 106.97 5.77788 129.049 2.41586C151.128 -0.946153 173.678 0.621289 195.08 7.00569C216.482 13.3901 236.205 24.4331 252.833 39.3422C269.462 54.2513 282.584 72.6566 291.258 93.2373L280.033 97.9682C272.057 79.0444 259.992 62.1208 244.702 48.412C229.412 34.7032 211.276 24.5493 191.598 18.6788C171.919 12.8084 151.185 11.3672 130.883 14.4585C110.581 17.5499 91.2156 25.0972 74.1759 36.5587C57.1363 48.0202 42.8453 63.1117 32.3285 80.7501C21.8117 98.3885 15.3301 118.136 13.3487 138.576C11.3673 159.016 13.9353 179.641 20.8684 198.971C27.8016 218.301 38.9279 235.856 53.4488 250.377L44.8352 258.991Z"
-          fill="url(#paint0_linear_756_1208)"
-        />
+
         <path
           d="M251.079 170.3C254.873 151.225 252.926 131.453 245.483 113.485C238.041 95.5168 225.437 80.1592 209.266 69.3541C193.095 58.549 174.083 52.7819 154.635 52.7819C135.186 52.7819 116.174 58.549 100.003 69.3541C83.8324 80.1592 71.2287 95.5168 63.786 113.485C56.3434 131.453 54.3961 151.225 58.1903 170.3C61.9845 189.375 71.3499 206.896 85.1021 220.648"
           stroke="#797979"
@@ -363,6 +430,19 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
               result="shape"
             />
           </filter>
+          <defs>
+            <linearGradient
+              id="paint0_linear_756_1208"
+              x1="93.853"
+              y1="23.6981"
+              x2="78.5472"
+              y2="289.497"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#E3BB51" />
+              <stop offset="1" stop-color="#E38651" stop-opacity="0" />
+            </linearGradient>
+          </defs>
           <filter
             id="filter5_i_756_1195"
             x="137.233"
@@ -410,17 +490,7 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             <stop offset="0.509715" stop-color="#0F0F0F" />
             <stop offset="1" stop-color="#0C0C0C" />
           </linearGradient>
-          <linearGradient
-            id="paint0_linear_756_1208"
-            x1="90.3755"
-            y1="19.3861"
-            x2="75.0697"
-            y2="285.185"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#E3BB51" />
-            <stop offset="1" stop-color="#E38651" stop-opacity="0" />
-          </linearGradient>
+
           <linearGradient
             id="paint2_linear_756_1195"
             x1="154.827"
