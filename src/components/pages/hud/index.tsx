@@ -84,7 +84,7 @@ const Hud = () => {
   return (
     <div className="relative w-full h-full">
       <img
-        className="absolute object-cover"
+        className="h-screen w-screen absolute object-cover"
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
       />
@@ -101,12 +101,12 @@ const Hud = () => {
         height="180px"
       />
 
-      <Draggable disabled={!settings.general.freeformEditMode}>
+      {/* <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-52 left-10 flex flex-col gap-y-2">
           <Menu />
         </div>
-      </Draggable>
-
+      </Draggable> */}
+      {/* 
       <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
           {!settings.status.hideAllStatus && (
@@ -122,7 +122,7 @@ const Hud = () => {
             />
           )}
         </div>
-      </Draggable>
+      </Draggable> */}
 
       <button
         className="absolute top-10 left-10 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
@@ -137,7 +137,7 @@ const Hud = () => {
       />
 
       <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute flex flex-col gap-y-2 bottom-10 right-10">
+        <div className="absolute flex flex-col gap-y-2 right-0 bottom-0">
           <button className="bg-white" onClick={pressGasPedal}>
             Press Gas Pedal
           </button>
@@ -160,11 +160,11 @@ const Hud = () => {
         </div>
       </Draggable>
 
-      <Draggable disabled={!settings.general.freeformEditMode}>
+      {/* <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute right-10 top-10">
           <QuickInfo />
         </div>
-      </Draggable>
+      </Draggable> */}
     </div>
   );
 };
