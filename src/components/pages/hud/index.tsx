@@ -101,11 +101,11 @@ const Hud = () => {
         height="180px"
       />
 
-      {/* <Draggable disabled={!settings.general.freeformEditMode}>
+      <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-52 left-10 flex flex-col gap-y-2">
           <Menu />
         </div>
-      </Draggable> */}
+      </Draggable>
 
       <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
@@ -160,11 +160,11 @@ const Hud = () => {
         </div>
       </Draggable>
 
-      {/* <Draggable disabled={!settings.general.freeformEditMode}>
+      <Draggable disabled={!settings.general.freeformEditMode}>
         <div className="absolute right-10 top-10">
           <QuickInfo />
         </div>
-      </Draggable> */}
+      </Draggable>
     </div>
   );
 };
