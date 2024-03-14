@@ -88,83 +88,86 @@ const Hud = () => {
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
       />
+      {!settings.general.hideAllHud && (
+        <>
+          <ReactPlayer
+            loop={true}
+            url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
+            playing={playing}
+            controls={true}
+            onPause={() => setPlaying(false)}
+            onEnded={playNextTrack}
+            style={{ visibility: "hidden" }}
+            width="96%"
+            height="180px"
+          />
 
-      <ReactPlayer
-        loop={true}
-        url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
-        playing={playing}
-        controls={true}
-        onPause={() => setPlaying(false)}
-        onEnded={playNextTrack}
-        style={{ visibility: "hidden" }}
-        width="96%"
-        height="180px"
-      />
+          <Draggable disabled={!settings.general.freeformEditMode}>
+            <div className="absolute bottom-52 left-10 flex flex-col gap-y-2">
+              <Menu />
+            </div>
+          </Draggable>
 
-      <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute bottom-52 left-10 flex flex-col gap-y-2">
-          <Menu />
-        </div>
-      </Draggable>
+          <Draggable disabled={!settings.general.freeformEditMode}>
+            <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
+              {!settings.status.hideAllStatus && (
+                <StatusComponent
+                  status={{
+                    armor: 20,
+                    energy: 30,
+                    health: 50,
+                    hungry: 20,
+                    hydration: 100,
+                    stress: 10,
+                  }}
+                />
+              )}
+            </div>
+          </Draggable>
 
-      <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute bottom-10 left-10 flex flex-col gap-y-2">
-          {!settings.status.hideAllStatus && (
-            <StatusComponent
-              status={{
-                armor: 20,
-                energy: 30,
-                health: 50,
-                hungry: 20,
-                hydration: 100,
-                stress: 10,
-              }}
-            />
-          )}
-        </div>
-      </Draggable>
-
-      <button
-        className="absolute top-10 left-10 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
-        onClick={() => setIsModalOpen(true)}
-      >
-        Open Settings
-      </button>
-
-      <SettingsModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
-
-      <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute flex flex-col gap-y-2 right-0 bottom-0">
-          <button className="bg-white" onClick={pressGasPedal}>
-            Press Gas Pedal
-          </button>
-          <button className="bg-white" onClick={() => changeGear(gear + 1)}>
-            Gear Up
-          </button>
-          <button className="bg-white" onClick={() => changeGear(gear - 1)}>
-            Gear Down
+          <button
+            className="absolute top-10 left-10 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Open Settings
           </button>
 
-          {SpeedoMeterComponent && (
-            <SpeedoMeterComponent
-              speed={speed}
-              fuel={30}
-              gear={gear}
-              maxFuel={100}
-              maxSpeed={300}
-            />
-          )}
-        </div>
-      </Draggable>
+          <SettingsModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
 
-      <Draggable disabled={!settings.general.freeformEditMode}>
-        <div className="absolute right-10 top-10">
-          <QuickInfo />
-        </div>
-      </Draggable>
+          <Draggable disabled={!settings.general.freeformEditMode}>
+            <div className="absolute flex flex-col gap-y-2 right-0 bottom-0">
+              <button className="bg-white" onClick={pressGasPedal}>
+                Press Gas Pedal
+              </button>
+              <button className="bg-white" onClick={() => changeGear(gear + 1)}>
+                Gear Up
+              </button>
+              <button className="bg-white" onClick={() => changeGear(gear - 1)}>
+                Gear Down
+              </button>
+
+              {SpeedoMeterComponent && (
+                <SpeedoMeterComponent
+                  speed={speed}
+                  fuel={30}
+                  gear={gear}
+                  maxFuel={100}
+                  maxSpeed={300}
+                />
+              )}
+            </div>
+          </Draggable>
+
+          <Draggable disabled={!settings.general.freeformEditMode}>
+            <div className="absolute right-10 top-10">
+              <QuickInfo />
+            </div>
+          </Draggable>
+        </>
+      )}
     </div>
   );
 };

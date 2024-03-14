@@ -61,7 +61,7 @@ const AddSong = () => {
             </div>
 
             <div className="px-2 w-44 line-clamp-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
-              {track.url}
+              {track.title}
             </div>
             <button onClick={() => onPlay(index)}>
               <PlayArrowRounded />
