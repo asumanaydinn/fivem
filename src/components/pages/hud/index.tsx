@@ -6,9 +6,6 @@ import StatusStyle1 from "../../ui/status-styles/status-style-1";
 import StatusStyle2 from "../../ui/status-styles/status-style-2";
 import StatusStyle3 from "../../ui/status-styles/status-style-3";
 import StatusStyle4 from "../../ui/status-styles/status-style-4";
-import StatusStyle5 from "../../ui/status-styles/status-style-5";
-import StatusStyle6 from "../../ui/status-styles/status-style-6";
-import StatusStyle7 from "../../ui/status-styles/status-style-7";
 import Menu from "../menu";
 import SpeedoMeter1 from "../../ui/speedometer-styles/speedometer-1";
 import SpeedoMeter2 from "../../ui/speedometer-styles/speedometer-2";
@@ -21,13 +18,16 @@ import SpeedoMeter8 from "../../ui/speedometer-styles/speedometer-8";
 import SpeedoMeter9 from "../../ui/speedometer-styles/speedometer-9";
 import SpeedoMeter10 from "../../ui/speedometer-styles/speedometer-10";
 import StatusStyle8 from "../../ui/status-styles/status-style-8";
-import StatusStyle9 from "../../ui/status-styles/status-style-9";
 import QuickInfo from "./quick-info";
 import { useMusicPlayer } from "../../../contexts/MediaContext";
 import ReactPlayer from "react-player";
 
 import Draggable from "react-draggable";
 import StatusStyle10 from "../../ui/status-styles/status-style-10";
+import StatusStyle5 from "../../ui/status-styles/status-style-5";
+import { StatusStyle6 } from "../../icons/status-style-6";
+import StatusStyle9 from "../../ui/status-styles/status-style-9";
+import StatusStyle7 from "../../ui/status-styles/status-style-7";
 
 const statusComponents = [
   StatusStyle1,

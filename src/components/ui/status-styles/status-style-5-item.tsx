@@ -1,34 +1,74 @@
-type StatusStyle4ItemProps = {
-  percentage: number;
+import React from "react";
+
+interface StatusStyle5ItemProps {
+  fillPercentage: number; 
   Icon: () => JSX.Element;
-  color: string;
   activeColor: string;
-};
+}
 
-const StatusStyle5Item = (props: StatusStyle4ItemProps) => {
-  const { Icon, activeColor, color } = props;
-
-  const purplePercentage = props.percentage; 
-  const pinkPercentage = 100 - purplePercentage; 
-
-  const squareStyle = {
-    width: "2rem", 
-    height: "2rem", 
-    transform: "rotate(45deg)",
-    backgroundImage: `linear-gradient(to bottom right, ${activeColor} ${purplePercentage}%,  ${color} ${pinkPercentage}%)`,
-    outlineColor: color + "40",
-  };
-
+const StatusStyle5Item: React.FC<StatusStyle5ItemProps> = ({
+  fillPercentage,
+  Icon,
+  activeColor,
+}) => {
+  const radius = 18; 
+  const circumference = 2 * Math.PI * radius; 
+  const filledLength = (circumference * fillPercentage) / 100; 
   return (
-    <div className="relative w-12 h-12 items-center justify-center">
+    <>
       <div
-        style={squareStyle}
-        className="absolute left-2 top-2 outline outline-4"
-      ></div>
-      <div className="absolute z-10 left-[17px] top-4">
-        <Icon />
+        className="relative flex items-center justify-center"
+        style={{ width: "100%", height: "100%" }}
+      >
+        <div
+          className="w-9 h-9 z-10 absolute rounded-full bg-black top-1/2 left-1/2"
+          style={{ transform: "translate(-50%, -50%)" }}
+        ></div>
+        <div
+          className="w-[41px] h-[41px] absolute rounded-full bg-black bg-opacity-10 top-1/2 left-1/2"
+          style={{ transform: "translate(-50%, -50%)" }}
+        ></div>
+        <div
+          className="w-[43px] h-[43px] absolute rounded-full bg-black bg-opacity-30 top-1/2 left-1/2"
+          style={{ transform: "translate(-50%, -50%)" }}
+        ></div>
+        <div
+          className="w-[36px] h-[36px] z-50 absolute flex items-center justify-center top-1/2 left-1/2"
+          style={{ transform: "translate(-50%, -50%)" }}
+        >
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="17"
+              fill="transparent"
+              stroke="black"
+              strokeWidth="2"
+            />
+            <circle
+              cx="18"
+              cy="18"
+              r="17"
+              fill="transparent"
+              stroke={activeColor}
+              strokeWidth="2"
+              strokeDasharray={`${filledLength} ${circumference}`}
+              transform="rotate(-90) translate(-36)"
+            />
+          </svg>
+        </div>
+        <div className="absolute z-20">
+          <Icon />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
+
 export default StatusStyle5Item;
