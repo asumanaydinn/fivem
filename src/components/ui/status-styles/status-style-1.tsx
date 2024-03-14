@@ -36,6 +36,7 @@ const HydrationIcon = () => (
     />
   </svg>
 );
+
 const EnergyIcon = () => (
   <svg
     className="absolute"
@@ -114,85 +115,108 @@ const StatusStyle1: React.FC<StatusStyle1Props> = ({ status }) => {
   return (
     <div className="flex flex-col gap-y-2">
       <div className="flex gap-x-2 items-center">
-        {(!settings.status.hideHealth ||
+        {!settings.status.hideHealth ? (
           status.health >
-            settings.styleVisibility["1"].visibilityThresholds?.health) && (
-          <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
-            <div
-              className="bg-[#E12E59] w-full absolute bottom-0"
-              style={{ height: healthHeight }}
-            ></div>
-            <HealthIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds?.health && (
+            <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
+              <div
+                className="bg-[#E12E59] w-full absolute bottom-0"
+                style={{ height: healthHeight }}
+              ></div>
+              <HealthIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
-        {(!settings.status.hideHydration ||
+
+        {!settings.status.hideHydration ? (
           status.hydration >
-            settings.styleVisibility["1"].visibilityThresholds.hydration) && (
-          <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
-            <div
-              className="bg-purple-600 w-full absolute bottom-0"
-              style={{ height: hydrationHeight }}
-            ></div>
-            <HydrationIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds.hydration && (
+            <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
+              <div
+                className="bg-purple-600 w-full absolute bottom-0"
+                style={{ height: hydrationHeight }}
+              ></div>
+              <HydrationIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
-        {(!settings.status.hideHungry ||
+
+        {!settings.status.hideHungry ? (
           status.hungry >
-            settings.styleVisibility["1"].visibilityThresholds?.hunger) && (
-          <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
-            <div
-              className="bg-[#DE2EE1] w-full absolute bottom-0"
-              style={{ height: hungryHeight }}
-            ></div>
-            <HungryIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds?.hunger && (
+            <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
+              <div
+                className="bg-[#DE2EE1] w-full absolute bottom-0"
+                style={{ height: hungryHeight }}
+              ></div>
+              <HungryIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
-        {(!settings.status.hideEnergy ||
+        {!settings.status.hideEnergy ? (
           status.energy >
-            settings.styleVisibility["1"].visibilityThresholds?.energy) && (
-          <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
-            <div
-              className="bg-[#E12E39] w-full absolute bottom-0"
-              style={{ height: energyHeight }}
-            ></div>
-            <EnergyIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds?.energy && (
+            <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
+              <div
+                className="bg-[#E12E39] w-full absolute bottom-0"
+                style={{ height: energyHeight }}
+              ></div>
+              <EnergyIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
-        {(!settings.status.hideStress ||
+        {!settings.status.hideStress ? (
           status.stress >
-            settings.styleVisibility["1"].visibilityThresholds?.stress) && (
-          <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
-            <div
-              className="bg-[#E12E39] w-full absolute bottom-0"
-              style={{ height: stressHeight }}
-            ></div>
-            <StressIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds?.stress && (
+            <div className="w-10 relative h-10 bg-[#010100] flex items-center justify-center">
+              <div
+                className="bg-[#E12E39] w-full absolute bottom-0"
+                style={{ height: stressHeight }}
+              ></div>
+              <StressIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
       </div>
 
       <div className="flex gap-x-2">
-        {(!settings.status.hideHealth ||
+        {!settings.status.hideHealth ? (
           status.health >
-            settings.styleVisibility["1"].visibilityThresholds?.health) && (
-          <div className="w-24 h-8 bg-[#010100] relative flex items-center justify-center">
-            <div
-              className="h-8 absolute left-0 bg-[#1CB459] flex items-center justify-center"
-              style={{ width: healthHeight }}
-            ></div>
-            <HealthIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds?.health && (
+            <div className="w-24 h-8 bg-[#010100] relative flex items-center justify-center">
+              <div
+                className="h-8 absolute left-0 bg-[#1CB459] flex items-center justify-center"
+                style={{ width: healthHeight }}
+              ></div>
+              <HealthIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
-        {(!settings.status.hideArmor ||
+        {!settings.status.hideArmor ? (
           status.armor >
-            settings.styleVisibility["1"].visibilityThresholds?.armor) && (
-          <div className="w-24 h-8 bg-[#010100] relative flex items-center justify-center">
-            <div
-              className="h-8 absolute left-0 bg-[#2E60E1] flex items-center justify-center"
-              style={{ width: armorHeight }}
-            ></div>
-            <ArmorIcon />
-          </div>
+            settings.styleVisibility["1"]?.visibilityThresholds?.armor && (
+            <div className="w-24 h-8 bg-[#010100] relative flex items-center justify-center">
+              <div
+                className="h-8 absolute left-0 bg-[#2E60E1] flex items-center justify-center"
+                style={{ width: armorHeight }}
+              ></div>
+              <ArmorIcon />
+            </div>
+          )
+        ) : (
+          <></>
         )}
       </div>
     </div>

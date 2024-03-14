@@ -53,7 +53,7 @@ const defaultSettings: AppSettings = {
     speedometerType: "7",
   },
   status: {
-    statusStyleType: "5",
+    statusStyleType: "1",
     hideAllStatus: false,
     hideHealth: false,
     hideHydration: false,
@@ -62,7 +62,108 @@ const defaultSettings: AppSettings = {
     hideArmor: false,
     hideStress: false,
   },
-  styleVisibility: {},
+  styleVisibility: {
+    "1": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "2": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "3": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "4": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "5": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "6": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "7": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "8": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "9": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+    "10": {
+      visibilityThresholds: {
+        armor: 0,
+        energy: 0,
+        health: 0,
+        hunger: 0,
+        hydration: 0,
+        stress: 0,
+      },
+    },
+  },
 };
 
 interface SettingsContextType {
