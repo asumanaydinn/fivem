@@ -13,13 +13,13 @@ import { RearRightDoor } from "../../../icons/rear-right-door";
 
 const VehicleMenu = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Doors");
-  const [selectedPiece, setSelectedPiece] = useState("Bonnet");
+  const [selectedPiece, setSelectedPiece] = useState<string | null>(null);
 
-  const [selectedNeon, setSelectedNeon] = useState("All");
+  const [selectedNeon, setSelectedNeon] = useState<string | null>(null);
 
   useEffect(() => {
-    const cycleDuration = 5000; 
-    let svgCount = 5; 
+    const cycleDuration = 5000;
+    let svgCount = 5;
     let interval = cycleDuration / svgCount;
 
     let currentSVG = 1;
@@ -77,7 +77,9 @@ const VehicleMenu = () => {
         {selectedTab === "Doors" && (
           <div className=" flex flex-col gap-y-2">
             <div
-              onClick={() => setSelectedPiece("Bonnet")}
+              onClick={() =>
+                setSelectedPiece(selectedPiece === "Bonnet" ? null : "Bonnet")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -86,47 +88,60 @@ const VehicleMenu = () => {
               </div>
             </div>
             <div
-              onClick={() => setSelectedPiece("LeftFront")}
-              className="w-20 h-[23.23px] relative cursor-pointer"
+              onClick={() =>
+                setSelectedPiece(
+                  selectedPiece === "LeftFront" ? null : "LeftFront"
+                )
+              }
+              className="w-20 h-[23.23px] cursor-pointer left-0 top-0 flex items-center justify-center bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25"
             >
-              <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[8.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
+              <div className=" text-center px-1 leading-none text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Left Front Door
               </div>
             </div>
             <div
-              onClick={() => setSelectedPiece("RightFront")}
-              className="w-20 h-[23.23px] relative cursor-pointer"
+              onClick={() =>
+                setSelectedPiece(
+                  selectedPiece === "RightFront" ? null : "RightFront"
+                )
+              }
+              className="w-20 h-[23.23px] cursor-pointer left-0 top-0 flex items-center justify-center bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25"
             >
-              <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[5.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
+              <div className="px-1 leading-none text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Right Front Door
               </div>
             </div>
             <div
-              onClick={() => setSelectedPiece("LeftBack")}
-              className="w-20 h-[23.23px] relative cursor-pointer"
+              onClick={() =>
+                setSelectedPiece(
+                  selectedPiece === "LeftBack" ? null : "LeftBack"
+                )
+              }
+              className="w-20 h-[23.23px] cursor-pointer left-0 top-0 flex items-center justify-center bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25"
             >
-              <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[8.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
+              <div className="px-1 leading-none text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Left Back Door
               </div>
             </div>
             <div
-              onClick={() => setSelectedPiece("RightBack")}
-              className="w-20 h-[23.23px] relative cursor-pointer"
+              onClick={() =>
+                setSelectedPiece(
+                  selectedPiece === "RightBack" ? null : "RightBack"
+                )
+              }
+              className="w-20 h-[23.23px] cursor-pointer left-0 top-0 flex items-center justify-center bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25"
             >
-              <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[6.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
+              <div className="px-1 leading-none text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Right Back Door
               </div>
             </div>
             <div
-              onClick={() => setSelectedPiece("Trunk")}
-              className="w-20 h-[23.23px] relative cursor-pointer"
+              onClick={() =>
+                setSelectedPiece(selectedPiece === "Trunk" ? null : "Trunk")
+              }
+              className="w-20 h-[23.23px] cursor-pointer left-0 top-0 flex items-center justify-center bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25"
             >
-              <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
-              <div className="left-[27.47px] top-[6.29px] absolute text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
+              <div className="px-1 leading-none text-center text-neutral-400 text-[8.89px] font-semibold font-['Qanelas Soft']">
                 Trunk
               </div>
             </div>
@@ -136,7 +151,9 @@ const VehicleMenu = () => {
         {selectedTab === "Neons" && (
           <div className="flex flex-col gap-y-2">
             <div
-              onClick={() => setSelectedNeon("All")}
+              onClick={() =>
+                setSelectedNeon(selectedNeon === "All" ? null : "All")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -145,7 +162,9 @@ const VehicleMenu = () => {
               </div>
             </div>
             <div
-              onClick={() => setSelectedNeon("Front")}
+              onClick={() =>
+                setSelectedNeon(selectedNeon === "Front" ? null : "Front")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -154,7 +173,9 @@ const VehicleMenu = () => {
               </div>
             </div>
             <div
-              onClick={() => setSelectedNeon("Left")}
+              onClick={() =>
+                setSelectedNeon(selectedNeon === "Left" ? null : "Left")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -163,7 +184,9 @@ const VehicleMenu = () => {
               </div>
             </div>
             <div
-              onClick={() => setSelectedNeon("Right")}
+              onClick={() =>
+                setSelectedNeon(selectedNeon === "Right" ? null : "Right")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -172,7 +195,9 @@ const VehicleMenu = () => {
               </div>
             </div>
             <div
-              onClick={() => setSelectedNeon("Rear")}
+              onClick={() =>
+                setSelectedNeon(selectedNeon === "Rear" ? null : "Rear")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
@@ -181,7 +206,9 @@ const VehicleMenu = () => {
               </div>
             </div>
             <div
-              onClick={() => setSelectedNeon("Party")}
+              onClick={() =>
+                setSelectedNeon(selectedNeon === "Party" ? null : "Party")
+              }
               className="w-20 h-[23.23px] relative cursor-pointer"
             >
               <div className="w-20 h-[23.23px] left-0 top-0 absolute bg-zinc-300 bg-opacity-5 rounded-sm border border-white border-opacity-25" />
