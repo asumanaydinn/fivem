@@ -53,7 +53,7 @@ const defaultSettings: AppSettings = {
     speedometerType: "2",
   },
   status: {
-    statusStyleType: "1",
+    statusStyleType: "10",
     hideAllStatus: false,
     hideHealth: false,
     hideHydration: false,

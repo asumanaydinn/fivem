@@ -10,7 +10,7 @@ const StatusStyle2: React.FC<StatusStyle2Props> = ({ status }) => {
   const { settings } = useSettings();
 
   return (
-    <div className="flex gap-x-2 items-center h-12">
+    <div className="flex gap-x-12 items-center h-12">
       {(!settings.status.hideHealth ||
         status.health >
           settings.styleVisibility["3"].visibilityThresholds?.health) && (
