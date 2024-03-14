@@ -57,7 +57,7 @@ const SpeedoMeter2 = (props: Props) => {
         </svg>
       </div>
       <div className="flex flex-col items-end justify-start">
-        <div className="">
+        <div className="h-10 w-20 flex items-center justify-end">
           {speed < 100 && speed !== 0 && (
             <span className="text-black text-opacity-30 text-[32px] font-extrabold font-['Orbitron']">
               0
