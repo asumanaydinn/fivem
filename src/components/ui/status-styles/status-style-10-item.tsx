@@ -19,7 +19,11 @@ const StatusStyle10Item: React.FC<StatusStyle10ItemProps> = ({
     <>
       <div
         className="relative flex items-center justify-center"
-        style={{ width: "100%", height: "100%" }}
+        style={{
+          width: "100%",
+          height: "100%",
+          filter: `drop-shadow(0px 0px 14.301px ${activeColor})`,
+        }}
       >
         <div
           className="w-9 h-9 z-10 absolute rounded-full  top-1/2 left-1/2"

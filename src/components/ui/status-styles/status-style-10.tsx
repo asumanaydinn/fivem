@@ -360,7 +360,6 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
         </svg>
 
         <div className="w-[93.91px] relative h-[3.79px] bg-[#5FBCFF] bg-opacity-40">
-          {" "}
           <div
             className="absolute right-0 h-[3.79px] bg-[#5FBCFF]"
             style={{
