@@ -4,6 +4,7 @@ import PauseRoundedIcon from "@mui/icons-material/PauseRounded";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import SkipNextRoundedIcon from "@mui/icons-material/SkipNextRounded";
 import SkipPreviousRoundedIcon from "@mui/icons-material/SkipPreviousRounded";
+import { formatDuration } from "date-fns";
 
 interface Track {
   url: string;
@@ -12,6 +13,42 @@ interface Track {
 
 interface MusicPlayerProps {
   tracks: Track[];
+}
+
+function parseIsoDuration(isoDuration: string) {
+  const regex =
+    /P(?:([0-9]+)Y)?(?:([0-9]+)M)?(?:([0-9]+)D)?T?(?:([0-9]+)H)?(?:([0-9]+)M)?(?:([0-9]+)S)?/;
+  const matches = isoDuration.match(regex);
+  if (matches)
+    return {
+      years: parseInt(matches[1]) || 0,
+      months: parseInt(matches[2]) || 0,
+      days: parseInt(matches[3]) || 0,
+      hours: parseInt(matches[4]) || 0,
+      minutes: parseInt(matches[5]) || 0,
+      seconds: parseInt(matches[6]) || 0,
+    };
+}
+
+function formatIsoDuration(isoDuration: string) {
+  const durationObj = parseIsoDuration(isoDuration);
+
+  // Since date-fns formatDuration does not handle years and months (due to their variable length),
+  // you might display them separately or omit based on your requirements. Here, we'll focus on days and shorter periods.
+  if (durationObj) {
+    const formattedDuration = formatDuration({
+      years: durationObj.years,
+      months: durationObj.months,
+      days: durationObj.days,
+      hours: durationObj.hours,
+      minutes: durationObj.minutes,
+      seconds: durationObj.seconds,
+    });
+
+    return formattedDuration;
+  }
+
+  return "";
 }
 
 const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
@@ -60,9 +97,13 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
       const data = await response.json();
       const videoData = data.items[0];
 
+      const formattedDuration = formatIsoDuration(
+        videoData.contentDetails.duration
+      );
+
       return {
         title: videoData.snippet.title,
-        duration: videoData.contentDetails.duration, // Consider formatting this value
+        duration: formattedDuration, // Consider formatting this value
         artist: videoData.snippet.channelTitle, // YouTube doesn't directly provide artist names for music videos
       };
     } catch (error) {
@@ -182,7 +223,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
               {currentSongDetails.duration}
             </div>
           </div>
-          <div className="w-[335px] h-0.5 bg-zinc-300 bg-opacity-10 rounded-sm" />
+
+          <div className="w-[335px] h-0.5 bg-zinc-300 bg-opacity-10 rounded-sm relative">
+            {playing && (
+              <div className="w-[100px] absolute h-0.5 bg-white bg-opacity-10 rounded-sm " />
+            )}
+          </div>
           <div className="flex items-center justify-center w-full">
             {currentTrackIndex - 1 >= 0 && (
               <button

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
+import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
 
 const MusicList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const { musicList, searchSongInMusicList } = useMusicPlayer();
+  const { musicList, searchSongInMusicList, currentTrackIndex, onPlay } =
+    useMusicPlayer();
 
   const filteredSongs =
     searchTerm.length > 0 ? searchSongInMusicList(searchTerm) : musicList;
@@ -58,7 +60,7 @@ const MusicList: React.FC = () => {
           key={index}
           className="w-[342px] h-[48.14px] px-2 flex items-center justify-between bg-zinc-300 bg-opacity-5 rounded-[1px]"
         >
-          <div className="flex items-center gap-x-2">
+          <div className="flex items-center gap-x-2 w-full">
             <div className="w-[32.09px] flex items-center justify-center h-[32.09px]  bg-stone-500 rounded-[1px]">
               <svg
                 width="13"
@@ -74,8 +76,24 @@ const MusicList: React.FC = () => {
               </svg>
             </div>
 
-            <div className="px-2 line-clamp-2 w-44 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
-              {track.title}
+            <div className="flex items-center justify-between w-full">
+              <div className="flex flex-col">
+                <div className="px-2 w-44 line-clamp-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
+                  {track.title}
+                </div>
+                <div className="px-2 w-44 line-clamp-2 text-neutral-100 text-[8px] font-semibold font-['Qanelas Soft']">
+                  {track.artist}
+                </div>
+              </div>
+              {index === currentTrackIndex ? (
+                <div className="text-zinc-500 text-[8.89px] font-semibold font-['Inter']">
+                  Playing Now
+                </div>
+              ) : (
+                <button onClick={() => onPlay(index)}>
+                  <PlayArrowRounded />
+                </button>
+              )}
             </div>
           </div>
         </div>

@@ -7,7 +7,49 @@ import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
 const AddSong = () => {
   const [music, setMusic] = useState("");
 
-  const { addSongToMusicList, musicList, onPlay } = useMusicPlayer();
+  const { addSongToMusicList, musicList, onPlay, currentTrackIndex } =
+    useMusicPlayer();
+
+  function extractVideoID(url: string): string | null {
+    const regExp =
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return match && match[7].length === 11 ? match[7] : null;
+  }
+
+  async function fetchSongDetails(videoID: string) {
+    const API_KEY = "AIzaSyBVwkciEOdTzJyAQuwRSbm0k_IO_RjfpYA"; // Replace with your YouTube Data API Key
+    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoID}&key=${API_KEY}&part=snippet,contentDetails`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      const videoData = data.items[0];
+
+      return {
+        title: videoData.snippet.title,
+        duration: videoData.contentDetails.duration, // Consider formatting this value
+        artist: videoData.snippet.channelTitle, // YouTube doesn't directly provide artist names for music videos
+      };
+    } catch (error) {
+      console.error("Error fetching YouTube video data:", error);
+      return { title: "", duration: "", artist: "" };
+    }
+  }
+
+  const handleAddSong = () => {
+    const videoID = extractVideoID(music);
+
+    if (videoID)
+      fetchSongDetails(videoID).then((details) => {
+        addSongToMusicList({
+          title: details.title,
+          url: music,
+          artist: details.artist,
+          duratiion: details.duration,
+        });
+      });
+  };
 
   return (
     <div className="w-full h-full flex gap-y-2 px-2 flex-col bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 rounded">
@@ -24,9 +66,7 @@ const AddSong = () => {
           className="w-[296px] p-2 h-[38px] text-[8.891px] text-[#959595] bg-gradient-to-r from-zinc-300 via-zinc-300 to-zinc-300 rounded-[3px] border border-white"
         />
         <button
-          onClick={() => {
-            addSongToMusicList({ title: "", url: music });
-          }}
+          onClick={() => handleAddSong()}
           style={{
             borderRadius: "3px",
             border: "0.5px solid rgba(255, 255, 255, 0.25)",
@@ -44,7 +84,7 @@ const AddSong = () => {
           key={index}
           className="w-[342px] h-[48.14px] px-2 flex items-center justify-between bg-zinc-300 bg-opacity-5 rounded-[1px]"
         >
-          <div className="flex items-center gap-x-2">
+          <div className="flex items-center gap-x-2 w-full">
             <div className="w-[32.09px] flex items-center justify-center h-[32.09px]  bg-stone-500 rounded-[1px]">
               <svg
                 width="13"
@@ -59,13 +99,25 @@ const AddSong = () => {
                 />
               </svg>
             </div>
-
-            <div className="px-2 w-44 line-clamp-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
-              {track.title}
+            <div className="flex items-center justify-between w-full">
+              <div className="flex flex-col">
+                <div className="px-2 w-44 line-clamp-2 text-neutral-200 text-[9.26px] font-semibold font-['Qanelas Soft']">
+                  {track.title}
+                </div>
+                <div className="px-2 w-44 line-clamp-2 text-neutral-100 text-[8px] font-semibold font-['Qanelas Soft']">
+                  {track.artist}
+                </div>
+              </div>
+              {index === currentTrackIndex ? (
+                <div className="text-zinc-500 text-[8.89px] font-semibold font-['Inter']">
+                  Playing Now
+                </div>
+              ) : (
+                <button onClick={() => onPlay(index)}>
+                  <PlayArrowRounded />
+                </button>
+              )}
             </div>
-            <button onClick={() => onPlay(index)}>
-              <PlayArrowRounded />
-            </button>
           </div>
         </div>
       ))}
