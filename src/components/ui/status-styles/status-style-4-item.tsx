@@ -9,12 +9,11 @@ const StatusStyle4Item = (props: StatusStyle4ItemProps) => {
   const { Icon, activeColor, color } = props;
 
   const purplePercentage = props.percentage;
-  const pinkPercentage = 100 - purplePercentage;
   const squareStyle = {
     width: "2rem",
     height: "2rem",
     transform: "rotate(45deg)",
-    backgroundImage: `linear-gradient(to bottom right, ${activeColor} ${purplePercentage}%,  ${color} ${pinkPercentage}%)`,
+    backgroundImage: `linear-gradient(to bottom right, ${color} ${purplePercentage}%,  ${activeColor} ${0}%)`,
   };
 
   return (
