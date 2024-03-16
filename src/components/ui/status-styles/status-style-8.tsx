@@ -11,7 +11,7 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
 
   return (
     <div className="flex items-center justify-center gap-x-2">
-      {(!settings.status.hideHealth ||
+      {!settings.status.hideHealth ? (
         status.health >
           settings.styleVisibility["8"].visibilityThresholds?.health) && (
         <StatusStyle8Item
@@ -33,9 +33,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           color="#421533"
           value={status.health}
         />
-      )}
+      ): <></>}
 
-      {(!settings.status.hideHydration ||
+      {!settings.status.hideHydration ? (
         status.hydration >
           settings.styleVisibility["8"].visibilityThresholds?.hydration) && (
         <StatusStyle8Item
@@ -57,8 +57,8 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           color="#221645"
           value={status.hydration}
         />
-      )}
-      {(!settings.status.hideHungry ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.hungry >
           settings.styleVisibility["8"].visibilityThresholds?.hunger) && (
         <StatusStyle8Item
@@ -80,8 +80,8 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           color="#492F18"
           value={status.hungry}
         />
-      )}
-      {(!settings.status.hideEnergy ||
+      ): <></>}
+      {!settings.status.hideEnergy ? (
         status.energy >
           settings.styleVisibility["8"].visibilityThresholds?.energy) && (
         <StatusStyle8Item
@@ -103,8 +103,8 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           color="#174730"
           value={status.energy}
         />
-      )}
-      {(!settings.status.hideArmor ||
+      ): <></>}
+      {!settings.status.hideArmor ? (
         status.armor >
           settings.styleVisibility["8"].visibilityThresholds?.armor) && (
         <StatusStyle8Item
@@ -126,9 +126,9 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           color="#451746"
           value={status.armor}
         />
-      )}
+      ): <></>}
 
-      {(!settings.status.hideStress ||
+      {!settings.status.hideStress ? (
         status.stress >
           settings.styleVisibility["8"].visibilityThresholds?.stress) && (
         <StatusStyle8Item
@@ -150,7 +150,7 @@ const StatusStyle8: React.FC<StatusStyle2Props> = ({ status }) => {
           color="#174346"
           value={status.stress}
         />
-      )}
+      ): <></>}
     </div>
   );
 };

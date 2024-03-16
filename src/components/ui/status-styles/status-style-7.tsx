@@ -20,7 +20,7 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
 
   return (
     <div className="flex gap-x-2 relative h-12">
-      {(!settings.status.hideHealth ||
+      {!settings.status.hideHealth ? (
         status.health >
           settings.styleVisibility["5"].visibilityThresholds?.health) && (
         <StatusStyle7Item
@@ -42,9 +42,9 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}
+      ): <></>}
 
-      {(!settings.status.hideHydration ||
+      {!settings.status.hideHydration ? (
         status.hydration >
           settings.styleVisibility["5"].visibilityThresholds?.hydration) && (
         <StatusStyle7Item
@@ -66,8 +66,8 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}
-      {(!settings.status.hideHungry ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.hungry >
           settings.styleVisibility["5"].visibilityThresholds?.hunger) && (
         <StatusStyle7Item
@@ -89,8 +89,8 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}
-      {(!settings.status.hideEnergy ||
+      ):<></>}
+      {!settings.status.hideEnergy ? (
         status.energy >
           settings.styleVisibility["5"].visibilityThresholds?.energy) && (
         <StatusStyle7Item
@@ -112,9 +112,9 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}
+      ): <></>}
 
-      {(!settings.status.hideArmor ||
+      {!settings.status.hideArmor ? (
         status.armor >
           settings.styleVisibility["5"].visibilityThresholds?.armor) && (
         <StatusStyle7Item
@@ -136,9 +136,9 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}
+      ): <></>}
 
-      {(!settings.status.hideStress ||
+      {!settings.status.hideStress ? (
         status.stress >
           settings.styleVisibility["5"].visibilityThresholds?.stress) && (
         <StatusStyle7Item
@@ -160,7 +160,7 @@ const StatusStyle7: React.FC<StatusStyle2Props> = ({ status }) => {
             </svg>
           )}
         />
-      )}
+      ): <></>}
     </div>
   );
 };

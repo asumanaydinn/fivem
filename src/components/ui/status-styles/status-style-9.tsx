@@ -19,7 +19,7 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
 
   return (
     <div className="flex gap-x-2 items-center">
-      {(!settings.status.hideHealth ||
+      {!settings.status.hideHungry ? (
         status.health >
           settings.styleVisibility["7"].visibilityThresholds?.health) && (
         <div className="w-11 relative h-11 bg-[#FF4758] bg-opacity-25 flex items-center justify-center border-4 border-[#FF4758] border-opacity-25">
@@ -41,8 +41,8 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
             />
           </svg>
         </div>
-      )}
-      {(!settings.status.hideHydration ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.hydration >
           settings.styleVisibility["7"].visibilityThresholds?.hydration) && (
         <div className="w-11 relative h-11 bg-[#814BB7] bg-opacity-25 border-[#814BB7] border-4 border-opacity-25 flex items-center justify-center">
@@ -64,8 +64,8 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
             />
           </svg>
         </div>
-      )}
-      {(!settings.status.hideHungry ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.hungry >
           settings.styleVisibility["7"].visibilityThresholds?.hunger) && (
         <div className="w-11 relative h-11 bg-[#DE2EE1] bg-opacity-25 border-4 border-[#DE2EE1] border-opacity-25 flex items-center justify-center">
@@ -87,8 +87,8 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
             />
           </svg>
         </div>
-      )}
-      {(!settings.status.hideEnergy ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.energy >
           settings.styleVisibility["7"].visibilityThresholds?.energy) && (
         <div className="w-11 relative h-11 bg-[#E12E39] bg-opacity-25 border-4 border-[#E12E39] border-opacity-25 flex items-center justify-center">
@@ -110,8 +110,8 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
             />
           </svg>
         </div>
-      )}
-      {(!settings.status.hideArmor ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.armor >
           settings.styleVisibility["7"].visibilityThresholds?.armor) && (
         <div className="w-11 relative h-11 bg-[#56B954] border-[#56B954] border-4 border-opacity-25 bg-opacity-25 flex items-center justify-center">
@@ -133,8 +133,8 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
             />
           </svg>
         </div>
-      )}
-      {(!settings.status.hideStress ||
+      ): <></>}
+      {!settings.status.hideHungry ? (
         status.stress >
           settings.styleVisibility["7"].visibilityThresholds?.stress) && (
         <div className="w-11 relative h-11 bg-[#E12E39] bg-opacity-25 border-opacity-25 border-4 border-[#E12E39] flex items-center justify-center">
@@ -156,7 +156,7 @@ const StatusStyle9: React.FC<StatusStyle7Props> = ({ status }) => {
             />
           </svg>
         </div>
-      )}
+      ):<></>}
     </div>
   );
 };
