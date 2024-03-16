@@ -29,7 +29,7 @@ const SpeedoMeter3: React.FC<Props> = ({
               </span>
             )}
             <span className="leading-tight text-neutral-200 text-[61.02px] font-semibold font-['Orbitron']">
-              {Math.min(speed, maxSpeed)}
+              {speed}
             </span>
           </div>
           <div className="text-white text-opacity-50 text-[21.63px] font-medium font-['Orbitron']">
@@ -37,6 +37,63 @@ const SpeedoMeter3: React.FC<Props> = ({
           </div>
         </div>
       </div>
+
+      <svg
+        className="absolute top-[34px] left-[33px]"
+        width="157"
+        height="269"
+        viewBox="0 0 157 269"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_d_43_1570)">
+          <path
+            d="M80.9966 252.118C80.7204 252.596 80.1082 252.76 79.6321 252.48C56.1338 238.666 37.6953 217.651 27.0562 192.536C16.2869 167.113 14.0956 138.874 20.8141 112.094C27.5327 85.3146 42.7951 61.4538 64.2898 44.1258C85.5247 27.0071 111.699 17.1854 138.936 16.0994C139.488 16.0774 139.95 16.511 139.968 17.063L139.993 17.8476C140.011 18.3996 139.577 18.861 139.025 18.8831C112.394 19.9498 86.8013 29.5554 66.0377 46.294C45.0144 63.2421 30.0867 86.5796 23.5155 112.772C16.9443 138.964 19.0876 166.584 29.6207 191.449C40.0237 216.007 58.0508 236.556 81.0247 250.068C81.5007 250.348 81.6653 250.96 81.3891 251.438L80.9966 252.118Z"
+            fill="none"
+            stroke="#FC56FF"
+            strokeWidth={3}
+            strokeDasharray={(speed * 240) / maxSpeed + " 5000"}
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_43_1570"
+            x="0.896582"
+            y="-0.00136757"
+            width="155.197"
+            height="268.718"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset />
+            <feGaussianBlur stdDeviation="8.05" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0.988235 0 0 0 0 0.337255 0 0 0 0 1 0 0 0 0.72 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_43_1570"
+            />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_43_1570"
+              result="shape"
+            />
+          </filter>
+        </defs>
+      </svg>
+
       <svg
         width="354"
         height="352"
@@ -121,17 +178,7 @@ const SpeedoMeter3: React.FC<Props> = ({
           fill="#FC56FF"
           fill-opacity="0.2"
         />
-        <g filter="url(#filter3_d_43_1542)">
-          <path
-            d="M113.997 286.118C113.72 286.596 113.108 286.76 112.632 286.48C95.5565 276.441 81.0612 262.545 70.3101 245.897C59.3781 228.969 52.6311 209.683 50.6265 189.632C48.622 169.581 51.4175 149.341 58.782 130.584C66.0247 112.137 77.4819 95.6462 92.2325 82.4255C92.6438 82.0569 93.2762 82.0966 93.6415 82.5108L94.1609 83.0995C94.5263 83.5137 94.4863 84.1454 94.0751 84.5141C79.6558 97.4424 68.4556 113.567 61.3744 131.602C54.1714 149.947 51.4372 169.744 53.3978 189.355C55.3584 208.966 61.9574 227.829 72.6497 244.386C83.1611 260.663 97.3317 274.25 114.025 284.068C114.501 284.348 114.665 284.96 114.389 285.438L113.997 286.118Z"
-            fill="none"
-            stroke="#FC56FF"
-            strokeWidth={3}
-            strokeDasharray={
-              (Math.min(speed, maxSpeed) * 240) / maxSpeed + " 500"
-            }
-          />
-        </g>
+
         <defs>
           <filter
             id="filter0_d_43_1542"
@@ -239,11 +286,11 @@ const SpeedoMeter3: React.FC<Props> = ({
             />
           </filter>
           <filter
-            id="filter3_d_43_1542"
-            x="33.8966"
-            y="66.0729"
-            width="96.7269"
-            height="236.644"
+            id="filter0_d_43_1570"
+            x="0.896582"
+            y="-0.00136757"
+            width="155.197"
+            height="268.718"
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
@@ -264,12 +311,12 @@ const SpeedoMeter3: React.FC<Props> = ({
             <feBlend
               mode="normal"
               in2="BackgroundImageFix"
-              result="effect1_dropShadow_43_1542"
+              result="effect1_dropShadow_43_1570"
             />
             <feBlend
               mode="normal"
               in="SourceGraphic"
-              in2="effect1_dropShadow_43_1542"
+              in2="effect1_dropShadow_43_1570"
               result="shape"
             />
           </filter>
