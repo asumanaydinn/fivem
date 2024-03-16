@@ -1,5 +1,3 @@
-import { useSettings } from "../../../contexts/SettingsContext";
-
 interface Props {
   speed: number;
   maxSpeed: number;
@@ -15,8 +13,6 @@ const SpeedoMeter6: React.FC<Props> = ({
   maxFuel,
   gear,
 }) => {
-  const { settings } = useSettings();
-
   return (
     <div className="w-[354px] h-[352px] relative">
       <div className="absolute -left-[18px] top-[135px] w-full ">
@@ -555,7 +551,7 @@ const SpeedoMeter6: React.FC<Props> = ({
           strokeWidth={speed >= 20 ? 2 : 0}
           strokeDasharray={
             speed >= 20
-              ? Math.min(speed * 4 - 80, maxSpeed *4 - 80) + " 2500"
+              ? Math.min(speed * 4 - 80, maxSpeed * 4 - 80) + " 2500"
               : "2500 2500"
           }
         />
