@@ -88,7 +88,7 @@ const Hud = () => {
         src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
         alt="background"
       />
-      <div className="p-4 w-full h-full">
+      <div className="relative w-full h-full p-4">
         <button
           className="absolute top-4 left-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
           onClick={() => setIsModalOpen(true)}
@@ -102,7 +102,7 @@ const Hud = () => {
         />
 
         {!settings.general.hideAllHud && (
-          <div className="relative w-full h-full">
+          <>
             <ReactPlayer
               loop={true}
               url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
@@ -173,7 +173,7 @@ const Hud = () => {
                 <QuickInfo />
               </div>
             </Draggable>
-          </div>
+          </>
         )}
       </div>
     </div>
