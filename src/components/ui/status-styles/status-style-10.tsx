@@ -35,7 +35,7 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               cy="37.2128"
               r="18.3224"
               fill="white"
-              fill-opacity="0.08"
+              fillOpacity="0.08"
             />
             <g filter="url(#filter1_d_800_3694)">
               <path
@@ -53,24 +53,24 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               <path
                 d="M20.0677 38.792C20.3334 41.5407 21.2882 44.1779 22.8439 46.4595C24.3995 48.7412 26.5057 50.5934 28.9674 51.8448L29.4851 50.8265C27.1947 49.6622 25.2351 47.9389 23.7877 45.816C22.3403 43.6932 21.4519 41.2395 21.2048 38.6821L20.0677 38.792Z"
                 fill="white"
-                fill-opacity="0.28"
-                shape-rendering="crispEdges"
+                fillOpacity="0.28"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter4_d_800_3694)">
               <path
                 d="M33.7024 53.4023C36.4262 53.8571 39.2207 53.6174 41.8272 52.7053C44.4338 51.7932 46.768 50.2382 48.6139 48.1842L47.7643 47.4207C46.0469 49.3316 43.8751 50.7784 41.4499 51.6271C39.0248 52.4757 36.4248 52.6988 33.8905 52.2756L33.7024 53.4023Z"
                 fill="white"
-                fill-opacity="0.28"
-                shape-rendering="crispEdges"
+                fillOpacity="0.28"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter5_d_800_3694)">
               <path
                 d="M50.2331 46.0537C51.7206 43.7271 52.5971 41.0628 52.7814 38.3074C52.9656 35.5521 52.4518 32.7948 51.2873 30.2908L50.2515 30.7725C51.3349 33.1022 51.813 35.6676 51.6416 38.2312C51.4701 40.7948 50.6546 43.2737 49.2706 45.4384L50.2331 46.0537Z"
                 fill="white"
-                fill-opacity="0.28"
-                shape-rendering="crispEdges"
+                fillOpacity="0.28"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter6_d_800_3694)">
@@ -88,9 +88,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="72.4828"
               height="72.4828"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -123,9 +123,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="38.2928"
               height="32.0644"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -164,9 +164,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="34.9931"
               height="36.4055"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -205,9 +205,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="33.4764"
               height="37.2218"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -246,9 +246,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="38.9706"
               height="30.2649"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -287,9 +287,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="27.6064"
               height="39.822"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -328,9 +328,9 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
               width="22.0232"
               height="26.603"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"

@@ -17,8 +17,8 @@ export const Speedometer5 = () => (
       cy="52"
       r="48.9412"
       stroke="white"
-      stroke-opacity="0.13"
-      stroke-width="0.679732"
+      strokeOpacity="0.13"
+      strokeWidth="0.679732"
     />
     <path
       d="M75.247 98.5143C85.7296 93.2752 94.1352 84.649 99.1009 74.0342C104.067 63.4195 105.301 51.4386 102.605 40.0342C99.9079 28.6299 93.4382 18.4708 84.2443 11.2041C75.0505 3.93746 63.6716 -0.0106255 51.9528 2.14615e-05C40.2339 0.0106685 28.8623 3.97942 19.6816 11.2628C10.501 18.5461 4.04969 28.717 1.37379 40.1262C-1.30211 51.5355 -0.0457219 63.5141 4.93925 74.1198C9.92421 84.7255 18.3455 93.3365 28.8375 98.5564L31.3379 93.5306C21.9785 88.8741 14.4664 81.1928 10.0195 71.7319C5.57268 62.2711 4.45192 51.5856 6.83895 41.408C9.22599 31.2304 14.9809 22.1575 23.1704 15.6604C31.36 9.16331 41.5041 5.62298 51.9579 5.61349C62.4116 5.60399 72.5621 9.12587 80.7635 15.6081C88.9649 22.0903 94.7362 31.1527 97.1417 41.326C99.5472 51.4992 98.4459 62.1867 94.0163 71.6556C89.5866 81.1245 82.0884 88.8195 72.7375 93.493L75.247 98.5143Z"
@@ -205,8 +205,8 @@ export const Speedometer5 = () => (
         cy="46.9016"
         r="14.0816"
         stroke="white"
-        stroke-opacity="0.13"
-        stroke-width="0.385794"
+        strokeOpacity="0.13"
+        strokeWidth="0.385794"
       />
     </g>
     <path
@@ -225,8 +225,8 @@ export const Speedometer5 = () => (
         height="7.91058"
         rx="2.15744"
         fill="url(#paint5_linear_79_1180)"
-        fill-opacity="0.03"
-        shape-rendering="crispEdges"
+        fillOpacity="0.03"
+        shapeRendering="crispEdges"
       />
       <rect
         x="39.2326"
@@ -235,9 +235,9 @@ export const Speedometer5 = () => (
         height="7.61338"
         rx="2.00884"
         stroke="white"
-        stroke-opacity="0.12"
-        stroke-width="0.297198"
-        shape-rendering="crispEdges"
+        strokeOpacity="0.12"
+        strokeWidth="0.297198"
+        shapeRendering="crispEdges"
       />
     </g>
     <path
@@ -245,8 +245,8 @@ export const Speedometer5 = () => (
       fill="#FF504B"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M53.2012 69.288V68.4328C53.2012 68.4044 53.1899 68.3773 53.1698 68.3572C53.1498 68.3372 53.1226 68.3259 53.0943 68.3259C53.0659 68.3259 53.0387 68.3372 53.0187 68.3572C52.9986 68.3773 52.9873 68.4044 52.9873 68.4328V68.7535H52.7735V68.5397C52.7735 68.483 52.751 68.4286 52.7109 68.3885C52.6708 68.3484 52.6164 68.3259 52.5597 68.3259H52.3902L52.017 67.9527L50.808 69.9117L50.8117 69.9133C50.8376 69.924 50.8654 69.9295 50.8935 69.9294H51.7672C51.7953 69.9295 51.8231 69.924 51.849 69.9133C51.875 69.9025 51.8985 69.8867 51.9183 69.8668L52.3902 69.3949H52.5597C52.6164 69.3949 52.6708 69.3724 52.7109 69.3323C52.751 69.2922 52.7735 69.2378 52.7735 69.1811V68.9673H52.9873V69.288C52.9873 69.3164 52.9986 69.3436 53.0187 69.3636C53.0387 69.3837 53.0659 69.3949 53.0943 69.3949C53.1226 69.3949 53.1498 69.3837 53.1698 69.3636C53.1899 69.3436 53.2012 69.3164 53.2012 69.288ZM50.6032 69.7276L51.7969 67.7934C51.7871 67.792 51.7771 67.7913 51.7672 67.7914H51.4907V67.5776H51.8114C51.8398 67.5776 51.867 67.5663 51.887 67.5463C51.9071 67.5262 51.9183 67.499 51.9183 67.4707C51.9183 67.4423 51.9071 67.4151 51.887 67.3951C51.867 67.375 51.8398 67.3638 51.8114 67.3638H50.9562C50.9278 67.3638 50.9007 67.375 50.8806 67.3951C50.8606 67.4151 50.8493 67.4423 50.8493 67.4707C50.8493 67.499 50.8606 67.5262 50.8806 67.5463C50.9007 67.5663 50.9278 67.5776 50.9562 67.5776H51.2769V67.7914H50.4217C50.365 67.7914 50.3106 67.8139 50.2705 67.854C50.2304 67.8941 50.2079 67.9485 50.2079 68.0052V68.7535H49.9941V68.4328C49.9941 68.4044 49.9828 68.3773 49.9628 68.3572C49.9427 68.3372 49.9155 68.3259 49.8872 68.3259C49.8588 68.3259 49.8316 68.3372 49.8116 68.3572C49.7915 68.3773 49.7803 68.4044 49.7803 68.4328V69.288C49.7803 69.3164 49.7915 69.3436 49.8116 69.3636C49.8316 69.3837 49.8588 69.3949 49.8872 69.3949C49.9155 69.3949 49.9427 69.3837 49.9628 69.3636C49.9828 69.3436 49.9941 69.3164 49.9941 69.288V68.9673H50.2079V69.2438C50.2078 69.2719 50.2133 69.2997 50.224 69.3256C50.2348 69.3516 50.2506 69.3751 50.2706 69.3949L50.6032 69.7276Z"
       fill="#898989"
     />
@@ -262,9 +262,9 @@ export const Speedometer5 = () => (
         width="72.7646"
         height="72.7648"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -297,9 +297,9 @@ export const Speedometer5 = () => (
         width="34.2314"
         height="17.3313"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -333,9 +333,9 @@ export const Speedometer5 = () => (
         y2="101.281"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#030303" />
-        <stop offset="0.509715" stop-color="#0F0F0F" />
-        <stop offset="1" stop-color="#202020" />
+        <stop stopColor="#030303" />
+        <stop offset="0.509715" stopColor="#0F0F0F" />
+        <stop offset="1" stopColor="#202020" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_79_1180"
@@ -345,8 +345,8 @@ export const Speedometer5 = () => (
         y2="104"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#090909" />
-        <stop offset="1" stop-color="#161616" />
+        <stop stopColor="#090909" />
+        <stop offset="1" stopColor="#161616" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_79_1180"
@@ -356,8 +356,8 @@ export const Speedometer5 = () => (
         y2="93.8038"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF6847" />
-        <stop offset="1" stop-color="#FF0B54" />
+        <stop stopColor="#FF6847" />
+        <stop offset="1" stopColor="#FF0B54" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_79_1180"
@@ -367,8 +367,8 @@ export const Speedometer5 = () => (
         y2="93.8038"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FDAAD2" />
-        <stop offset="1" stop-color="#FF800B" />
+        <stop stopColor="#FDAAD2" />
+        <stop offset="1" stopColor="#FF800B" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_79_1180"
@@ -378,8 +378,8 @@ export const Speedometer5 = () => (
         y2="61.1761"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#2E2E2E" />
-        <stop offset="1" stop-color="#242424" />
+        <stop stopColor="#2E2E2E" />
+        <stop offset="1" stopColor="#242424" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_79_1180"
@@ -389,9 +389,9 @@ export const Speedometer5 = () => (
         y2="68.6529"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#D9D9D9" />
-        <stop offset="0.505" stop-color="#D9D9D9" stop-opacity="0" />
-        <stop offset="1" stop-color="#D9D9D9" />
+        <stop stopColor="#D9D9D9" />
+        <stop offset="0.505" stopColor="#D9D9D9" stopOpacity="0" />
+        <stop offset="1" stopColor="#D9D9D9" />
       </linearGradient>
     </defs>
   </svg>

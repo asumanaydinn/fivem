@@ -290,12 +290,9 @@ const VehicleMenu = () => {
                         width="121.2"
                         height="121.2"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          flood-opacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                           mode="normal"
                           in="SourceGraphic"
@@ -328,12 +325,9 @@ const VehicleMenu = () => {
                         width="121.2"
                         height="121.2"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          flood-opacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                           mode="normal"
                           in="SourceGraphic"
@@ -366,12 +360,9 @@ const VehicleMenu = () => {
                         width="121.2"
                         height="121.2"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          flood-opacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                           mode="normal"
                           in="SourceGraphic"
@@ -404,12 +395,9 @@ const VehicleMenu = () => {
                         width="121.2"
                         height="121.2"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          flood-opacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                           mode="normal"
                           in="SourceGraphic"
@@ -442,12 +430,9 @@ const VehicleMenu = () => {
                         width="121.2"
                         height="121.2"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          flood-opacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                           mode="normal"
                           in="SourceGraphic"
@@ -486,10 +471,10 @@ const VehicleMenu = () => {
                             width="121.2"
                             height="121.2"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -526,10 +511,10 @@ const VehicleMenu = () => {
                             width="121.2"
                             height="121.2"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -566,10 +551,10 @@ const VehicleMenu = () => {
                             width="121.2"
                             height="121.2"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -606,10 +591,10 @@ const VehicleMenu = () => {
                             width="121.2"
                             height="121.2"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -646,10 +631,10 @@ const VehicleMenu = () => {
                             width="121.2"
                             height="121.2"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -689,9 +674,9 @@ const VehicleMenu = () => {
                       width="121.2"
                       height="121.2"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -727,9 +712,9 @@ const VehicleMenu = () => {
                       width="121.2"
                       height="121.2"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -765,9 +750,9 @@ const VehicleMenu = () => {
                       width="121.2"
                       height="121.2"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -803,9 +788,9 @@ const VehicleMenu = () => {
                       width="121.2"
                       height="121.2"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"

@@ -28,7 +28,7 @@ const StatusStyle6Item = (props: Props) => {
           height="32"
           transform="rotate(-135 22.7559 44.9812)"
           fill="white"
-          fill-opacity="0.25"
+          fillOpacity="0.25"
         />
       </svg>
       <svg

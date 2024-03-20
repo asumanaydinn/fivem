@@ -26,7 +26,7 @@ export const Status10 = () => (
       height="3.79444"
       rx="0.948609"
       fill="#5FBCFF"
-      fill-opacity="0.41"
+      fillOpacity="0.41"
     />
     <g filter="url(#filter0_d_800_3672)">
       <rect
@@ -44,7 +44,7 @@ export const Status10 = () => (
       rx="0.948609"
       transform="matrix(-1 0 0 1 114.809 34.8695)"
       fill="#FF5F98"
-      fill-opacity="0.41"
+      fillOpacity="0.41"
     />
     <g filter="url(#filter1_d_800_3672)">
       <rect
@@ -60,12 +60,12 @@ export const Status10 = () => (
       cy="61.777"
       r="15.5244"
       fill="#33FF85"
-      fill-opacity="0.08"
+      fillOpacity="0.08"
     />
     <path
       d="M277.382 61.7768C277.382 69.4576 271.155 75.6841 263.474 75.6841C255.794 75.6841 249.567 69.4576 249.567 61.7768C249.567 54.096 255.794 47.8695 263.474 47.8695C271.155 47.8695 277.382 54.096 277.382 61.7768ZM251.541 61.7768C251.541 68.3677 256.883 73.7106 263.474 73.7106C270.065 73.7106 275.408 68.3677 275.408 61.7768C275.408 55.186 270.065 49.8431 263.474 49.8431C256.883 49.8431 251.541 55.186 251.541 61.7768Z"
       fill="#33FF85"
-      fill-opacity="0.14"
+      fillOpacity="0.14"
     />
     <g filter="url(#filter2_d_800_3672)">
       <path
@@ -82,12 +82,12 @@ export const Status10 = () => (
       cy="62.6783"
       r="15.524"
       fill="#33DAFF"
-      fill-opacity="0.08"
+      fillOpacity="0.08"
     />
     <path
       d="M88.4323 62.6777C88.4323 70.3582 82.2059 76.5846 74.5254 76.5846C66.8448 76.5846 60.6185 70.3582 60.6185 62.6777C60.6185 54.9971 66.8448 48.7708 74.5254 48.7708C82.2059 48.7708 88.4323 54.9971 88.4323 62.6777ZM62.592 62.6777C62.592 69.2683 67.9347 74.6111 74.5254 74.6111C81.116 74.6111 86.4588 69.2683 86.4588 62.6777C86.4588 56.087 81.116 50.7442 74.5254 50.7442C67.9347 50.7442 62.592 56.087 62.592 62.6777Z"
       fill="#33DAFF"
-      fill-opacity="0.14"
+      fillOpacity="0.14"
     />
     <g filter="url(#filter3_d_800_3672)">
       <path
@@ -104,12 +104,12 @@ export const Status10 = () => (
       cy="61.777"
       r="15.5244"
       fill="#FFE24D"
-      fill-opacity="0.08"
+      fillOpacity="0.08"
     />
     <path
       d="M237.204 61.7768C237.204 69.4576 230.977 75.6841 223.296 75.6841C215.616 75.6841 209.389 69.4576 209.389 61.7768C209.389 54.096 215.616 47.8695 223.296 47.8695C230.977 47.8695 237.204 54.096 237.204 61.7768ZM211.363 61.7768C211.363 68.3677 216.706 73.7106 223.296 73.7106C229.887 73.7106 235.23 68.3677 235.23 61.7768C235.23 55.186 229.887 49.8431 223.296 49.8431C216.706 49.8431 211.363 55.186 211.363 61.7768Z"
       fill="#FFE24D"
-      fill-opacity="0.14"
+      fillOpacity="0.14"
     />
     <g filter="url(#filter4_d_800_3672)">
       <path
@@ -127,7 +127,7 @@ export const Status10 = () => (
         cy="37.2128"
         r="18.3224"
         fill="white"
-        fill-opacity="0.08"
+        fillOpacity="0.08"
       />
       <g filter="url(#filter6_d_800_3672)">
         <path
@@ -145,24 +145,24 @@ export const Status10 = () => (
         <path
           d="M133.068 38.792C133.333 41.5407 134.288 44.1779 135.844 46.4595C137.4 48.7412 139.506 50.5934 141.967 51.8448L142.485 50.8265C140.195 49.6622 138.235 47.9389 136.788 45.816C135.34 43.6932 134.452 41.2395 134.205 38.6821L133.068 38.792Z"
           fill="white"
-          fill-opacity="0.28"
-          shape-rendering="crispEdges"
+          fillOpacity="0.28"
+          shapeRendering="crispEdges"
         />
       </g>
       <g filter="url(#filter9_d_800_3672)">
         <path
           d="M146.702 53.4023C149.426 53.8571 152.221 53.6174 154.827 52.7053C157.434 51.7932 159.768 50.2382 161.614 48.1842L160.764 47.4207C159.047 49.3316 156.875 50.7784 154.45 51.6271C152.025 52.4757 149.425 52.6988 146.891 52.2756L146.702 53.4023Z"
           fill="white"
-          fill-opacity="0.28"
-          shape-rendering="crispEdges"
+          fillOpacity="0.28"
+          shapeRendering="crispEdges"
         />
       </g>
       <g filter="url(#filter10_d_800_3672)">
         <path
           d="M163.233 46.0537C164.721 43.7271 165.597 41.0628 165.781 38.3074C165.966 35.5521 165.452 32.7948 164.287 30.2908L163.251 30.7725C164.335 33.1022 164.813 35.6676 164.642 38.2312C164.47 40.7948 163.655 43.2737 162.271 45.4384L163.233 46.0537Z"
           fill="white"
-          fill-opacity="0.28"
-          shape-rendering="crispEdges"
+          fillOpacity="0.28"
+          shapeRendering="crispEdges"
         />
       </g>
       <g filter="url(#filter11_d_800_3672)">
@@ -177,12 +177,12 @@ export const Status10 = () => (
       cy="62.6783"
       r="15.524"
       fill="#C85D70"
-      fill-opacity="0.08"
+      fillOpacity="0.08"
     />
     <path
       d="M48.4303 62.6777C48.4303 70.3582 42.2039 76.5846 34.5234 76.5846C26.8428 76.5846 20.6165 70.3582 20.6165 62.6777C20.6165 54.9971 26.8428 48.7708 34.5234 48.7708C42.2039 48.7708 48.4303 54.9971 48.4303 62.6777ZM22.5899 62.6777C22.5899 69.2683 27.9327 74.6111 34.5234 74.6111C41.114 74.6111 46.4568 69.2683 46.4568 62.6777C46.4568 56.087 41.114 50.7442 34.5234 50.7442C27.9327 50.7442 22.5899 56.087 22.5899 62.6777Z"
       fill="#FF3357"
-      fill-opacity="0.439216"
+      fillOpacity="0.439216"
     />
     <g filter="url(#filter12_d_800_3672)">
       <path
@@ -202,9 +202,9 @@ export const Status10 = () => (
         width="74.1812"
         height="44.7743"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -243,9 +243,9 @@ export const Status10 = () => (
         width="74.1812"
         height="44.7743"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -284,9 +284,9 @@ export const Status10 = () => (
         width="37.8035"
         height="34.2926"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -325,9 +325,9 @@ export const Status10 = () => (
         width="36.6191"
         height="33.1082"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -366,9 +366,9 @@ export const Status10 = () => (
         width="37.8035"
         height="34.2926"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -407,9 +407,9 @@ export const Status10 = () => (
         width="72.4828"
         height="72.4828"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -442,9 +442,9 @@ export const Status10 = () => (
         width="38.2928"
         height="32.0644"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -483,9 +483,9 @@ export const Status10 = () => (
         width="34.9931"
         height="36.4055"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -524,9 +524,9 @@ export const Status10 = () => (
         width="33.4764"
         height="37.2218"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -565,9 +565,9 @@ export const Status10 = () => (
         width="38.9706"
         height="30.2649"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -606,9 +606,9 @@ export const Status10 = () => (
         width="27.6064"
         height="39.822"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -647,9 +647,9 @@ export const Status10 = () => (
         width="22.0232"
         height="26.603"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -682,9 +682,9 @@ export const Status10 = () => (
         width="45.2013"
         height="45.2013"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

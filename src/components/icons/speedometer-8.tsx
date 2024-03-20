@@ -11,15 +11,15 @@ export const Speedometer8 = () => (
       cy="54"
       r="54"
       fill="url(#paint0_linear_86_819)"
-      fill-opacity="0.9"
+      fillOpacity="0.9"
     />
     <circle
       cx="54"
       cy="54"
       r="53.6276"
       stroke="white"
-      stroke-opacity="0.13"
-      stroke-width="0.744828"
+      strokeOpacity="0.13"
+      strokeWidth="0.744828"
     />
     <g filter="url(#filter0_d_86_819)">
       <path
@@ -38,8 +38,8 @@ export const Speedometer8 = () => (
       />
     </g>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M55.9514 98.9228V97.6427C55.9514 97.6003 55.9345 97.5596 55.9045 97.5296C55.8745 97.4995 55.8338 97.4827 55.7913 97.4827C55.7489 97.4827 55.7082 97.4995 55.6782 97.5296C55.6482 97.5596 55.6313 97.6003 55.6313 97.6427V98.1227H55.3113V97.8027C55.3113 97.7178 55.2776 97.6364 55.2176 97.5764C55.1576 97.5164 55.0762 97.4827 54.9913 97.4827H54.7375L54.1789 96.9241L52.3693 99.8563L52.3748 99.8586C52.4137 99.8747 52.4553 99.883 52.4974 99.8828H53.805C53.8471 99.883 53.8887 99.8747 53.9276 99.8586C53.9664 99.8425 54.0016 99.8189 54.0312 99.789L54.7375 99.0828H54.9913C55.0762 99.0828 55.1576 99.0491 55.2176 98.989C55.2776 98.929 55.3113 98.8476 55.3113 98.7628V98.4427H55.6313V98.9228C55.6313 98.9652 55.6482 99.0059 55.6782 99.0359C55.7082 99.0659 55.7489 99.0828 55.7913 99.0828C55.8338 99.0828 55.8745 99.0659 55.9045 99.0359C55.9345 99.0059 55.9514 98.9652 55.9514 98.9228ZM52.0628 99.5807L53.8495 96.6856C53.8348 96.6836 53.8199 96.6826 53.805 96.6826H53.3912V96.3626H53.8712C53.9137 96.3626 53.9544 96.3458 53.9844 96.3158C54.0144 96.2857 54.0312 96.245 54.0312 96.2026C54.0312 96.1602 54.0144 96.1195 53.9844 96.0895C53.9544 96.0595 53.9137 96.0426 53.8712 96.0426H52.5912C52.5487 96.0426 52.508 96.0595 52.478 96.0895C52.448 96.1195 52.4311 96.1602 52.4311 96.2026C52.4311 96.245 52.448 96.2857 52.478 96.3158C52.508 96.3458 52.5487 96.3626 52.5912 96.3626H53.0712V96.6826H51.7911C51.7062 96.6826 51.6248 96.7164 51.5648 96.7764C51.5048 96.8364 51.4711 96.9178 51.4711 97.0027V98.1227H51.1511V97.6427C51.1511 97.6003 51.1342 97.5596 51.1042 97.5296C51.0742 97.4995 51.0335 97.4827 50.9911 97.4827C50.9486 97.4827 50.9079 97.4995 50.8779 97.5296C50.8479 97.5596 50.8311 97.6003 50.8311 97.6427V98.9228C50.8311 98.9652 50.8479 99.0059 50.8779 99.0359C50.9079 99.0659 50.9486 99.0828 50.9911 99.0828C51.0335 99.0828 51.0742 99.0659 51.1042 99.0359C51.1342 99.0059 51.1511 98.9652 51.1511 98.9228V98.4427H51.4711V98.8566C51.471 98.8986 51.4792 98.9403 51.4953 98.9791C51.5114 99.0179 51.5351 99.0532 51.5649 99.0828L52.0628 99.5807Z"
       fill="#898989"
     />
@@ -50,13 +50,13 @@ export const Speedometer8 = () => (
     <path
       d="M91.263 91.669C98.673 84.2589 103.719 74.8179 105.764 64.5398C107.808 54.2617 106.759 43.6082 102.749 33.9265C98.7384 24.2448 91.9471 15.9696 83.2338 10.1476C74.5205 4.32553 64.2764 1.21802 53.797 1.21802C43.3175 1.21802 33.0734 4.32553 24.3601 10.1476C15.6468 15.9696 8.85558 24.2448 4.84527 33.9265C0.83497 43.6082 -0.214309 54.2617 1.83013 64.5398C3.87456 74.8179 8.92089 84.2589 16.331 91.669"
       stroke="#797979"
-      stroke-width="0.353233"
+      strokeWidth="0.353233"
     />
     <g filter="url(#filter2_i_86_819)">
       <path
         d="M89.3898 90.056C96.4294 82.9951 101.223 73.999 103.166 64.2052C105.108 54.4114 104.111 44.2599 100.301 35.0344C96.4914 25.8089 90.0398 17.9237 81.7621 12.376C73.4845 6.82827 63.7526 3.86719 53.7971 3.86719C43.8417 3.86719 34.1098 6.82827 25.8321 12.376C17.5545 17.9237 11.1028 25.8089 7.29302 35.0344C3.48324 44.2599 2.48642 54.4114 4.42863 64.2052C6.37085 73.999 11.1649 82.9951 18.2044 90.056"
         stroke="#1E1E1E"
-        stroke-width="3.53233"
+        strokeWidth="3.53233"
       />
     </g>
     <path
@@ -66,31 +66,31 @@ export const Speedometer8 = () => (
     <path
       d="M86.912 58.9499C88.2254 52.347 87.5513 45.503 84.975 39.2832C82.3987 33.0635 78.0359 27.7474 72.4383 24.0072C66.8406 20.267 60.2596 18.2706 53.5274 18.2706C46.7952 18.2706 40.2142 20.267 34.6166 24.0072C29.0189 27.7474 24.6561 33.0635 22.0798 39.2832C19.5035 45.503 18.8294 52.347 20.1428 58.9499C21.4562 65.5527 24.6981 71.6178 29.4585 76.3782"
       stroke="#797979"
-      stroke-width="0.415475"
+      strokeWidth="0.415475"
     />
     <g filter="url(#filter3_di_86_819)">
       <path
         d="M84.1618 58.3457C85.367 52.2684 84.7485 45.9691 82.3844 40.2444C80.0203 34.5197 76.0169 29.6267 70.8803 26.1841C65.7438 22.7416 59.7049 20.9042 53.5272 20.9042C47.3496 20.9042 41.3107 22.7416 36.1742 26.1841C31.0376 29.6267 27.0342 34.5196 24.6701 40.2444C22.306 45.9691 21.6875 52.2684 22.8927 58.3457C24.0979 64.423 27.0727 70.0054 31.4409 74.3869"
         stroke="url(#paint2_linear_86_819)"
-        stroke-width="4.15475"
-        shape-rendering="crispEdges"
+        strokeWidth="4.15475"
+        shapeRendering="crispEdges"
       />
     </g>
     <path
       d="M77.93 74.4267C82.0124 69.7662 84.6264 64.0016 85.4414 57.8618"
       stroke="#1E1E1E"
-      stroke-width="2.07738"
+      strokeWidth="2.07738"
     />
     <path
       d="M96.3328 36.3325C92.8521 27.9465 86.9578 20.7789 79.3951 15.736C71.8325 10.6931 62.9412 8.00147 53.8457 8.00146C44.7502 8.00146 35.8589 10.6931 28.2963 15.736C20.7336 20.7789 14.8392 27.9465 11.3585 36.3325C7.87784 44.7185 6.96712 53.9462 8.74157 62.8488C10.516 71.7513 14.3664 80.6655 20.7979 87.0838"
       stroke="#132B22"
-      stroke-width="2.82586"
+      strokeWidth="2.82586"
     />
     <g filter="url(#filter4_d_86_819)">
       <path
         d="M97.6903 35.8312C94.0944 27.1539 88.0049 19.7373 80.192 14.5193C72.379 9.30123 63.1935 6.51611 53.7969 6.51611C44.4004 6.51611 35.2149 9.30123 27.4019 14.5193C19.589 19.7373 13.4995 27.1539 9.9036 35.8312C6.3077 44.5085 5.36684 54.0567 7.20002 63.2685C9.03319 72.4802 13.1069 81.4897 19.7513 88.131"
         stroke="#5DC5A0"
-        stroke-width="0.353233"
+        strokeWidth="0.353233"
       />
     </g>
     <rect
@@ -137,7 +137,7 @@ export const Speedometer8 = () => (
         cy="77.1428"
         r="6.49624"
         fill="#D9D9D9"
-        fill-opacity="0.13"
+        fillOpacity="0.13"
       />
     </g>
     <circle
@@ -145,8 +145,8 @@ export const Speedometer8 = () => (
       cy="77.1428"
       r="6.39474"
       stroke="white"
-      stroke-opacity="0.1"
-      stroke-width="0.203008"
+      strokeOpacity="0.1"
+      strokeWidth="0.203008"
     />
     <path
       d="M52.3827 79.4888V78.5501L54.6956 76.4641V75.912L54.4257 75.642H53.2907L52.8428 76.0899L52.3397 75.5807L52.9532 74.9671H54.7815L55.4625 75.6481V76.7831L53.2539 78.7894H55.5055V79.4888H52.3827Z"
@@ -160,9 +160,9 @@ export const Speedometer8 = () => (
         width="55.0658"
         height="27.8654"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -195,9 +195,9 @@ export const Speedometer8 = () => (
         width="17.3681"
         height="18.089"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -230,9 +230,9 @@ export const Speedometer8 = () => (
         width="104.204"
         height="89.3785"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -265,9 +265,9 @@ export const Speedometer8 = () => (
         width="76.612"
         height="67.0147"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -318,9 +318,9 @@ export const Speedometer8 = () => (
         width="94.5853"
         height="84.7586"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -353,9 +353,9 @@ export const Speedometer8 = () => (
         width="12.9927"
         height="14.6165"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -389,9 +389,9 @@ export const Speedometer8 = () => (
         y2="108"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#030303" />
-        <stop offset="0.509715" stop-color="#0F0F0F" />
-        <stop offset="1" stop-color="#0C0C0C" />
+        <stop stopColor="#030303" />
+        <stop offset="0.509715" stopColor="#0F0F0F" />
+        <stop offset="1" stopColor="#0C0C0C" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_86_819"
@@ -401,8 +401,8 @@ export const Speedometer8 = () => (
         y2="100.102"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#E3BB51" />
-        <stop offset="1" stop-color="#E38651" stop-opacity="0" />
+        <stop stopColor="#E3BB51" />
+        <stop offset="1" stopColor="#E38651" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_86_819"
@@ -412,9 +412,9 @@ export const Speedometer8 = () => (
         y2="75.5187"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#59BC98" stop-opacity="0" />
-        <stop offset="0.44818" stop-color="#59BC98" stop-opacity="0.63" />
-        <stop offset="1" stop-color="#59BC98" stop-opacity="0" />
+        <stop stopColor="#59BC98" stopOpacity="0" />
+        <stop offset="0.44818" stopColor="#59BC98" stopOpacity="0.63" />
+        <stop offset="1" stopColor="#59BC98" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

@@ -14,7 +14,7 @@ export const StatusStyle6 = () => {
         height="31.4581"
         transform="rotate(-135 22.2441 44.9811)"
         fill="white"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="12.4951"
@@ -44,7 +44,7 @@ export const StatusStyle6 = () => {
         height="31.4581"
         transform="rotate(-135 72.3467 44.9811)"
         fill="white"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="69.8926"
@@ -74,7 +74,7 @@ export const StatusStyle6 = () => {
         height="31.4581"
         transform="rotate(-135 122.448 44.9811)"
         fill="white"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="112.699"
@@ -104,7 +104,7 @@ export const StatusStyle6 = () => {
         height="31.4581"
         transform="rotate(-135 172.551 44.9811)"
         fill="white"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="162.802"
@@ -134,7 +134,7 @@ export const StatusStyle6 = () => {
         height="31.4581"
         transform="rotate(-135 222.653 44.9811)"
         fill="white"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="212.904"
@@ -164,7 +164,7 @@ export const StatusStyle6 = () => {
         height="31.4581"
         transform="rotate(-135 272.756 44.9812)"
         fill="white"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="263.007"

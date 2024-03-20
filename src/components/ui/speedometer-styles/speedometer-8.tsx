@@ -41,7 +41,7 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             d="M48.4825 254.117C27.8946 233.929 13.7558 208.115 7.85414 179.939C1.95246 151.763 4.55292 122.492 15.3267 95.8257C26.1004 69.1597 44.5636 46.297 68.3814 30.1288C92.1992 13.9606 120.302 5.21294 149.136 4.99213C177.969 4.77132 206.239 13.0872 230.37 28.8883C254.501 44.6893 273.41 67.2658 284.704 93.7628"
             strokeDasharray={(speed * 170) / 100 + " 5000"}
             stroke="url(#paint0_linear_796_3658)"
-            stroke-width="9.53"
+            strokeWidth="9.53"
           />
         </g>
         <defs>
@@ -52,9 +52,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="289.085"
             height="257.473"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -88,13 +88,13 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             y2="7.63663"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.076701" stop-color="#AE713C" stop-opacity="0.54" />
+            <stop offset="0.076701" stopColor="#AE713C" stopOpacity="0.54" />
             <stop
               offset="0.716738"
-              stop-color="#DEB546"
-              stop-opacity="0.814929"
+              stopColor="#DEB546"
+              stopOpacity="0.814929"
             />
-            <stop offset="0.858898" stop-color="#FFE24D" />
+            <stop offset="0.858898" stopColor="#FFE24D" />
           </linearGradient>
         </defs>
       </svg>
@@ -110,15 +110,15 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
           cy="156"
           r="156"
           fill="url(#paint0_linear_756_1195)"
-          fill-opacity="0.9"
+          fillOpacity="0.9"
         />
         <circle
           cx="156"
           cy="156"
           r="155.628"
           stroke="white"
-          stroke-opacity="0.13"
-          stroke-width="0.744828"
+          strokeOpacity="0.13"
+          strokeWidth="0.744828"
         />
 
         <g filter="url(#filter1_d_756_1195)">
@@ -128,8 +128,8 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
           />
         </g>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M161.637 285.777V282.079C161.637 281.956 161.588 281.838 161.502 281.752C161.415 281.665 161.298 281.616 161.175 281.616C161.052 281.616 160.935 281.665 160.848 281.752C160.761 281.838 160.713 281.956 160.713 282.079V283.465H159.788V282.541C159.788 282.296 159.691 282.06 159.517 281.887C159.344 281.714 159.109 281.616 158.864 281.616H158.13L156.517 280.003L151.289 288.473L151.305 288.48C151.417 288.527 151.538 288.55 151.659 288.55H155.437C155.558 288.55 155.678 288.527 155.791 288.48C155.903 288.434 156.005 288.365 156.09 288.279L158.13 286.239H158.864C159.109 286.239 159.344 286.141 159.517 285.968C159.691 285.795 159.788 285.559 159.788 285.314V284.39H160.713V285.777C160.713 285.899 160.761 286.017 160.848 286.103C160.935 286.19 161.052 286.239 161.175 286.239C161.298 286.239 161.415 286.19 161.502 286.103C161.588 286.017 161.637 285.899 161.637 285.777ZM150.404 287.677L155.565 279.314C155.523 279.308 155.48 279.305 155.437 279.305H154.241V278.381H155.628C155.751 278.381 155.868 278.332 155.955 278.245C156.041 278.158 156.09 278.041 156.09 277.918C156.09 277.796 156.041 277.678 155.955 277.591C155.868 277.505 155.751 277.456 155.628 277.456H151.93C151.807 277.456 151.69 277.505 151.603 277.591C151.516 277.678 151.468 277.796 151.468 277.918C151.468 278.041 151.516 278.158 151.603 278.245C151.69 278.332 151.807 278.381 151.93 278.381H153.317V279.305H149.619C149.374 279.305 149.138 279.402 148.965 279.576C148.792 279.749 148.694 279.984 148.694 280.23V283.465H147.77V282.079C147.77 281.956 147.721 281.838 147.634 281.752C147.548 281.665 147.43 281.616 147.307 281.616C147.185 281.616 147.067 281.665 146.981 281.752C146.894 281.838 146.845 281.956 146.845 282.079V285.777C146.845 285.899 146.894 286.017 146.981 286.103C147.067 286.19 147.185 286.239 147.307 286.239C147.43 286.239 147.548 286.19 147.634 286.103C147.721 286.017 147.77 285.899 147.77 285.777V284.39H148.694V285.585C148.694 285.707 148.718 285.827 148.764 285.939C148.811 286.051 148.879 286.153 148.965 286.239L150.404 287.677Z"
           fill="#898989"
         />
@@ -140,44 +140,44 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
         <path
           d="M263.648 264.821C285.055 243.415 299.634 216.14 305.54 186.448C311.446 156.756 308.415 125.979 296.829 98.0098C285.244 70.0404 265.625 46.1345 240.453 29.3152C215.281 12.4959 185.687 3.51868 155.413 3.51868C125.139 3.51868 95.5454 12.4959 70.3736 29.3152C45.2017 46.1345 25.5827 70.0404 13.9974 98.0098C2.41203 125.979 -0.619224 156.756 5.28692 186.448C11.1931 216.14 25.7713 243.414 47.1782 264.821"
           stroke="#797979"
-          stroke-width="0.353233"
+          strokeWidth="0.353233"
         />
         <g filter="url(#filter2_i_756_1195)">
           <path
             d="M258.237 260.162C278.574 239.764 292.423 213.775 298.034 185.482C303.645 157.189 300.765 127.862 289.759 101.211C278.753 74.559 260.115 51.7796 236.202 35.7529C212.288 19.7261 184.174 11.1719 155.414 11.1719C126.654 11.1719 98.5392 19.7261 74.626 35.7529C50.7127 51.7796 32.0746 74.559 21.0686 101.211C10.0625 127.862 7.18283 157.189 12.7937 185.482C18.4045 213.775 32.2539 239.764 52.5904 260.162"
             stroke="#1E1E1E"
-            stroke-width="3.53233"
+            strokeWidth="3.53233"
           />
         </g>
 
         <path
           d="M251.079 170.3C254.873 151.225 252.926 131.453 245.483 113.485C238.041 95.5168 225.437 80.1592 209.266 69.3541C193.095 58.549 174.083 52.7819 154.635 52.7819C135.186 52.7819 116.174 58.549 100.003 69.3541C83.8324 80.1592 71.2287 95.5168 63.786 113.485C56.3434 131.453 54.3961 151.225 58.1903 170.3C61.9845 189.375 71.3499 206.896 85.1021 220.648"
           stroke="#797979"
-          stroke-width="0.415475"
+          strokeWidth="0.415475"
         />
         <g filter="url(#filter3_di_756_1195)">
           <path
             d="M243.134 168.554C246.616 150.998 244.829 132.8 237.999 116.262C231.17 99.7235 219.604 85.5882 204.765 75.6431C189.926 65.6981 172.481 60.3899 154.634 60.3899C136.788 60.3899 119.342 65.698 104.503 75.6431C89.6641 85.5882 78.0986 99.7235 71.2691 116.262C64.4395 132.8 62.6526 150.998 66.1342 168.554C69.6159 186.111 78.2099 202.238 90.8293 214.895"
             stroke="url(#paint2_linear_756_1195)"
-            stroke-width="4.15475"
-            shape-rendering="crispEdges"
+            strokeWidth="4.15475"
+            shapeRendering="crispEdges"
           />
         </g>
         <path
           d="M225.132 215.01C236.925 201.547 244.477 184.893 246.831 167.156"
           stroke="#1E1E1E"
-          stroke-width="2.07738"
+          strokeWidth="2.07738"
         />
         <path
           d="M278.295 104.961C268.24 80.7344 251.211 60.0278 229.364 45.4595C207.516 30.8912 181.83 23.1154 155.554 23.1154C129.278 23.1154 103.592 30.8912 81.7448 45.4595C59.8972 60.0278 42.869 80.7344 32.8136 104.961C22.7582 129.187 20.1273 155.845 25.2535 181.563C30.3797 207.282 41.503 233.034 60.0829 251.576"
           stroke="#132B22"
-          stroke-width="2.82586"
+          strokeWidth="2.82586"
         />
         <g filter="url(#filter4_d_756_1195)">
           <path
             d="M282.216 103.512C271.828 78.4447 254.236 57.0189 231.666 41.9446C209.095 26.8702 182.559 18.8243 155.413 18.8243C128.268 18.8243 101.732 26.8702 79.1609 41.9446C56.5902 57.0189 38.9984 78.4446 28.6102 103.512C18.2221 128.58 15.504 156.164 20.7999 182.776C26.0957 209.387 37.8642 235.415 57.059 254.601"
             stroke="#5DC5A0"
-            stroke-width="0.353233"
+            strokeWidth="0.353233"
           />
         </g>
         <rect
@@ -224,7 +224,7 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             cy="222.857"
             r="18.7669"
             fill="#D9D9D9"
-            fill-opacity="0.13"
+            fillOpacity="0.13"
           />
         </g>
         <circle
@@ -232,8 +232,8 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
           cy="222.857"
           r="18.6654"
           stroke="white"
-          stroke-opacity="0.1"
-          stroke-width="0.203008"
+          strokeOpacity="0.1"
+          strokeWidth="0.203008"
         />
 
         <defs>
@@ -244,9 +244,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="102.659"
             height="42.2826"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -279,9 +279,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="24.6142"
             height="26.6977"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -314,9 +314,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="294.36"
             height="252.18"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -349,9 +349,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="194.61"
             height="168.038"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -402,9 +402,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="267.235"
             height="238.92"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -439,8 +439,8 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
               y2="289.497"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#E3BB51" />
-              <stop offset="1" stop-color="#E38651" stop-opacity="0" />
+              <stop stopColor="#E3BB51" />
+              <stop offset="1" stopColor="#E38651" stopOpacity="0" />
             </linearGradient>
           </defs>
           <filter
@@ -450,9 +450,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             width="37.5337"
             height="39.158"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -486,9 +486,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             y2="312"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#030303" />
-            <stop offset="0.509715" stop-color="#0F0F0F" />
-            <stop offset="1" stop-color="#0C0C0C" />
+            <stop stopColor="#030303" />
+            <stop offset="0.509715" stopColor="#0F0F0F" />
+            <stop offset="1" stopColor="#0C0C0C" />
           </linearGradient>
 
           <linearGradient
@@ -499,9 +499,9 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
             y2="218.165"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#59BC98" stop-opacity="0" />
-            <stop offset="0.44818" stop-color="#59BC98" stop-opacity="0.63" />
-            <stop offset="1" stop-color="#59BC98" stop-opacity="0" />
+            <stop stopColor="#59BC98" stopOpacity="0" />
+            <stop offset="0.44818" stopColor="#59BC98" stopOpacity="0.63" />
+            <stop offset="1" stopColor="#59BC98" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

@@ -13,7 +13,7 @@ export const StatusStyle9 = () => {
         height="46.2285"
         transform="rotate(-90 0 46.2286)"
         fill="#FF4758"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="42.4453"
@@ -35,7 +35,7 @@ export const StatusStyle9 = () => {
         height="46.2285"
         transform="rotate(-90 52.9541 46.2286)"
         fill="#FF7E47"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="95.3613"
@@ -57,7 +57,7 @@ export const StatusStyle9 = () => {
         height="46.2285"
         transform="rotate(-90 105.908 46.2286)"
         fill="#56B954"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="148.627"
@@ -79,7 +79,7 @@ export const StatusStyle9 = () => {
         height="46.2285"
         transform="rotate(-90 158.863 46.2286)"
         fill="#814BB7"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="201.034"
@@ -101,7 +101,7 @@ export const StatusStyle9 = () => {
         height="46.2285"
         transform="rotate(-90 211.817 46.2286)"
         fill="#4982D8"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="254.299"
@@ -123,7 +123,7 @@ export const StatusStyle9 = () => {
         height="46.2285"
         transform="rotate(-90 264.771 46.2286)"
         fill="#FF4758"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="307.563"

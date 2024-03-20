@@ -63,9 +63,9 @@ const SpeedoMeter3: React.FC<Props> = ({
             width="155.197"
             height="268.718"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -106,7 +106,7 @@ const SpeedoMeter3: React.FC<Props> = ({
           cy="176.999"
           r="127"
           fill="url(#paint0_linear_43_1542)"
-          fill-opacity="0.74"
+          fillOpacity="0.74"
         />
 
         <circle
@@ -114,7 +114,7 @@ const SpeedoMeter3: React.FC<Props> = ({
           cy="176.999"
           r="126.5"
           stroke="white"
-          stroke-opacity="0.1"
+          strokeOpacity="0.1"
         />
         <g filter="url(#filter0_d_43_1542)">
           <path
@@ -144,8 +144,8 @@ const SpeedoMeter3: React.FC<Props> = ({
           fill="white"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M186.732 240.799V235.932C186.732 235.77 186.668 235.616 186.554 235.502C186.439 235.387 186.285 235.323 186.123 235.323C185.962 235.323 185.807 235.387 185.693 235.502C185.579 235.616 185.515 235.77 185.515 235.932V237.757H184.298V236.54C184.298 236.217 184.17 235.908 183.942 235.68C183.713 235.452 183.404 235.323 183.081 235.323H182.116L179.992 233.199L173.111 244.349L173.132 244.358C173.28 244.419 173.438 244.45 173.598 244.45H178.57C178.73 244.45 178.889 244.419 179.036 244.358C179.184 244.297 179.318 244.207 179.43 244.093L182.116 241.408H183.081C183.404 241.408 183.713 241.28 183.942 241.051C184.17 240.823 184.298 240.514 184.298 240.191V238.974H185.515V240.799C185.515 240.961 185.579 241.115 185.693 241.23C185.807 241.344 185.962 241.408 186.123 241.408C186.285 241.408 186.439 241.344 186.554 241.23C186.668 241.115 186.732 240.961 186.732 240.799ZM171.946 243.301L178.739 232.293C178.683 232.285 178.627 232.281 178.57 232.281H176.997V231.064H178.822C178.983 231.064 179.138 231 179.252 230.886C179.366 230.772 179.43 230.617 179.43 230.456C179.43 230.294 179.366 230.14 179.252 230.026C179.138 229.912 178.983 229.847 178.822 229.847H173.955C173.793 229.847 173.638 229.912 173.524 230.026C173.41 230.14 173.346 230.294 173.346 230.456C173.346 230.617 173.41 230.772 173.524 230.886C173.638 231 173.793 231.064 173.955 231.064H175.78V232.281H170.912C170.59 232.281 170.28 232.409 170.052 232.638C169.824 232.866 169.695 233.175 169.695 233.498V237.757H168.479V235.932C168.479 235.77 168.414 235.616 168.3 235.502C168.186 235.387 168.032 235.323 167.87 235.323C167.709 235.323 167.554 235.387 167.44 235.502C167.326 235.616 167.262 235.77 167.262 235.932V240.799C167.262 240.961 167.326 241.115 167.44 241.23C167.554 241.344 167.709 241.408 167.87 241.408C168.032 241.408 168.186 241.344 168.3 241.23C168.414 241.115 168.479 240.961 168.479 240.799V238.974H169.695V240.548C169.695 240.707 169.726 240.866 169.787 241.013C169.849 241.161 169.939 241.295 170.052 241.408L171.946 243.301Z"
           fill="#898989"
         />
@@ -156,7 +156,7 @@ const SpeedoMeter3: React.FC<Props> = ({
         <path
           d="M240.497 286.984C264.354 273.21 283.086 252.052 293.867 226.7C304.648 201.349 306.894 173.18 300.266 146.441C293.637 119.702 278.494 95.8435 257.12 78.4634C235.747 61.0833 209.301 51.1243 181.772 50.0884L181.668 52.8715C208.593 53.8847 234.458 63.6253 255.363 80.6243C276.268 97.6233 291.079 120.959 297.562 147.111C304.045 173.264 301.849 200.815 291.304 225.611C280.759 250.406 262.438 271.1 239.104 284.572L240.497 286.984Z"
           fill="#FF6A56"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
         <g filter="url(#filter1_d_43_1542)">
           <path
@@ -176,7 +176,7 @@ const SpeedoMeter3: React.FC<Props> = ({
         <path
           d="M113.497 286.984C89.6391 273.21 70.9072 252.052 60.1261 226.7C49.3449 201.349 47.0992 173.18 53.7276 146.441C60.3559 119.702 75.4989 95.8435 96.8727 78.4634C118.247 61.0833 144.692 51.1243 172.221 50.0884L172.326 52.8715C145.401 53.8847 119.535 63.6253 98.6298 80.6243C77.7248 97.6233 62.9138 120.959 56.4308 147.111C49.9478 173.264 52.1443 200.815 62.689 225.611C73.2337 250.406 91.5548 271.1 114.889 284.572L113.497 286.984Z"
           fill="#FC56FF"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
 
         <defs>
@@ -187,9 +187,9 @@ const SpeedoMeter3: React.FC<Props> = ({
             width="27.8051"
             height="26.1325"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -222,9 +222,9 @@ const SpeedoMeter3: React.FC<Props> = ({
             width="96.7269"
             height="236.644"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -257,9 +257,9 @@ const SpeedoMeter3: React.FC<Props> = ({
             width="48.073"
             height="33.9764"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -292,9 +292,9 @@ const SpeedoMeter3: React.FC<Props> = ({
             width="155.197"
             height="268.718"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -328,9 +328,9 @@ const SpeedoMeter3: React.FC<Props> = ({
             y2="303.999"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#181818" />
-            <stop offset="0.465" stop-color="#222222" />
-            <stop offset="1" stop-color="#050505" />
+            <stop stopColor="#181818" />
+            <stop offset="0.465" stopColor="#222222" />
+            <stop offset="1" stopColor="#050505" />
           </linearGradient>
         </defs>
       </svg>

@@ -15,7 +15,7 @@ export const StatusStyle4 = () => {
         rx="21.5785"
         transform="rotate(-90 0.685547 44.5264)"
         fill="#8256FF"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="22.2646"
@@ -25,12 +25,12 @@ export const StatusStyle4 = () => {
         rx="0.922603"
         transform="rotate(-135 22.2646 45.2119)"
         fill="#8256FF"
-        fill-opacity="0.94"
+        fillOpacity="0.94"
       />
       <path
         d="M22.917 44.5595C22.5567 44.9198 21.9726 44.9198 21.6123 44.5595L1.83241 24.7797C1.2512 24.1985 1.66284 23.2047 2.48479 23.2047L22.0928 23.2047L43.0734 22.1298C43.9172 22.0866 44.3704 23.1061 43.773 23.7036L22.917 44.5595Z"
         fill="#4D2FA2"
-        fill-opacity="0.94"
+        fillOpacity="0.94"
       />
       <path
         d="M28.7391 17.3506C27.2817 15.8319 24.9154 15.8319 23.458 17.3506L22.466 18.3787L21.474 17.347C20.013 15.8283 17.6503 15.8283 16.1929 17.347C14.5516 19.0533 14.5516 21.8237 16.1929 23.5299L22.466 30.0627L28.7391 23.5335C30.3804 21.8273 30.3804 19.0569 28.7391 17.3506Z"
@@ -44,7 +44,7 @@ export const StatusStyle4 = () => {
         rx="21.5785"
         transform="rotate(-90 54.9756 44.5264)"
         fill="#FF56C5"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="76.5537"
@@ -67,7 +67,7 @@ export const StatusStyle4 = () => {
         rx="21.5785"
         transform="rotate(-90 218.2 44.5264)"
         fill="#FF56C5"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="239.779"
@@ -90,7 +90,7 @@ export const StatusStyle4 = () => {
         rx="21.5785"
         transform="rotate(-90 109.266 44.5264)"
         fill="#FFA756"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="130.844"
@@ -113,7 +113,7 @@ export const StatusStyle4 = () => {
         rx="21.5785"
         transform="rotate(-90 272.157 44.5264)"
         fill="#FFA756"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="293.735"
@@ -136,7 +136,7 @@ export const StatusStyle4 = () => {
         rx="21.5785"
         transform="rotate(-90 163.555 44.5264)"
         fill="#FF4758"
-        fill-opacity="0.25"
+        fillOpacity="0.25"
       />
       <rect
         x="185.133"

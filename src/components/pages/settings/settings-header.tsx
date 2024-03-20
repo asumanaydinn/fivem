@@ -35,8 +35,8 @@ const SettingsHeader = () => {
               y2="58.755"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#F3F2FC" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="#F3F2FC" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
           </defs>
         </svg>

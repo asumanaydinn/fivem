@@ -14,9 +14,9 @@ const CarBackground = () => {
         r="120.822"
         transform="rotate(-90 121 103.089)"
         fill="url(#paint0_radial_72_1369)"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
         stroke="white"
-        stroke-width="0.356932"
+        strokeWidth="0.356932"
       />
       <circle
         opacity="0.2"
@@ -25,9 +25,9 @@ const CarBackground = () => {
         r="79.4174"
         transform="rotate(-90 121 103.089)"
         fill="url(#paint1_radial_72_1369)"
-        fill-opacity="0.4"
+        fillOpacity="0.4"
         stroke="white"
-        stroke-width="0.356932"
+        strokeWidth="0.356932"
       />
       <g opacity="0.2">
         <rect
@@ -983,8 +983,8 @@ const CarBackground = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(121 103.089) rotate(88.0644) scale(121.069)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_72_1369"
@@ -994,8 +994,8 @@ const CarBackground = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(121 103.089) rotate(90) scale(79.5959)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>

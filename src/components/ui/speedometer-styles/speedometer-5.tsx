@@ -49,7 +49,11 @@ const SpeedoMeter5: React.FC<Props> = ({
           fill="none"
           stroke="#FF6847"
           strokeWidth={speed > 15 ? 3 : 0}
-          strokeDasharray={speed > 30 ? Math.min(speed * 3, 760) + " 3000" : Math.min(speed * 1.5, 760) + " 3000" }
+          strokeDasharray={
+            speed > 30
+              ? Math.min(speed * 3, 760) + " 3000"
+              : Math.min(speed * 1.5, 760) + " 3000"
+          }
         />
         <defs>
           <linearGradient
@@ -60,8 +64,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="271"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FF6847" />
-            <stop offset="1" stop-color="#FF0B54" />
+            <stop stopColor="#FF6847" />
+            <stop offset="1" stopColor="#FF0B54" />
           </linearGradient>
         </defs>
       </svg>
@@ -79,8 +83,8 @@ const SpeedoMeter5: React.FC<Props> = ({
           cy="153"
           r="144"
           stroke="white"
-          stroke-opacity="0.13"
-          stroke-width="2"
+          strokeOpacity="0.13"
+          strokeWidth="2"
         />
         <path
           d="M221.4 289.859C252.243 274.444 276.975 249.063 291.585 217.832C306.196 186.6 309.828 151.348 301.894 117.793C293.96 84.238 274.924 54.3467 247.873 32.9659C220.822 11.5852 187.341 -0.0312636 152.861 6.31462e-05C118.381 0.0313899 84.9216 11.7087 57.9094 33.1385C30.8971 54.5684 11.9154 84.4942 4.04211 118.064C-3.83122 151.633 -0.134528 186.878 14.5328 218.083C29.2001 249.289 53.978 274.625 84.8489 289.983L92.2059 275.196C64.6675 261.495 42.5645 238.894 29.4805 211.057C16.3966 183.221 13.0989 151.781 20.1223 121.835C27.1457 91.8895 44.0783 65.1942 68.1745 46.0777C92.2708 26.9613 122.118 16.5446 152.876 16.5166C183.634 16.4887 213.5 26.8511 237.631 45.9238C261.762 64.9964 278.743 91.6609 285.821 121.594C292.899 151.527 289.658 182.973 276.625 210.833C263.591 238.693 241.529 261.334 214.016 275.085L221.4 289.859Z"
@@ -88,16 +92,16 @@ const SpeedoMeter5: React.FC<Props> = ({
         />
         <defs>
           <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="27.56%" stop-color="#FF6847" />
-            <stop offset="76.96%" stop-color="#FF0B54" />
+            <stop offset="27.56%" stopColor="#FF6847" />
+            <stop offset="76.96%" stopColor="#FF0B54" />
           </linearGradient>
         </defs>
 
         <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="27.56%" stop-color="#FDAAD2" />
-              <stop offset="76.96%" stop-color="#FF800B" />
+              <stop offset="27.56%" stopColor="#FDAAD2" />
+              <stop offset="76.96%" stopColor="#FF800B" />
             </linearGradient>
           </defs>
         </svg>
@@ -270,8 +274,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             cy="138"
             r="41.4324"
             stroke="white"
-            stroke-opacity="0.13"
-            stroke-width="1.13514"
+            strokeOpacity="0.13"
+            strokeWidth="1.13514"
           />
         </g>
 
@@ -283,8 +287,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             height="23.2754"
             rx="6.34791"
             fill="url(#paint5_linear_79_1179)"
-            fill-opacity="0.03"
-            shape-rendering="crispEdges"
+            fillOpacity="0.03"
+            shapeRendering="crispEdges"
           />
           <rect
             x="115.437"
@@ -293,9 +297,9 @@ const SpeedoMeter5: React.FC<Props> = ({
             height="22.4009"
             rx="5.91068"
             stroke="white"
-            stroke-opacity="0.12"
-            stroke-width="0.874457"
-            shape-rendering="crispEdges"
+            strokeOpacity="0.12"
+            strokeWidth="0.874457"
+            shapeRendering="crispEdges"
           />
         </g>
         <path
@@ -303,8 +307,8 @@ const SpeedoMeter5: React.FC<Props> = ({
           fill="#FF504B"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M156.533 203.869V201.352C156.533 201.269 156.5 201.189 156.441 201.13C156.382 201.071 156.302 201.038 156.219 201.038C156.135 201.038 156.055 201.071 155.996 201.13C155.937 201.189 155.904 201.269 155.904 201.352V202.296H155.275V201.667C155.275 201.5 155.209 201.34 155.091 201.222C154.973 201.104 154.813 201.038 154.646 201.038H154.147L153.049 199.94L149.492 205.704L149.502 205.708C149.579 205.74 149.661 205.756 149.743 205.756H152.314C152.397 205.756 152.478 205.74 152.555 205.708C152.631 205.677 152.7 205.63 152.759 205.571L154.147 204.183H154.646C154.813 204.183 154.973 204.117 155.091 203.999C155.209 203.881 155.275 203.721 155.275 203.554V202.925H155.904V203.869C155.904 203.952 155.937 204.032 155.996 204.091C156.055 204.15 156.135 204.183 156.219 204.183C156.302 204.183 156.382 204.15 156.441 204.091C156.5 204.032 156.533 203.952 156.533 203.869ZM148.889 205.162L152.401 199.471C152.372 199.467 152.343 199.465 152.314 199.465H151.5V198.836H152.444C152.527 198.836 152.607 198.803 152.666 198.744C152.725 198.685 152.759 198.605 152.759 198.521C152.759 198.438 152.725 198.358 152.666 198.299C152.607 198.24 152.527 198.207 152.444 198.207H149.928C149.844 198.207 149.764 198.24 149.705 198.299C149.646 198.358 149.613 198.438 149.613 198.521C149.613 198.605 149.646 198.685 149.705 198.744C149.764 198.803 149.844 198.836 149.928 198.836H150.871V199.465H148.355C148.188 199.465 148.028 199.531 147.91 199.649C147.792 199.767 147.726 199.927 147.726 200.094V202.296H147.097V201.352C147.097 201.269 147.064 201.189 147.005 201.13C146.946 201.071 146.866 201.038 146.782 201.038C146.699 201.038 146.619 201.071 146.56 201.13C146.501 201.189 146.468 201.269 146.468 201.352V203.869C146.468 203.952 146.501 204.032 146.56 204.091C146.619 204.15 146.699 204.183 146.782 204.183C146.866 204.183 146.946 204.15 147.005 204.091C147.064 204.032 147.097 203.952 147.097 203.869V202.925H147.726V203.738C147.726 203.821 147.742 203.903 147.773 203.979C147.805 204.056 147.852 204.125 147.91 204.183L148.889 205.162Z"
           fill="#898989"
         />
@@ -320,9 +324,9 @@ const SpeedoMeter5: React.FC<Props> = ({
             width="214.098"
             height="214.098"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -355,9 +359,9 @@ const SpeedoMeter5: React.FC<Props> = ({
             width="100.719"
             height="50.9946"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -391,9 +395,9 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="298"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#030303" />
-            <stop offset="0.509715" stop-color="#0F0F0F" />
-            <stop offset="1" stop-color="#202020" />
+            <stop stopColor="#030303" />
+            <stop offset="0.509715" stopColor="#0F0F0F" />
+            <stop offset="1" stopColor="#202020" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_79_1179"
@@ -403,8 +407,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="306"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#090909" />
-            <stop offset="1" stop-color="#161616" />
+            <stop stopColor="#090909" />
+            <stop offset="1" stopColor="#161616" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_79_1179"
@@ -414,8 +418,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="276"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FF6847" />
-            <stop offset="1" stop-color="#FF0B54" />
+            <stop stopColor="#FF6847" />
+            <stop offset="1" stopColor="#FF0B54" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_79_1179"
@@ -425,8 +429,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="276"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FDAAD2" />
-            <stop offset="1" stop-color="#FF800B" />
+            <stop stopColor="#FDAAD2" />
+            <stop offset="1" stopColor="#FF800B" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_79_1179"
@@ -436,8 +440,8 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="180"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2E2E2E" />
-            <stop offset="1" stop-color="#242424" />
+            <stop stopColor="#2E2E2E" />
+            <stop offset="1" stopColor="#242424" />
           </linearGradient>
           <linearGradient
             id="paint5_linear_79_1179"
@@ -447,9 +451,9 @@ const SpeedoMeter5: React.FC<Props> = ({
             y2="202"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#D9D9D9" />
-            <stop offset="0.505" stop-color="#D9D9D9" stop-opacity="0" />
-            <stop offset="1" stop-color="#D9D9D9" />
+            <stop stopColor="#D9D9D9" />
+            <stop offset="0.505" stopColor="#D9D9D9" stopOpacity="0" />
+            <stop offset="1" stopColor="#D9D9D9" />
           </linearGradient>
         </defs>
       </svg>
