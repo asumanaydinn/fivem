@@ -10,8 +10,8 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
   const { settings } = useSettings();
 
   return (
-    <div className="flex flex-col items-start justify-between h-20">
-      <div className="flex items-center w-full justify-between">
+    <div className="absolute bottom-0 left-0 flex flex-col items-start justify-between h-20">
+      <div className="flex items-center w-full justify-between h-12">
         <div className="w-[93.91px] relative h-[3.79px] bg-[#FF5F98] bg-opacity-40">
           {" "}
           <div
@@ -369,7 +369,7 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
           ></div>
         </div>
       </div>
-      <div className="w-full flex items-center justify-between gap-x-12">
+      <div className="w-full flex items-center justify-between gap-x-12 h-full">
         <div className="flex items-center w-24 justify-center">
           {(!settings.status.hideHydration ||
             status.hydration >
@@ -417,7 +417,7 @@ const StatusStyle10: React.FC<StatusStyle10Props> = ({ status }) => {
             />
           )}
         </div>
-        <div className="flex items-center w-24 justify-center">
+        <div className="flex items-center w-24 h-full justify-center">
           {(!settings.status.hideEnergy ||
             status.energy >
               settings.styleVisibility["2"].visibilityThresholds?.energy) && (

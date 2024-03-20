@@ -15,10 +15,7 @@ const StatusStyle3Item: React.FC<StatusStyle3ItemProps> = ({
 
   return (
     <>
-      <div
-        className="relative flex items-center justify-center"
-        style={{ width: "100%", height: "100%", backgroundColor: "white" }}
-      >
+      <div className="relative flex items-center justify-center w-[44px] bg-white">
         <div
           className="w-9 h-9 z-10 absolute rounded-full border-2 border-black top-1/2 left-1/2"
           style={{ transform: "translate(-50%, -50%)" }}

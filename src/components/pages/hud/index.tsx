@@ -116,7 +116,7 @@ const Hud = () => {
           </Draggable>
 
           <Draggable disabled={!settings.general.freeformEditMode}>
-            <div className="absolute bottom-0 left-0 flex flex-col gap-y-2">
+            <div className="absolute bottom-0 left-0">
               {!settings.status.hideAllStatus && (
                 <StatusComponent
                   status={{

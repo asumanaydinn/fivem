@@ -1,7 +1,7 @@
 import React from "react";
 
 interface StatusStyle5ItemProps {
-  fillPercentage: number; 
+  fillPercentage: number;
   Icon: () => JSX.Element;
   activeColor: string;
 }
@@ -11,15 +11,12 @@ const StatusStyle5Item: React.FC<StatusStyle5ItemProps> = ({
   Icon,
   activeColor,
 }) => {
-  const radius = 18; 
-  const circumference = 2 * Math.PI * radius; 
-  const filledLength = (circumference * fillPercentage) / 100; 
+  const radius = 18;
+  const circumference = 2 * Math.PI * radius;
+  const filledLength = (circumference * fillPercentage) / 100;
   return (
     <>
-      <div
-        className="relative flex items-center justify-center"
-        style={{ width: "100%", height: "100%" }}
-      >
+      <div className="relative flex items-center justify-center w-full h-full">
         <div
           className="w-9 h-9 z-10 absolute rounded-full bg-black top-1/2 left-1/2"
           style={{ transform: "translate(-50%, -50%)" }}

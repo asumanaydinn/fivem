@@ -19,7 +19,7 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
   const stressHeight = (status.stress / maxStatusValue) * 100;
 
   return (
-    <div className="flex gap-x-2 relative">
+    <div className="flex items-center h-12 w-[370px] gap-x-2">
       {!settings.status.hideHealth ? (
         status.health >
           settings.styleVisibility["4"].visibilityThresholds?.health && (
