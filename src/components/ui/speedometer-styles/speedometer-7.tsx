@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 interface Props {
   speed: number;
   maxSpeed: number;
@@ -44,8 +46,13 @@ const SpeedoMeter7 = (props: Props) => {
     <div className="w-[158.05px] h-[87.77px] mr-4 mb-10">
       <div className="flex items-center gap-x-2 relative">
         <div className="flex items-center justify-center gap-x-1">
-          <div className="w-[23.27px] h-[42.05px] flex flex-col items-center justify-center bg-teal-500 rounded-sm shadow-inner">
-            <div className="flex pr-1 items-center justify-center w-full text-emerald-900 text-sm font-semibold font-['Orbitron']">
+          <div className="w-[23.27px] h-[42.05px] flex flex-col gap-y-1 items-center justify-center bg-teal-500 rounded-sm shadow-inner">
+            <div
+              className={clsx(
+                "flex  items-center justify-center text-center w-full text-emerald-900 text-sm/tight font-semibold font-['Orbitron']",
+                gear === 1 && "pr-0.5"
+              )}
+            >
               {gear}
             </div>
             {gearIcon()}
@@ -53,7 +60,7 @@ const SpeedoMeter7 = (props: Props) => {
           <div className="w-[23.27px] h-[42.05px] flex flex-col item-end justify-end bg-neutral-700 rounded-sm shadow-inner">
             <div
               style={{ height: (fuel * 42) / 100 }}
-              className="w-full rounded-sm bg-gradient-to-t flex items-center justify-center from-yellow-400 to-yellow-800"
+              className="w-full rounded-sm bg-gradient-to-t flex items-center justify-center from-yellow-400 to-yellow-600"
             >
               <svg
                 width="9"
