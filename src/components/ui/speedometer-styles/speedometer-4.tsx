@@ -50,7 +50,7 @@ const SpeedoMeter4: React.FC<Props> = ({
           fill="none"
           stroke="white"
           strokeWidth={3}
-          strokeDasharray={(speed * 240) / maxSpeed + " 5000"}
+          strokeDasharray={Math.min((speed * 240) / 410, 327) + " 5000"}
         />
       </svg>
 

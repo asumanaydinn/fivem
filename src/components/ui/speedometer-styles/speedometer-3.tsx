@@ -9,13 +9,7 @@ interface Props {
   gear: number;
 }
 
-const SpeedoMeter3: React.FC<Props> = ({
-  speed,
-  maxSpeed,
-  fuel,
-  maxFuel,
-  gear,
-}) => {
+const SpeedoMeter3: React.FC<Props> = ({ speed, fuel, maxFuel, gear }) => {
   const { settings } = useSettings();
 
   return (
@@ -52,7 +46,7 @@ const SpeedoMeter3: React.FC<Props> = ({
             fill="none"
             stroke="#FC56FF"
             strokeWidth={3}
-            strokeDasharray={(speed * 240) / maxSpeed + " 5000"}
+            strokeDasharray={Math.min((speed * 240) / 410, 327) + " 5000"}
           />
         </g>
         <defs>
