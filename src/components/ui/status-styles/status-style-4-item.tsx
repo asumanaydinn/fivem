@@ -13,7 +13,7 @@ const StatusStyle4Item = (props: StatusStyle4ItemProps) => {
     width: "2rem",
     height: "2rem",
     transform: "rotate(45deg)",
-    backgroundImage: `linear-gradient(to bottom right, ${color} ${purplePercentage}%,  ${activeColor} ${0}%)`,
+    backgroundImage: `linear-gradient(to top left, ${activeColor} ${purplePercentage}%,  ${color} ${0}%)`,
   };
 
   return (

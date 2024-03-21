@@ -13,7 +13,7 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
     <div className="flex items-center h-12 gap-x-4">
       {!settings.status.hideHealth ? (
         status.health >
-          settings.styleVisibility["9"].visibilityThresholds?.health && (
+          settings.styleVisibility["6"].visibilityThresholds?.health && (
           <StatusStyle6Item
             Icon={() => (
               <svg
@@ -37,7 +37,7 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
       )}
       {!settings.status.hideHydration ? (
         status.hydration >
-          settings.styleVisibility["9"].visibilityThresholds?.hydration && (
+          settings.styleVisibility["6"].visibilityThresholds?.hydration && (
           <StatusStyle6Item
             Icon={() => (
               <svg
@@ -61,7 +61,7 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
       )}
       {!settings.status.hideHungry ? (
         status.hungry >
-          settings.styleVisibility["9"].visibilityThresholds?.hunger && (
+          settings.styleVisibility["6"].visibilityThresholds?.hunger && (
           <StatusStyle6Item
             Icon={() => (
               <svg
@@ -85,7 +85,7 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
       )}
       {!settings.status.hideEnergy ? (
         status.energy >
-          settings.styleVisibility["9"].visibilityThresholds?.energy && (
+          settings.styleVisibility["6"].visibilityThresholds?.energy && (
           <StatusStyle6Item
             Icon={() => (
               <svg
@@ -109,7 +109,7 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
       )}
       {!settings.status.hideArmor ? (
         status.armor >
-          settings.styleVisibility["9"].visibilityThresholds?.armor && (
+          settings.styleVisibility["6"].visibilityThresholds?.armor && (
           <StatusStyle6Item
             Icon={() => (
               <svg
@@ -133,7 +133,7 @@ const StatusStyle6: React.FC<StatusStyle2Props> = ({ status }) => {
       )}
       {!settings.status.hideStress ? (
         status.stress >
-          settings.styleVisibility["9"].visibilityThresholds?.stress && (
+          settings.styleVisibility["6"].visibilityThresholds?.stress && (
           <StatusStyle6Item
             Icon={() => (
               <svg

@@ -159,6 +159,7 @@ const StatusStyle4: React.FC<StatusStyle4Props> = ({ status }) => {
             color="#FFBF83"
             Icon={() => (
               <svg
+                className="absolute -left-0.5"
                 width="18"
                 height="16"
                 viewBox="0 0 18 16"

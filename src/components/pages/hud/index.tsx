@@ -25,9 +25,10 @@ import ReactPlayer from "react-player";
 import Draggable from "react-draggable";
 import StatusStyle10 from "../../ui/status-styles/status-style-10";
 import StatusStyle5 from "../../ui/status-styles/status-style-5";
-import { StatusStyle6 } from "../../icons/status-style-6";
+
 import StatusStyle9 from "../../ui/status-styles/status-style-9";
 import StatusStyle7 from "../../ui/status-styles/status-style-7";
+import StatusStyle6 from "../../ui/status-styles/status-style-6";
 
 const statusComponents = [
   StatusStyle1,
@@ -120,7 +121,7 @@ const Hud = () => {
               {!settings.status.hideAllStatus && (
                 <StatusComponent
                   status={{
-                    armor: 20,
+                    armor: 100,
                     energy: 30,
                     health: 50,
                     hungry: 20,
@@ -147,7 +148,7 @@ const Hud = () => {
               {SpeedoMeterComponent && (
                 <SpeedoMeterComponent
                   speed={speed}
-                  fuel={30}
+                  fuel={50}
                   gear={gear}
                   maxFuel={100}
                   maxSpeed={300}
