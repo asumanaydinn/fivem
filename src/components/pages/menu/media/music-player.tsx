@@ -1,10 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import PauseRoundedIcon from "@mui/icons-material/PauseRounded";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import SkipNextRoundedIcon from "@mui/icons-material/SkipNextRounded";
 import SkipPreviousRoundedIcon from "@mui/icons-material/SkipPreviousRounded";
-import { formatDuration } from "date-fns";
 
 interface Track {
   url: string;
@@ -16,40 +15,45 @@ interface MusicPlayerProps {
   ref: React.MutableRefObject<any>;
 }
 
-function parseIsoDuration(isoDuration: string) {
+function getDurationText(isoDuration: string) {
   const regex =
-    /P(?:([0-9]+)Y)?(?:([0-9]+)M)?(?:([0-9]+)D)?T?(?:([0-9]+)H)?(?:([0-9]+)M)?(?:([0-9]+)S)?/;
+    /P(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)W)?(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
   const matches = isoDuration.match(regex);
-  if (matches)
-    return {
-      years: parseInt(matches[1]) || 0,
-      months: parseInt(matches[2]) || 0,
-      days: parseInt(matches[3]) || 0,
-      hours: parseInt(matches[4]) || 0,
-      minutes: parseInt(matches[5]) || 0,
-      seconds: parseInt(matches[6]) || 0,
-    };
+
+  if (!matches) return "";
+
+  const minutes = parseFloat(matches[6]) || 0;
+  const seconds = parseFloat(matches[7]) || 0;
+
+  return minutes + " min " + seconds + " seconds";
 }
 
-function formatIsoDuration(isoDuration: string) {
-  const durationObj = parseIsoDuration(isoDuration);
+function isoDurationToSeconds(isoDuration: string) {
+  const regex =
+    /P(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)W)?(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
+  const matches = isoDuration.match(regex);
 
-  // Since date-fns formatDuration does not handle years and months (due to their variable length),
-  // you might display them separately or omit based on your requirements. Here, we'll focus on days and shorter periods.
-  if (durationObj) {
-    const formattedDuration = formatDuration({
-      years: durationObj.years,
-      months: durationObj.months,
-      days: durationObj.days,
-      hours: durationObj.hours,
-      minutes: durationObj.minutes,
-      seconds: durationObj.seconds,
-    });
+  if (!matches) return 0;
 
-    return formattedDuration;
-  }
+  const years = parseFloat(matches[1]) || 0;
+  const months = parseFloat(matches[2]) || 0;
+  const weeks = parseFloat(matches[3]) || 0;
+  const days = parseFloat(matches[4]) || 0;
+  const hours = parseFloat(matches[5]) || 0;
+  const minutes = parseFloat(matches[6]) || 0;
+  const seconds = parseFloat(matches[7]) || 0;
 
-  return "";
+  console.log(matches);
+
+  return (
+    years * 365.25 * 24 * 60 * 60 +
+    months * 30.44 * 24 * 60 * 60 +
+    weeks * 7 * 24 * 60 * 60 +
+    days * 24 * 60 * 60 +
+    hours * 60 * 60 +
+    minutes * 60 +
+    seconds
+  );
 }
 
 const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks, ref }) => {
@@ -60,11 +64,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks, ref }) => {
     musicList,
     playNextTrack,
     playPreviousTrack,
+    progress,
   } = useMusicPlayer();
+
+  const [durationText, setDurationText] = useState("");
 
   const [currentSongDetails, setCurrentSongDetails] = useState({
     title: "",
-    duration: "",
+    duration: 0,
     artist: "",
   });
 
@@ -98,7 +105,9 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks, ref }) => {
       const data = await response.json();
       const videoData = data.items[0];
 
-      const formattedDuration = formatIsoDuration(
+      setDurationText(getDurationText(videoData.contentDetails.duration));
+
+      const formattedDuration = isoDurationToSeconds(
         videoData.contentDetails.duration
       );
 
@@ -109,15 +118,9 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks, ref }) => {
       };
     } catch (error) {
       console.error("Error fetching YouTube video data:", error);
-      return { title: "", duration: "", artist: "" };
+      return { title: "", duration: 0, artist: "" };
     }
   }
-
-  const duration = useMemo(() => {
-    if (ref) return ref.current.getDuration();
-
-    return 0;
-  }, [ref]);
 
   if (!currentSongDetails)
     return (
@@ -227,14 +230,16 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks, ref }) => {
               00.00
             </div>
             <div className="text-center text-neutral-400 text-[7.12px] font-semibold font-['Inter']">
-              {currentSongDetails.duration}
+              {durationText}
             </div>
           </div>
 
           <div className="w-[335px] h-0.5 bg-zinc-300 bg-opacity-10 rounded-sm relative">
             {playing && (
               <div
-                style={{ width: (duration * 335) / 100 + "%" }}
+                style={{
+                  width: (progress * 335) / currentSongDetails.duration + "px",
+                }}
                 className=" absolute h-0.5 bg-white bg-opacity-10 rounded-sm "
               />
             )}

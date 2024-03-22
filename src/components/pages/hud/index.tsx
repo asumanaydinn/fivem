@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import SettingsModal from "../settings/settings-modal";
 import { useSettings } from "../../../contexts/SettingsContext";
 
@@ -58,7 +58,7 @@ const speedometerComponents = [
 
 const Hud = () => {
   const { settings } = useSettings();
-  const { musicList, playing, setPlaying } = useMusicPlayer();
+  const { musicList, playing, setPlaying, setProgress } = useMusicPlayer();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [speed, setSpeed] = useState(0);
   const [gear, setGear] = useState(1);
@@ -101,6 +101,7 @@ const Hud = () => {
           <ReactPlayer
             ref={playerRef}
             loop={true}
+            onProgress={(state) => setProgress(state.playedSeconds)}
             url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
             playing={playing}
             controls={true}
