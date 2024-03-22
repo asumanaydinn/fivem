@@ -449,6 +449,22 @@ const SpeedoMeter10 = (props: Props) => {
       )}
 
       <svg
+        className="absolute z-10 left-[31px] top-[33px]"
+        width="148"
+        height="207"
+        viewBox="0 0 148 207"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M147.5 206H46L1 100.5L55.5 12.5L145 1"
+          stroke="#3DA3D9"
+          strokeWidth="1.69933"
+          strokeDasharray={speed * 2.2 + " 500"}
+        />
+      </svg>
+
+      <svg
         className="absolute"
         width="656"
         height="276"
@@ -2789,12 +2805,6 @@ const SpeedoMeter10 = (props: Props) => {
           stroke="#D7D1D1"
           strokeOpacity="0.1"
           strokeWidth="1.69933"
-        />
-        <path
-          d="M176.738 33.8811L89.6535 44.2513C87.0319 44.5635 84.7043 46.0767 83.355 48.346L34.0434 131.28C32.632 133.653 32.4623 136.565 33.5885 139.087L75.9486 233.934C77.3156 236.995 80.3544 238.966 83.7066 238.966H176.738"
-          stroke="#3DA3D9"
-          strokeWidth="1.69933"
-          strokeDasharray={speed * 2.2 + " 500"}
         />
 
         <path
