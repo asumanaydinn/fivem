@@ -13,7 +13,7 @@ export const defaultSettings: AppSettings = {
   },
   speedometers: {
     units: "kmh",
-    speedometerType: "3",
+    speedometerType: "4",
   },
   status: {
     statusStyleType: "6",
