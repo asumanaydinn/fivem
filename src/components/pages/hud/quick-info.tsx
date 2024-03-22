@@ -1,7 +1,26 @@
+import { useState } from "react";
 import { useSettings } from "../../../contexts/SettingsContext";
 
 const QuickInfo = () => {
   const { settings } = useSettings();
+
+  const [serverInfoDetail, setServerInfoDetail] = useState<{
+    serverName: string;
+    serverLink: string;
+    serverLogo: string;
+    bankState: string;
+    jobStatus: string;
+    cash: string;
+    id: number;
+  }>({
+    serverLink: "Yeni server.com",
+    serverLogo: "",
+    serverName: "yeni server",
+    bankState: "1234",
+    cash: "242",
+    id: 1244,
+    jobStatus: "işsiz",
+  });
 
   const serverInfo = () => {
     return (
@@ -15,10 +34,10 @@ const QuickInfo = () => {
           <div className="w-[2.13px] h-[40.51px] left-[110.87px] top-[8.53px]  bg-neutral-700 rounded-[0.98px]" />
           <div className="flex flex-col gap-y-1">
             <div className="left-[124.73px] top-[12.84px]  text-center text-white text-xs font-semibold font-['Orbitron']">
-              SERVERNAME
+              {serverInfoDetail.serverName.toUpperCase()}
             </div>
             <div className="left-[140.79px] top-[32.35px]  text-center text-cyan-400 text-[7.35px] font-semibold font-['Orbitron']">
-              discord.com/dusa
+              {serverInfoDetail.serverLink}
             </div>
           </div>
           <div className="w-[2.13px] h-[40.51px] left-[253.72px] top-[8.53px]  bg-neutral-700 rounded-[0.98px]" />
@@ -73,7 +92,7 @@ const QuickInfo = () => {
                   BANK :
                 </span>
                 <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-                  9923$
+                  {serverInfoDetail.bankState}
                 </span>
               </div>
             </div>
@@ -97,7 +116,7 @@ const QuickInfo = () => {
                   CASH :
                 </span>
                 <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-                  9923$
+                  {serverInfoDetail.cash}
                 </span>
               </div>
             </div>
@@ -124,7 +143,7 @@ const QuickInfo = () => {
               JOB :
             </span>
             <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-              İSSİZ
+              {serverInfoDetail.jobStatus.toUpperCase()}
             </span>
           </div>
         </div>
@@ -149,7 +168,7 @@ const QuickInfo = () => {
               ID :
             </span>
             <span className="text-white text-[11.11px] font-semibold font-['Orbitron']">
-              32323
+              {serverInfoDetail.id}
             </span>
           </div>
         </div>
