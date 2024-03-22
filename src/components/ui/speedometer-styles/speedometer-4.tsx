@@ -18,8 +18,8 @@ const SpeedoMeter4: React.FC<Props> = ({
   const { settings } = useSettings();
 
   return (
-    <div className="w-[354px] h-[352px] relative">
-      <div className="absolute top-24 w-full ">
+    <div className="w-[300px] h-[300px] flex items-end justify-end relative">
+      <div className="absolute top-24 left-4 w-full">
         <div className="items-center justify-center flex flex-col">
           <div className="flex items-center justify-center">
             {speed !== 0 && speed < 100 && (
@@ -56,8 +56,8 @@ const SpeedoMeter4: React.FC<Props> = ({
 
       <svg
         width="354"
-        height="352"
-        viewBox="0 0 354 352"
+        height="300"
+        viewBox="0 0 310 300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import SettingsModal from "../settings/settings-modal";
 import { useSettings } from "../../../contexts/SettingsContext";
 
@@ -133,19 +133,20 @@ const Hud = () => {
               )}
             </div>
           </Draggable>
+          <div className="absolute flex flex-col items-end justify-end gap-y-2 right-0 bottom-60">
+            <button className="bg-white" onClick={pressGasPedal}>
+              Press Gas Pedal
+            </button>
+            <button className="bg-white" onClick={() => changeGear(gear + 1)}>
+              Gear Up
+            </button>
+            <button className="bg-white" onClick={() => changeGear(gear - 1)}>
+              Gear Down
+            </button>
+          </div>
 
           <Draggable disabled={!settings.general.freeformEditMode}>
-            <div className="absolute flex flex-col gap-y-2 right-0 bottom-0">
-              <button className="bg-white" onClick={pressGasPedal}>
-                Press Gas Pedal
-              </button>
-              <button className="bg-white" onClick={() => changeGear(gear + 1)}>
-                Gear Up
-              </button>
-              <button className="bg-white" onClick={() => changeGear(gear - 1)}>
-                Gear Down
-              </button>
-
+            <div className="absolute right-0 bottom-0">
               {SpeedoMeterComponent && (
                 <SpeedoMeterComponent
                   speed={speed}

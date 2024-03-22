@@ -18,8 +18,8 @@ const SpeedoMeter6: React.FC<Props> = ({
   const { settings } = useSettings();
 
   return (
-    <div className="w-[354px] h-[352px] relative">
-      <div className="absolute -left-[18px] top-[135px] w-full ">
+    <div className="w-[300px] h-[300px] relative">
+      <div className="absolute -right-2 top-[135px] w-full ">
         <div className="items-center justify-center flex flex-col">
           <div className="flex items-center justify-center">
             {speed < 0 && speed < 100 && (

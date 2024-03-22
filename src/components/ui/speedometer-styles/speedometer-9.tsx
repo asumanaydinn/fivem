@@ -18,8 +18,8 @@ const SpeedoMeter9: React.FC<Props> = ({
   const { settings } = useSettings();
 
   return (
-    <div className="w-[354px] h-[352px] relative">
-      <div className="absolute top-28 -left-1 w-full ">
+    <div className="w-[300px] h-[300px] relative">
+      <div className="absolute top-28 left-5 w-full ">
         <div className="items-center justify-center flex flex-col gap-y-2">
           <div className="w-[97.01px] h-[47.19px] text-center text-zinc-400 text-[38.46px] font-medium font-['Orbitron']">
             {speed}
