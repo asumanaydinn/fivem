@@ -3,25 +3,29 @@ import { Song } from "../types/media";
 
 export interface MusicPlayerContextType {
   musicList: Song[];
+  playing: boolean;
+  currentTrackIndex: number;
+  progress: number;
+
   addSongToMusicList: (song: Song) => void;
   removeSongFromMusicList: (songId: string) => void;
   searchSongInMusicList: (searchTerm: string) => Song[];
-  playing: boolean;
   setPlaying: React.Dispatch<React.SetStateAction<boolean>>;
   playNextTrack: () => void;
   playPreviousTrack: () => void;
-  currentTrackIndex: number;
   onPlay: (index: number) => void;
   setProgress: React.Dispatch<React.SetStateAction<number>>;
-  progress: number;
 }
 
 const defaultValue: MusicPlayerContextType = {
   musicList: [],
+  playing: false,
+  progress: 0,
+  currentTrackIndex: 0,
+
   addSongToMusicList: () => {},
   removeSongFromMusicList: () => {},
   searchSongInMusicList: () => [],
-  playing: false,
   setPlaying: function (value: React.SetStateAction<boolean>): void {
     throw new Error("Function not implemented.");
   },
@@ -31,27 +35,19 @@ const defaultValue: MusicPlayerContextType = {
   playPreviousTrack: function (): void {
     throw new Error("Function not implemented.");
   },
-  currentTrackIndex: 0,
   onPlay: function (index: number): void {
     throw new Error("Function not implemented.");
   },
   setProgress: function (value: React.SetStateAction<number>): void {
     throw new Error("Function not implemented.");
   },
-  progress: 0,
 };
 
 const MusicPlayerContext = createContext<MusicPlayerContextType>(defaultValue);
 
 export const useMusicPlayer = () => useContext(MusicPlayerContext);
 
-interface MusicPlayerProviderProps {
-  children: ReactNode;
-}
-
-export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
-  children,
-}) => {
+export const MusicPlayerProvider = ({ children }: { children: ReactNode }) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
   const [musicList, setMusicList] = useState<Song[]>([]);
   const [playing, setPlaying] = useState(false);
@@ -90,17 +86,18 @@ export const MusicPlayerProvider: React.FC<MusicPlayerProviderProps> = ({
   return (
     <MusicPlayerContext.Provider
       value={{
-        playNextTrack,
-        playPreviousTrack,
         currentTrackIndex,
         musicList,
+        playing,
+        progress,
+
+        playNextTrack,
+        playPreviousTrack,
         addSongToMusicList,
         removeSongFromMusicList,
         searchSongInMusicList,
-        playing,
         setPlaying,
         onPlay,
-        progress,
         setProgress,
       }}
     >

@@ -1,6 +1,5 @@
 const LogoAndLocation: React.FC = () => (
   <div className="flex gap-x-2 items-center">
-    {/* Logo */}
     <div className="w-[32.56px] h-[32.56px] flex items-center justify-center bg-gradient-to-b from-violet-300 to-gray-200 rounded-[0.57px]">
       <div className="text-center text-black text-xs font-extrabold">NE</div>
     </div>

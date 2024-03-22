@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import SettingsModal from "../settings/settings-modal";
 import { useSettings } from "../../../contexts/SettingsContext";
 

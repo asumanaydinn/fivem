@@ -26,7 +26,7 @@ const Menu = ({ ref }: { ref: React.MutableRefObject<null> }) => {
       {activeTab === "Map" && (
         <img
           className="w-[369px] h-[234.95px]"
-          src={`${process.env.PUBLIC_URL}/assets/map.png`}
+          src={`/assets/map.png`}
           alt="Map"
         />
       )}

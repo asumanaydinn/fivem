@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <div className=" w-full h-full">
         <img
           className="h-screen w-screen absolute object-cover"
-          src={`${process.env.PUBLIC_URL}/assets/bg.svg`}
+          src={`/assets/bg.svg`}
           alt="background"
         />
         <div className="w-full h-full p-4">{children}</div>
