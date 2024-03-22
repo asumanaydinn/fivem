@@ -8,7 +8,13 @@ interface Props {
   gear: number;
 }
 
-const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
+const SpeedoMeter8: React.FC<Props> = ({
+  speed,
+  maxSpeed,
+  gear,
+  fuel,
+  maxFuel,
+}) => {
   const { settings } = useSettings();
 
   return (
@@ -28,6 +34,22 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
           {gear}
         </div>
       </div>
+      <svg
+        className="absolute left-[56px] top-[55px]"
+        width="196"
+        height="169"
+        viewBox="0 0 196 169"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M186.734 113.164C190.215 95.6077 188.428 77.4097 181.599 60.8716C174.769 44.3336 163.204 30.1983 148.365 20.2532C133.526 10.3082 116.08 5 98.2338 5C80.3872 5 62.9415 10.3082 48.1026 20.2532C33.2637 30.1983 21.6983 44.3336 14.8687 60.8716C8.0391 77.4097 6.25217 95.6077 9.73386 113.164C13.2155 130.721 21.8095 146.848 34.4289 159.506"
+          fill="none"
+          stroke="#59BC98"
+          strokeDasharray={(fuel * 7.3 * 50) / maxFuel + " 2000"}
+          stroke-width="4.15475"
+        />
+      </svg>
       <svg
         className="absolute left-[3px] top-[5px]"
         width="290"
@@ -156,14 +178,7 @@ const SpeedoMeter8: React.FC<Props> = ({ speed, maxSpeed, gear }) => {
           stroke="#797979"
           strokeWidth="0.415475"
         />
-        <g filter="url(#filter3_di_756_1195)">
-          <path
-            d="M243.134 168.554C246.616 150.998 244.829 132.8 237.999 116.262C231.17 99.7235 219.604 85.5882 204.765 75.6431C189.926 65.6981 172.481 60.3899 154.634 60.3899C136.788 60.3899 119.342 65.698 104.503 75.6431C89.6641 85.5882 78.0986 99.7235 71.2691 116.262C64.4395 132.8 62.6526 150.998 66.1342 168.554C69.6159 186.111 78.2099 202.238 90.8293 214.895"
-            stroke="url(#paint2_linear_756_1195)"
-            strokeWidth="4.15475"
-            shapeRendering="crispEdges"
-          />
-        </g>
+
         <path
           d="M225.132 215.01C236.925 201.547 244.477 184.893 246.831 167.156"
           stroke="#1E1E1E"
