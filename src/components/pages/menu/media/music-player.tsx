@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import PauseRoundedIcon from "@mui/icons-material/PauseRounded";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
@@ -13,6 +13,7 @@ interface Track {
 
 interface MusicPlayerProps {
   tracks: Track[];
+  ref: React.MutableRefObject<any>;
 }
 
 function parseIsoDuration(isoDuration: string) {
@@ -51,7 +52,7 @@ function formatIsoDuration(isoDuration: string) {
   return "";
 }
 
-const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
+const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks, ref }) => {
   const {
     currentTrackIndex,
     playing,
@@ -111,6 +112,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
       return { title: "", duration: "", artist: "" };
     }
   }
+
+  const duration = useMemo(() => {
+    if (ref) return ref.current.getDuration();
+
+    return 0;
+  }, [ref]);
 
   if (!currentSongDetails)
     return (
@@ -226,7 +233,10 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
 
           <div className="w-[335px] h-0.5 bg-zinc-300 bg-opacity-10 rounded-sm relative">
             {playing && (
-              <div className="w-[100px] absolute h-0.5 bg-white bg-opacity-10 rounded-sm " />
+              <div
+                style={{ width: (duration * 335) / 100 + "%" }}
+                className=" absolute h-0.5 bg-white bg-opacity-10 rounded-sm "
+              />
             )}
           </div>
           <div className="flex items-center justify-center w-full">

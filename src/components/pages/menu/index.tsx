@@ -8,7 +8,7 @@ interface Tab {
   label: string;
 }
 
-const Menu: React.FC = () => {
+const Menu = ({ ref }: { ref: React.MutableRefObject<null> }) => {
   const tabs: Tab[] = [
     { label: "Media" },
     { label: "Vehicle" },
@@ -31,7 +31,7 @@ const Menu: React.FC = () => {
         />
       )}
       {activeTab === "Vehicle" && <VehicleMenu />}
-      {activeTab === "Media" && <MediaMenu />}
+      {activeTab === "Media" && <MediaMenu ref={ref} />}
 
       <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>

@@ -5,14 +5,14 @@ import MusicPlayer from "./music-player";
 import AddSong from "./add-song";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 
-const MediaMenu: React.FC = () => {
+const MediaMenu = ({ ref }: { ref: React.MutableRefObject<null> }) => {
   const { musicList } = useMusicPlayer();
   const [activeTab, setActiveTab] = useState("Add Song");
 
   const tabComponents: Record<string, ReactNode> = {
-    "Add Song": <AddSong />,
-    "Music Player": <MusicPlayer tracks={musicList} />,
-    "Music List": <MusicList />,
+    "Add Song": <AddSong  />,
+    "Music Player": <MusicPlayer tracks={musicList} ref={ref}/>,
+    "Music List": <MusicList ref={ref}/>,
   };
 
   const renderTabButtons = () => {

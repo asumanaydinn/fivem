@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMusicPlayer } from "../../../../contexts/MediaContext";
 import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
 
-const MusicList: React.FC = () => {
+const MusicList = ({ ref }: { ref: React.MutableRefObject<null> }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const { musicList, searchSongInMusicList, currentTrackIndex, onPlay } =
     useMusicPlayer();

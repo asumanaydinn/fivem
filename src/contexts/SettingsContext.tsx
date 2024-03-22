@@ -1,173 +1,21 @@
 import React, { createContext, useContext, ReactNode, useState } from "react";
 import {
   AppSettings,
+  CarSettings,
   StatusSetting,
-  StatusSettingsMap,
   StatusStyleType,
 } from "../types/settings";
-
-const localStorageKey = "statusSettingsMap";
-
-function getStatusSettingsMapFromLocalStorage(): StatusSettingsMap {
-  const storedData = localStorage.getItem(localStorageKey);
-  return storedData ? JSON.parse(storedData) : {};
-}
-
-function setStatusSettingsMapInLocalStorage(settingsMap: StatusSettingsMap) {
-  localStorage.setItem(localStorageKey, JSON.stringify(settingsMap));
-}
-
-function getStatusSettingForStyleFromLocalStorage(
-  styleType: StatusStyleType
-): StatusSetting | null {
-  const settingsMap = getStatusSettingsMapFromLocalStorage();
-  return settingsMap[styleType] || null;
-}
-
-function updateStatusSettingForStyleInLocalStorage(
-  styleType: StatusStyleType,
-  setting: StatusSetting
-) {
-  const settingsMap = getStatusSettingsMapFromLocalStorage();
-  settingsMap[styleType] = setting;
-  setStatusSettingsMapInLocalStorage(settingsMap);
-}
-
-function clearSettingsInLocalStorage() {
-  localStorage.removeItem(localStorageKey);
-}
-
-const defaultSettings: AppSettings = {
-  general: {
-    cinematicMode: false,
-    showLocation: true,
-    minimap: true,
-    freeformEditMode: false,
-    hideAllHud: false,
-    hideUserMoney: false,
-    hideServerLogo: false,
-    hideQuickInfo: false,
-  },
-  speedometers: {
-    units: "kmh",
-    speedometerType: "7",
-  },
-  status: {
-    statusStyleType: "6",
-    hideAllStatus: false,
-    hideHealth: false,
-    hideHydration: false,
-    hideHungry: false,
-    hideEnergy: false,
-    hideArmor: false,
-    hideStress: false,
-  },
-  styleVisibility: {
-    "1": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "2": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "3": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "4": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "5": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "6": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "7": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "8": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "9": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-    "10": {
-      visibilityThresholds: {
-        armor: 0,
-        energy: 0,
-        health: 0,
-        hunger: 0,
-        hydration: 0,
-        stress: 0,
-      },
-    },
-  },
-};
+import {
+  getStatusSettingForStyleFromLocalStorage,
+  updateStatusSettingForStyleInLocalStorage,
+  clearSettingsInLocalStorage,
+} from "../helper/settings";
+import { defaultSettings } from "./default";
 
 interface SettingsContextType {
   settings: AppSettings;
+  openSettings: StatusStyleType | null;
+
   getStatusSettingForStyle: (
     styleType: StatusStyleType
   ) => StatusSetting | null;
@@ -180,12 +28,14 @@ interface SettingsContextType {
     newSettings: Partial<AppSettings[T]>
   ) => void;
   setOpenSettings: React.Dispatch<React.SetStateAction<StatusStyleType | null>>;
-  openSettings: StatusStyleType | null;
   restoreDefaults: () => void;
+  updateCarSettings: (newCarSettings: Partial<CarSettings>) => void;
 }
 
 const SettingsContext = createContext<SettingsContextType>({
   settings: defaultSettings,
+  openSettings: null,
+
   getStatusSettingForStyle: () => null,
   updateStatusSettingForStyle: () => {},
   updateSettings: () => {},
@@ -194,25 +44,31 @@ const SettingsContext = createContext<SettingsContextType>({
   ): void => {
     throw new Error("Function not implemented.");
   },
-  openSettings: null,
   restoreDefaults: function (): void {
+    throw new Error("Function not implemented.");
+  },
+  updateCarSettings: function (newCarSettings: Partial<CarSettings>): void {
     throw new Error("Function not implemented.");
   },
 });
 
 export const useSettings = () => useContext(SettingsContext);
 
-interface SettingsProviderProps {
-  children: ReactNode;
-}
-
-export const SettingsProvider: React.FC<SettingsProviderProps> = ({
-  children,
-}) => {
+export const SettingsProvider = ({ children }: { children: ReactNode }) => {
   const [settings, setSettings] = useState<AppSettings>(defaultSettings);
   const [openSettings, setOpenSettings] = useState<StatusStyleType | null>(
     null
   );
+
+  const updateCarSettings = (newCarSettings: Partial<CarSettings>) => {
+    setSettings((prevSettings) => ({
+      ...prevSettings,
+      carSettings: {
+        ...prevSettings.carSettings,
+        ...newCarSettings,
+      },
+    }));
+  };
 
   const updateSettings = <T extends keyof AppSettings>(
     category: T,
@@ -260,10 +116,12 @@ export const SettingsProvider: React.FC<SettingsProviderProps> = ({
     <SettingsContext.Provider
       value={{
         settings,
+        openSettings,
+
         getStatusSettingForStyle,
         updateStatusSettingForStyle,
         updateSettings,
-        openSettings,
+        updateCarSettings,
         setOpenSettings,
         restoreDefaults,
       }}

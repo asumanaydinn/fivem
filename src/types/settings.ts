@@ -58,6 +58,12 @@ export interface VibisilityThresholds {
   stress: number;
 }
 
+export interface CarSettings {
+  seatBelts: "on" | "off";
+  engineHasProblem: boolean;
+  doorIsOpen: boolean;
+}
+
 export interface AppSettings {
   general: GeneralSettings;
   speedometers: SpeedometerSettings;
@@ -67,6 +73,7 @@ export interface AppSettings {
       visibilityThresholds: VibisilityThresholds;
     };
   };
+  carSettings: CarSettings;
 }
 
 export interface StatusSetting {

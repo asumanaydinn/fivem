@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useRef, useState } from "react";
 import SettingsModal from "../settings/settings-modal";
 import { useSettings } from "../../../contexts/SettingsContext";
 
@@ -63,12 +63,12 @@ const Hud = () => {
   const [speed, setSpeed] = useState(0);
   const [gear, setGear] = useState(1);
 
-  // Function to increase speed - simulate pressing the gas pedal
+  const playerRef = useRef<any>(null);
+
   const pressGasPedal = () => {
     setSpeed((prevSpeed) => prevSpeed + 10);
   };
 
-  // Function to change gear
   const changeGear = (newGear: number) => {
     setGear(newGear);
   };
@@ -99,6 +99,7 @@ const Hud = () => {
       {!settings.general.hideAllHud && (
         <>
           <ReactPlayer
+            ref={playerRef}
             loop={true}
             url={musicList.length > 0 ? musicList[currentTrackIndex].url : ""}
             playing={playing}
@@ -112,7 +113,7 @@ const Hud = () => {
 
           <Draggable disabled={!settings.general.freeformEditMode}>
             <div className="absolute bottom-24 left-0 flex flex-col gap-y-2">
-              <Menu />
+              <Menu ref={playerRef} />
             </div>
           </Draggable>
 
