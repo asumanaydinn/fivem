@@ -133,7 +133,7 @@ const Hud = () => {
               )}
             </div>
           </Draggable>
-          <div className="absolute flex flex-col items-end justify-end gap-y-2 right-0 bottom-60">
+          <div className="absolute flex flex-col items-end justify-end gap-y-2 right-0 bottom-120">
             <button className="bg-white" onClick={pressGasPedal}>
               Press Gas Pedal
             </button>
