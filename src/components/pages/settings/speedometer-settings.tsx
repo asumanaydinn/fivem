@@ -15,6 +15,20 @@ import { SpeedoMeter6 } from "../../icons/speedometer-6";
 import { Speedometer9 } from "../../icons/speedometer-9";
 import { Speedometer10 } from "../../icons/speedometer-10";
 
+
+const speedometerComponents = [
+  Speedometer1,
+  Speedometer2,
+  Speedometer3,
+  Speedometer4,
+  Speedometer5,
+  SpeedoMeter6,
+  Speedometer7,
+  Speedometer8,
+  Speedometer9,
+  Speedometer10,
+];
+
 const SpeedometerSettings = () => {
   const { settings, updateSettings } = useSettings();
 
@@ -22,6 +36,11 @@ const SpeedometerSettings = () => {
     const newUnit = settings.speedometers.units === "kmh" ? "mph" : "kmh";
     updateSettings("speedometers", { units: newUnit });
   };
+
+  const SpeedoMeterComponent =
+  speedometerComponents[
+    parseInt(settings.speedometers.speedometerType, 10) - 1
+  ];
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -50,23 +69,38 @@ const SpeedometerSettings = () => {
         />
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
-        {[
-          Speedometer1,
-          Speedometer2,
-          Speedometer3,
-          Speedometer4,
-          Speedometer5,
-          SpeedoMeter6,
-          Speedometer7,
-          Speedometer8,
-          Speedometer9,
-          Speedometer10,
-        ].map((SpeedometerComponent, index) => (
-          <SpeedometerSettingsItem key={index} speedometerNumber={index + 1}>
-            <SpeedometerComponent />
-          </SpeedometerSettingsItem>
-        ))}
+      <div className="lg:flex lg:flex-col lg:items-center lg:justify-between w-full lg:gap-y-10">
+      <div className="lg:block hidden relative h-96 w-[720px]">
+          <img
+            className="object-cover w-[720px] h-96"
+            src={`/assets/bg.svg`}
+            alt="background"
+          />
+          <div className="absolute right-4 bottom-4 z-10">  {SpeedoMeterComponent && (
+                <SpeedoMeterComponent
+                
+                />
+              )}</div>
+        </div>
+        <div className="grid grid-cols-5 gap-4  lg:grid-cols-5 max-lg:grid-cols-8 mega-lg:grid-cols-10">
+          {[
+            Speedometer1,
+            Speedometer2,
+            Speedometer3,
+            Speedometer4,
+            Speedometer5,
+            SpeedoMeter6,
+            Speedometer7,
+            Speedometer8,
+            Speedometer9,
+            Speedometer10,
+          ].map((SpeedometerComponent, index) => (
+            <SpeedometerSettingsItem key={index} speedometerNumber={index + 1}>
+              <SpeedometerComponent />
+            </SpeedometerSettingsItem>
+          ))}
+        </div>
+       
       </div>
     </div>
   );
